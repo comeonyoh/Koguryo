@@ -1,0 +1,425 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E13F6AE91DD03C5500E1BA98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13F6AE81DD03C5500E1BA98 /* AppDelegate.swift */; };
+		E13F6AEB1DD03C5500E1BA98 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13F6AEA1DD03C5500E1BA98 /* ViewController.swift */; };
+		E13F6AEE1DD03C5500E1BA98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E13F6AEC1DD03C5500E1BA98 /* Main.storyboard */; };
+		E13F6AF01DD03C5500E1BA98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E13F6AEF1DD03C5500E1BA98 /* Assets.xcassets */; };
+		E13F6AF31DD03C5500E1BA98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E13F6AF11DD03C5500E1BA98 /* LaunchScreen.storyboard */; };
+		E13F6AFE1DD03C5500E1BA98 /* KoguryoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13F6AFD1DD03C5500E1BA98 /* KoguryoTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E13F6AFA1DD03C5500E1BA98 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E13F6ADD1DD03C5500E1BA98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E13F6AE41DD03C5500E1BA98;
+			remoteInfo = Koguryo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E13F6AE51DD03C5500E1BA98 /* Koguryo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Koguryo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E13F6AE81DD03C5500E1BA98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E13F6AEA1DD03C5500E1BA98 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E13F6AED1DD03C5500E1BA98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E13F6AEF1DD03C5500E1BA98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E13F6AF21DD03C5500E1BA98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E13F6AF41DD03C5500E1BA98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E13F6AF91DD03C5500E1BA98 /* KoguryoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KoguryoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E13F6AFD1DD03C5500E1BA98 /* KoguryoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KoguryoTests.swift; sourceTree = "<group>"; };
+		E13F6AFF1DD03C5500E1BA98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E13F6AE21DD03C5500E1BA98 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E13F6AF61DD03C5500E1BA98 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E13F6ADC1DD03C5500E1BA98 = {
+			isa = PBXGroup;
+			children = (
+				E13F6AE71DD03C5500E1BA98 /* Koguryo */,
+				E13F6AFC1DD03C5500E1BA98 /* KoguryoTests */,
+				E13F6AE61DD03C5500E1BA98 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E13F6AE61DD03C5500E1BA98 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E13F6AE51DD03C5500E1BA98 /* Koguryo.app */,
+				E13F6AF91DD03C5500E1BA98 /* KoguryoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E13F6AE71DD03C5500E1BA98 /* Koguryo */ = {
+			isa = PBXGroup;
+			children = (
+				E13F6AE81DD03C5500E1BA98 /* AppDelegate.swift */,
+				E13F6AEA1DD03C5500E1BA98 /* ViewController.swift */,
+				E13F6AEC1DD03C5500E1BA98 /* Main.storyboard */,
+				E13F6AEF1DD03C5500E1BA98 /* Assets.xcassets */,
+				E13F6AF11DD03C5500E1BA98 /* LaunchScreen.storyboard */,
+				E13F6AF41DD03C5500E1BA98 /* Info.plist */,
+			);
+			path = Koguryo;
+			sourceTree = "<group>";
+		};
+		E13F6AFC1DD03C5500E1BA98 /* KoguryoTests */ = {
+			isa = PBXGroup;
+			children = (
+				E13F6AFD1DD03C5500E1BA98 /* KoguryoTests.swift */,
+				E13F6AFF1DD03C5500E1BA98 /* Info.plist */,
+			);
+			path = KoguryoTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E13F6AE41DD03C5500E1BA98 /* Koguryo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E13F6B021DD03C5500E1BA98 /* Build configuration list for PBXNativeTarget "Koguryo" */;
+			buildPhases = (
+				E13F6AE11DD03C5500E1BA98 /* Sources */,
+				E13F6AE21DD03C5500E1BA98 /* Frameworks */,
+				E13F6AE31DD03C5500E1BA98 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Koguryo;
+			productName = Koguryo;
+			productReference = E13F6AE51DD03C5500E1BA98 /* Koguryo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E13F6AF81DD03C5500E1BA98 /* KoguryoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E13F6B051DD03C5500E1BA98 /* Build configuration list for PBXNativeTarget "KoguryoTests" */;
+			buildPhases = (
+				E13F6AF51DD03C5500E1BA98 /* Sources */,
+				E13F6AF61DD03C5500E1BA98 /* Frameworks */,
+				E13F6AF71DD03C5500E1BA98 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E13F6AFB1DD03C5500E1BA98 /* PBXTargetDependency */,
+			);
+			name = KoguryoTests;
+			productName = KoguryoTests;
+			productReference = E13F6AF91DD03C5500E1BA98 /* KoguryoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E13F6ADD1DD03C5500E1BA98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = ODOV;
+				TargetAttributes = {
+					E13F6AE41DD03C5500E1BA98 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = QWFDFURH3H;
+						ProvisioningStyle = Automatic;
+					};
+					E13F6AF81DD03C5500E1BA98 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = QWFDFURH3H;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E13F6AE41DD03C5500E1BA98;
+					};
+				};
+			};
+			buildConfigurationList = E13F6AE01DD03C5500E1BA98 /* Build configuration list for PBXProject "Koguryo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E13F6ADC1DD03C5500E1BA98;
+			productRefGroup = E13F6AE61DD03C5500E1BA98 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E13F6AE41DD03C5500E1BA98 /* Koguryo */,
+				E13F6AF81DD03C5500E1BA98 /* KoguryoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E13F6AE31DD03C5500E1BA98 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E13F6AF31DD03C5500E1BA98 /* LaunchScreen.storyboard in Resources */,
+				E13F6AF01DD03C5500E1BA98 /* Assets.xcassets in Resources */,
+				E13F6AEE1DD03C5500E1BA98 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E13F6AF71DD03C5500E1BA98 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E13F6AE11DD03C5500E1BA98 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E13F6AEB1DD03C5500E1BA98 /* ViewController.swift in Sources */,
+				E13F6AE91DD03C5500E1BA98 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E13F6AF51DD03C5500E1BA98 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E13F6AFE1DD03C5500E1BA98 /* KoguryoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E13F6AFB1DD03C5500E1BA98 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E13F6AE41DD03C5500E1BA98 /* Koguryo */;
+			targetProxy = E13F6AFA1DD03C5500E1BA98 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E13F6AEC1DD03C5500E1BA98 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E13F6AED1DD03C5500E1BA98 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E13F6AF11DD03C5500E1BA98 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E13F6AF21DD03C5500E1BA98 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E13F6B001DD03C5500E1BA98 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E13F6B011DD03C5500E1BA98 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E13F6B031DD03C5500E1BA98 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = QWFDFURH3H;
+				INFOPLIST_FILE = Koguryo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiger.odov.Koguryo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		E13F6B041DD03C5500E1BA98 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = QWFDFURH3H;
+				INFOPLIST_FILE = Koguryo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiger.odov.Koguryo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		E13F6B061DD03C5500E1BA98 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = QWFDFURH3H;
+				INFOPLIST_FILE = KoguryoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiger.odov.KoguryoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Koguryo.app/Koguryo";
+			};
+			name = Debug;
+		};
+		E13F6B071DD03C5500E1BA98 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = QWFDFURH3H;
+				INFOPLIST_FILE = KoguryoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiger.odov.KoguryoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Koguryo.app/Koguryo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E13F6AE01DD03C5500E1BA98 /* Build configuration list for PBXProject "Koguryo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E13F6B001DD03C5500E1BA98 /* Debug */,
+				E13F6B011DD03C5500E1BA98 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E13F6B021DD03C5500E1BA98 /* Build configuration list for PBXNativeTarget "Koguryo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E13F6B031DD03C5500E1BA98 /* Debug */,
+				E13F6B041DD03C5500E1BA98 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E13F6B051DD03C5500E1BA98 /* Build configuration list for PBXNativeTarget "KoguryoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E13F6B061DD03C5500E1BA98 /* Debug */,
+				E13F6B071DD03C5500E1BA98 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E13F6ADD1DD03C5500E1BA98 /* Project object */;
+}
