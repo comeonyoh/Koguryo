@@ -8,11 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		E13F6AE91DD03C5500E1BA98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13F6AE81DD03C5500E1BA98 /* AppDelegate.swift */; };
-		E13F6AEB1DD03C5500E1BA98 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13F6AEA1DD03C5500E1BA98 /* ViewController.swift */; };
 		E13F6AEE1DD03C5500E1BA98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E13F6AEC1DD03C5500E1BA98 /* Main.storyboard */; };
 		E13F6AF01DD03C5500E1BA98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E13F6AEF1DD03C5500E1BA98 /* Assets.xcassets */; };
 		E13F6AF31DD03C5500E1BA98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E13F6AF11DD03C5500E1BA98 /* LaunchScreen.storyboard */; };
 		E13F6AFE1DD03C5500E1BA98 /* KoguryoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13F6AFD1DD03C5500E1BA98 /* KoguryoTests.swift */; };
+		E13F6B0A1DD03E5F00E1BA98 /* MemoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13F6B091DD03E5F00E1BA98 /* MemoListViewController.swift */; };
+		E13F6B0C1DD03E7600E1BA98 /* WriteMemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13F6B0B1DD03E7600E1BA98 /* WriteMemoViewController.swift */; };
+		E13F6B101DD0457900E1BA98 /* MemoListSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13F6B0F1DD0457900E1BA98 /* MemoListSection.swift */; };
+		E13F6B121DD0493100E1BA98 /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13F6B111DD0493100E1BA98 /* Memo.swift */; };
+		E13F6B141DD04DF300E1BA98 /* MemoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13F6B131DD04DF300E1BA98 /* MemoManager.swift */; };
+		E13F6B211DD0519800E1BA98 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E13F6B231DD0519800E1BA98 /* Localizable.strings */; };
+		E13F6B281DD0537900E1BA98 /* CopyTextButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13F6B261DD0537900E1BA98 /* CopyTextButtonTableViewCell.swift */; };
+		E13F6B291DD0537900E1BA98 /* CopyTextButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E13F6B271DD0537900E1BA98 /* CopyTextButtonTableViewCell.xib */; };
+		E13F6B2C1DD053A000E1BA98 /* MemoListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13F6B2A1DD053A000E1BA98 /* MemoListTableViewCell.swift */; };
+		E13F6B2D1DD053A000E1BA98 /* MemoListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E13F6B2B1DD053A000E1BA98 /* MemoListTableViewCell.xib */; };
+		F7218D066B930892B3DB4265 /* Pods_Koguryo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E419A0B0961458AD3CA031F8 /* Pods_Koguryo.framework */; };
+		F7F606F050F2A456664BDCF1 /* Pods_KoguryoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F01CFD58BB2EA45E1A8518DC /* Pods_KoguryoTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,9 +37,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		658B6E14CA1E482035C768FB /* Pods-Koguryo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Koguryo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Koguryo/Pods-Koguryo.debug.xcconfig"; sourceTree = "<group>"; };
+		711A1B15B8FF31AF6EAA448D /* Pods-KoguryoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoguryoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KoguryoTests/Pods-KoguryoTests.release.xcconfig"; sourceTree = "<group>"; };
+		B5B6E82D578A33C0C8236FD7 /* Pods-KoguryoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoguryoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KoguryoTests/Pods-KoguryoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DDC01097025F47DA7B666491 /* Pods-Koguryo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Koguryo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Koguryo/Pods-Koguryo.release.xcconfig"; sourceTree = "<group>"; };
 		E13F6AE51DD03C5500E1BA98 /* Koguryo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Koguryo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E13F6AE81DD03C5500E1BA98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E13F6AEA1DD03C5500E1BA98 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E13F6AED1DD03C5500E1BA98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E13F6AEF1DD03C5500E1BA98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E13F6AF21DD03C5500E1BA98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +50,22 @@
 		E13F6AF91DD03C5500E1BA98 /* KoguryoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KoguryoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E13F6AFD1DD03C5500E1BA98 /* KoguryoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KoguryoTests.swift; sourceTree = "<group>"; };
 		E13F6AFF1DD03C5500E1BA98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E13F6B091DD03E5F00E1BA98 /* MemoListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoListViewController.swift; sourceTree = "<group>"; };
+		E13F6B0B1DD03E7600E1BA98 /* WriteMemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WriteMemoViewController.swift; sourceTree = "<group>"; };
+		E13F6B0F1DD0457900E1BA98 /* MemoListSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoListSection.swift; sourceTree = "<group>"; };
+		E13F6B111DD0493100E1BA98 /* Memo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
+		E13F6B131DD04DF300E1BA98 /* MemoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoManager.swift; sourceTree = "<group>"; };
+		E13F6B1D1DD0515800E1BA98 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Main.strings; sourceTree = "<group>"; };
+		E13F6B1E1DD0515800E1BA98 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		E13F6B221DD0519800E1BA98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E13F6B241DD0519E00E1BA98 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E13F6B251DD0519F00E1BA98 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E13F6B261DD0537900E1BA98 /* CopyTextButtonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CopyTextButtonTableViewCell.swift; sourceTree = "<group>"; };
+		E13F6B271DD0537900E1BA98 /* CopyTextButtonTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CopyTextButtonTableViewCell.xib; sourceTree = "<group>"; };
+		E13F6B2A1DD053A000E1BA98 /* MemoListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoListTableViewCell.swift; sourceTree = "<group>"; };
+		E13F6B2B1DD053A000E1BA98 /* MemoListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MemoListTableViewCell.xib; sourceTree = "<group>"; };
+		E419A0B0961458AD3CA031F8 /* Pods_Koguryo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Koguryo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F01CFD58BB2EA45E1A8518DC /* Pods_KoguryoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KoguryoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7218D066B930892B3DB4265 /* Pods_Koguryo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,18 +81,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7F606F050F2A456664BDCF1 /* Pods_KoguryoTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C91C4C427FA1524B640FD8EB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E419A0B0961458AD3CA031F8 /* Pods_Koguryo.framework */,
+				F01CFD58BB2EA45E1A8518DC /* Pods_KoguryoTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CDF841399DF3B8849D853199 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				658B6E14CA1E482035C768FB /* Pods-Koguryo.debug.xcconfig */,
+				DDC01097025F47DA7B666491 /* Pods-Koguryo.release.xcconfig */,
+				B5B6E82D578A33C0C8236FD7 /* Pods-KoguryoTests.debug.xcconfig */,
+				711A1B15B8FF31AF6EAA448D /* Pods-KoguryoTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E13F6ADC1DD03C5500E1BA98 = {
 			isa = PBXGroup;
 			children = (
 				E13F6AE71DD03C5500E1BA98 /* Koguryo */,
 				E13F6AFC1DD03C5500E1BA98 /* KoguryoTests */,
 				E13F6AE61DD03C5500E1BA98 /* Products */,
+				CDF841399DF3B8849D853199 /* Pods */,
+				C91C4C427FA1524B640FD8EB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,12 +131,15 @@
 		E13F6AE71DD03C5500E1BA98 /* Koguryo */ = {
 			isa = PBXGroup;
 			children = (
+				E13F6B0E1DD0440D00E1BA98 /* Views */,
+				E13F6B0D1DD0440D00E1BA98 /* Models */,
+				E13F6B081DD03E5100E1BA98 /* Controllers */,
 				E13F6AE81DD03C5500E1BA98 /* AppDelegate.swift */,
-				E13F6AEA1DD03C5500E1BA98 /* ViewController.swift */,
 				E13F6AEC1DD03C5500E1BA98 /* Main.storyboard */,
 				E13F6AEF1DD03C5500E1BA98 /* Assets.xcassets */,
 				E13F6AF11DD03C5500E1BA98 /* LaunchScreen.storyboard */,
 				E13F6AF41DD03C5500E1BA98 /* Info.plist */,
+				E13F6B231DD0519800E1BA98 /* Localizable.strings */,
 			);
 			path = Koguryo;
 			sourceTree = "<group>";
@@ -96,6 +153,36 @@
 			path = KoguryoTests;
 			sourceTree = "<group>";
 		};
+		E13F6B081DD03E5100E1BA98 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E13F6B091DD03E5F00E1BA98 /* MemoListViewController.swift */,
+				E13F6B0B1DD03E7600E1BA98 /* WriteMemoViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E13F6B0D1DD0440D00E1BA98 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E13F6B111DD0493100E1BA98 /* Memo.swift */,
+				E13F6B131DD04DF300E1BA98 /* MemoManager.swift */,
+				E13F6B0F1DD0457900E1BA98 /* MemoListSection.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E13F6B0E1DD0440D00E1BA98 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E13F6B2B1DD053A000E1BA98 /* MemoListTableViewCell.xib */,
+				E13F6B2A1DD053A000E1BA98 /* MemoListTableViewCell.swift */,
+				E13F6B271DD0537900E1BA98 /* CopyTextButtonTableViewCell.xib */,
+				E13F6B261DD0537900E1BA98 /* CopyTextButtonTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +190,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E13F6B021DD03C5500E1BA98 /* Build configuration list for PBXNativeTarget "Koguryo" */;
 			buildPhases = (
+				DDD4716EB559CE47FD6D08DB /* [CP] Check Pods Manifest.lock */,
 				E13F6AE11DD03C5500E1BA98 /* Sources */,
 				E13F6AE21DD03C5500E1BA98 /* Frameworks */,
 				E13F6AE31DD03C5500E1BA98 /* Resources */,
+				CCC6E111C71BFA698E374F10 /* [CP] Embed Pods Frameworks */,
+				9CF5AB1F82A5246B73C41E0E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -120,9 +210,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E13F6B051DD03C5500E1BA98 /* Build configuration list for PBXNativeTarget "KoguryoTests" */;
 			buildPhases = (
+				CDFAE84B98CB9A115A4C0BC5 /* [CP] Check Pods Manifest.lock */,
 				E13F6AF51DD03C5500E1BA98 /* Sources */,
 				E13F6AF61DD03C5500E1BA98 /* Frameworks */,
 				E13F6AF71DD03C5500E1BA98 /* Resources */,
+				459441373D8F5516E185C776 /* [CP] Embed Pods Frameworks */,
+				FBB5DC5920DB2BE86B43E7F2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -164,6 +257,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ko,
 			);
 			mainGroup = E13F6ADC1DD03C5500E1BA98;
 			productRefGroup = E13F6AE61DD03C5500E1BA98 /* Products */;
@@ -182,6 +276,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E13F6AF31DD03C5500E1BA98 /* LaunchScreen.storyboard in Resources */,
+				E13F6B2D1DD053A000E1BA98 /* MemoListTableViewCell.xib in Resources */,
+				E13F6B211DD0519800E1BA98 /* Localizable.strings in Resources */,
+				E13F6B291DD0537900E1BA98 /* CopyTextButtonTableViewCell.xib in Resources */,
 				E13F6AF01DD03C5500E1BA98 /* Assets.xcassets in Resources */,
 				E13F6AEE1DD03C5500E1BA98 /* Main.storyboard in Resources */,
 			);
@@ -196,13 +293,112 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		459441373D8F5516E185C776 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KoguryoTests/Pods-KoguryoTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9CF5AB1F82A5246B73C41E0E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Koguryo/Pods-Koguryo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CCC6E111C71BFA698E374F10 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Koguryo/Pods-Koguryo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CDFAE84B98CB9A115A4C0BC5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DDD4716EB559CE47FD6D08DB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FBB5DC5920DB2BE86B43E7F2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KoguryoTests/Pods-KoguryoTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E13F6AE11DD03C5500E1BA98 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E13F6AEB1DD03C5500E1BA98 /* ViewController.swift in Sources */,
 				E13F6AE91DD03C5500E1BA98 /* AppDelegate.swift in Sources */,
+				E13F6B141DD04DF300E1BA98 /* MemoManager.swift in Sources */,
+				E13F6B0C1DD03E7600E1BA98 /* WriteMemoViewController.swift in Sources */,
+				E13F6B2C1DD053A000E1BA98 /* MemoListTableViewCell.swift in Sources */,
+				E13F6B0A1DD03E5F00E1BA98 /* MemoListViewController.swift in Sources */,
+				E13F6B281DD0537900E1BA98 /* CopyTextButtonTableViewCell.swift in Sources */,
+				E13F6B101DD0457900E1BA98 /* MemoListSection.swift in Sources */,
+				E13F6B121DD0493100E1BA98 /* Memo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,6 +425,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				E13F6AED1DD03C5500E1BA98 /* Base */,
+				E13F6B1D1DD0515800E1BA98 /* ko */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -237,8 +434,19 @@
 			isa = PBXVariantGroup;
 			children = (
 				E13F6AF21DD03C5500E1BA98 /* Base */,
+				E13F6B1E1DD0515800E1BA98 /* ko */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		E13F6B231DD0519800E1BA98 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E13F6B221DD0519800E1BA98 /* Base */,
+				E13F6B241DD0519E00E1BA98 /* en */,
+				E13F6B251DD0519F00E1BA98 /* ko */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -248,6 +456,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -262,6 +471,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -297,6 +507,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -311,6 +522,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -337,6 +549,7 @@
 		};
 		E13F6B031DD03C5500E1BA98 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 658B6E14CA1E482035C768FB /* Pods-Koguryo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = QWFDFURH3H;
@@ -350,6 +563,7 @@
 		};
 		E13F6B041DD03C5500E1BA98 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DDC01097025F47DA7B666491 /* Pods-Koguryo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = QWFDFURH3H;
@@ -363,6 +577,7 @@
 		};
 		E13F6B061DD03C5500E1BA98 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5B6E82D578A33C0C8236FD7 /* Pods-KoguryoTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -378,6 +593,7 @@
 		};
 		E13F6B071DD03C5500E1BA98 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 711A1B15B8FF31AF6EAA448D /* Pods-KoguryoTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -410,6 +626,7 @@
 				E13F6B041DD03C5500E1BA98 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E13F6B051DD03C5500E1BA98 /* Build configuration list for PBXNativeTarget "KoguryoTests" */ = {
 			isa = XCConfigurationList;
@@ -418,6 +635,7 @@
 				E13F6B071DD03C5500E1BA98 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

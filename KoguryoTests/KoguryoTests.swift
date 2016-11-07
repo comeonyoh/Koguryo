@@ -13,24 +13,55 @@ class KoguryoTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testSectionIndex() {
+        
+        XCTAssertEqual(0, MemoListSection.addButton.rawValue)
+        XCTAssertEqual(1, MemoListSection.favorite.rawValue)
+        XCTAssertEqual(2, MemoListSection.list.rawValue)
+    }
+ 
+    func testMemoEquality() {
+        
+        let first = Memo.init(memo: "Hello world")
+        let second = Memo.init(memo: "Hello world", withPlaceHolder: "Say Hello")
+        
+        XCTAssertNotEqual(first, second)
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testHasFavoriteMember() {
+        
+        let memo = Memo.init(memo: "Test Memo")
+        
+        let manager = MemoManager.init()
+        
+        XCTAssertFalse(manager.hasFavoriteMemos())
+        XCTAssertEqual(manager.favoriteMemos?.count, 0)
+        
+        XCTAssertTrue(manager.addFavoriteMemo(memo))
+        
+        XCTAssertTrue(manager.hasFavoriteMemos())
+        XCTAssertEqual(manager.favoriteMemos?.count, 1)
     }
     
+    func testFavoriteMemberOverflowThanMaxCount() {
+        
+        let memo_1 = Memo.init(memo: "Test Memo")
+        let memo_2 = Memo.init(memo: "Test Memo")
+        let memo_3 = Memo.init(memo: "Test Memo")
+        let memo_4 = Memo.init(memo: "Test Memo")
+
+        let manager = MemoManager.init()
+
+        XCTAssertTrue(manager.addFavoriteMemo(memo_1))
+        XCTAssertTrue(manager.addFavoriteMemo(memo_2))
+        XCTAssertTrue(manager.addFavoriteMemo(memo_3))
+        XCTAssertFalse(manager.addFavoriteMemo(memo_4))
+
+    }
 }
