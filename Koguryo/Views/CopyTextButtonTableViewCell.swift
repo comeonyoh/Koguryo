@@ -26,6 +26,8 @@ class CopyTextButtonTableViewCell: UITableViewCell, Animationable {
         let btn = sender as! UIButton
 
         springAnimate(inView: btn)
+        
+        self.delegate?.copyTextButtonTableViewCell(didCopyButtonClicked: btn)
     }
     
 }

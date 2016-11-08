@@ -10,25 +10,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--설정-->
-        <scene sceneID="2N7-P9-Pcv">
-            <objects>
-                <viewController id="cWa-rU-YgU" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="AyG-kA-Ig2"/>
-                        <viewControllerLayoutGuide type="bottom" id="BDv-vn-gPi"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Yje-Ku-T59">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="설정" id="0GC-ID-MhE"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="llX-Xp-tBX" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="590" y="-574"/>
-        </scene>
         <!--메모장-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -59,11 +40,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="메모장" id="4yt-NJ-dVE">
-                        <barButtonItem key="leftBarButtonItem" image="info_bar_icon" id="P2j-XR-vYc">
-                            <connections>
-                                <segue destination="cWa-rU-YgU" kind="show" id="HEl-dU-cAf"/>
-                            </connections>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="6Ej-Uo-kB4">
                             <connections>
                                 <segue destination="YJa-8Y-7bi" kind="show" id="IBT-pH-Rft"/>
@@ -188,7 +164,4 @@
             <point key="canvasLocation" x="-191.19999999999999" y="122.78860569715144"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="info_bar_icon" width="22" height="22"/>
-    </resources>
 </document>

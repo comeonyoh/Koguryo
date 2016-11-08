@@ -134,6 +134,11 @@ extension MemoListViewController: UITableViewDataSource, MemoListTableViewCellDe
 
     func copyTextButtonTableViewCell(didCopyButtonClicked: UIView) {
         
+        print("copyTextButtonTableViewCell")
+        
+        self.memoListManager.copyFromPasteboard()
+        
+        self.memoListTableView.reloadData()
     }
 
 }

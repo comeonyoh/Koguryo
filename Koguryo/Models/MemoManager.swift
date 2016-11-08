@@ -100,4 +100,14 @@ extension MemoManager {
         }
     }
     
+    func copyFromPasteboard(){
+        
+        let content = UIPasteboard.general.string
+        
+        let newMemo = Memo.init(memo: content)
+        
+        self.allOfMemos?.append(newMemo)
+        
+    }
+    
 }

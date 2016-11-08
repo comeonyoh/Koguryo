@@ -64,4 +64,36 @@ class KoguryoTests: XCTestCase {
         XCTAssertFalse(manager.addFavoriteMemo(memo_4))
 
     }
+    
 }
+
+
+extension KoguryoTests {
+    
+    func testCopyFromPasteboard() {
+        
+        let testString = "I love soccer!"
+        
+        let pasteboard = UIPasteboard.general
+        
+        pasteboard.string = testString
+        
+        let manager = MemoManager.init()
+
+        manager.copyFromPasteboard()
+        
+        XCTAssertEqual(manager.allOfMemos?.count, 1)
+        XCTAssertEqual(manager.allOfMemos?.first?.contents, testString)
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
