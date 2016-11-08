@@ -129,7 +129,7 @@ extension MemoListViewController: UITableViewDataSource, MemoListTableViewCellDe
         self.memoListManager.copyToPasteboard(withIndex: indexPath)
         
         //  Show success alert view
-        
+        ProgressHudManager.showCopyHUD(inView: self.view)
     }
 
     func copyTextButtonTableViewCell(didCopyButtonClicked: UIView) {
@@ -145,6 +145,11 @@ extension MemoListViewController: UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
         
         guard indexPath.section != 0 else {
+            
+            let addSectionCell = tableView.cellForRow(at: indexPath) as! CopyTextButtonTableViewCell
+            
+            addSectionCell.springAnimate(inView: addSectionCell.saveButton)
+            
             return
         }
         

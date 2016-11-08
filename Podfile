@@ -8,6 +8,7 @@ target 'Koguryo' do
   # Pods for Koguryo
   pod 'pop', '~> 1.0'
   pod 'MGSwipeTableCell'
+  pod 'JGProgressHUD'
 
   target 'KoguryoTests' do
     inherit! :search_paths

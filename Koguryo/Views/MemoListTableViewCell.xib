@@ -15,7 +15,7 @@
             <rect key="frame" x="0.0" y="0.0" width="590" height="123"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="590" height="123"/>
+                <rect key="frame" x="0.0" y="0.0" width="590" height="122.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QxS-Xl-ebe">
@@ -28,9 +28,9 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V2x-MN-YcO">
-                        <rect key="frame" x="518" y="46" width="55" height="30"/>
+                        <rect key="frame" x="508" y="0.0" width="65" height="122.5"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="55" id="CEO-fj-p8d"/>
+                            <constraint firstAttribute="width" constant="65" id="CEO-fj-p8d"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <state key="normal" title="복사하기">
@@ -42,11 +42,13 @@
                     </button>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="V2x-MN-YcO" firstAttribute="bottom" secondItem="QxS-Xl-ebe" secondAttribute="bottom" id="6kj-ZQ-tdh"/>
+                    <constraint firstItem="V2x-MN-YcO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="3Cl-eM-jHb"/>
                     <constraint firstAttribute="trailing" secondItem="V2x-MN-YcO" secondAttribute="trailing" constant="17.5" id="Alr-Zg-Ygv"/>
                     <constraint firstItem="QxS-Xl-ebe" firstAttribute="top" relation="greaterThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="Pl0-6B-Jrt"/>
                     <constraint firstItem="QxS-Xl-ebe" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Sc1-3R-zuS"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="V2x-MN-YcO" secondAttribute="bottom" id="cRf-a4-s23"/>
                     <constraint firstItem="QxS-Xl-ebe" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="jc9-5P-Qs0"/>
+                    <constraint firstItem="V2x-MN-YcO" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="yCE-AP-K22"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

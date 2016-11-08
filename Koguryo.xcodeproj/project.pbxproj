@@ -22,8 +22,10 @@
 		E13F6B291DD0537900E1BA98 /* CopyTextButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E13F6B271DD0537900E1BA98 /* CopyTextButtonTableViewCell.xib */; };
 		E13F6B2C1DD053A000E1BA98 /* MemoListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13F6B2A1DD053A000E1BA98 /* MemoListTableViewCell.swift */; };
 		E13F6B2D1DD053A000E1BA98 /* MemoListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E13F6B2B1DD053A000E1BA98 /* MemoListTableViewCell.xib */; };
+		E17C20E41DD1A40B003AD7F2 /* ProgressHudManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17C20E31DD1A40B003AD7F2 /* ProgressHudManager.swift */; };
+		E17C20E81DD1A990003AD7F2 /* Animationable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17C20E71DD1A990003AD7F2 /* Animationable.swift */; };
+		E17C20EA1DD1AA6E003AD7F2 /* StoryboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17C20E91DD1AA6E003AD7F2 /* StoryboardManager.swift */; };
 		E1C4F9D91DD1621B0017F8DA /* PlaceholderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C4F9D81DD1621B0017F8DA /* PlaceholderTextView.swift */; };
-		E1FFADE61DD191D4000AA173 /* StoryboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FFADE51DD191D4000AA173 /* StoryboardManager.swift */; };
 		E1FFADE81DD19B14000AA173 /* WriteMemoViewControllerElementsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FFADE71DD19B14000AA173 /* WriteMemoViewControllerElementsManager.swift */; };
 		E1FFADEA1DD19D62000AA173 /* PlaceholderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FFADE91DD19D62000AA173 /* PlaceholderTextField.swift */; };
 		F7218D066B930892B3DB4265 /* Pods_Koguryo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E419A0B0961458AD3CA031F8 /* Pods_Koguryo.framework */; };
@@ -68,8 +70,10 @@
 		E13F6B271DD0537900E1BA98 /* CopyTextButtonTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CopyTextButtonTableViewCell.xib; sourceTree = "<group>"; };
 		E13F6B2A1DD053A000E1BA98 /* MemoListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoListTableViewCell.swift; sourceTree = "<group>"; };
 		E13F6B2B1DD053A000E1BA98 /* MemoListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MemoListTableViewCell.xib; sourceTree = "<group>"; };
+		E17C20E31DD1A40B003AD7F2 /* ProgressHudManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressHudManager.swift; sourceTree = "<group>"; };
+		E17C20E71DD1A990003AD7F2 /* Animationable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animationable.swift; sourceTree = "<group>"; };
+		E17C20E91DD1AA6E003AD7F2 /* StoryboardManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardManager.swift; sourceTree = "<group>"; };
 		E1C4F9D81DD1621B0017F8DA /* PlaceholderTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceholderTextView.swift; sourceTree = "<group>"; };
-		E1FFADE51DD191D4000AA173 /* StoryboardManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardManager.swift; sourceTree = "<group>"; };
 		E1FFADE71DD19B14000AA173 /* WriteMemoViewControllerElementsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WriteMemoViewControllerElementsManager.swift; sourceTree = "<group>"; };
 		E1FFADE91DD19D62000AA173 /* PlaceholderTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceholderTextField.swift; sourceTree = "<group>"; };
 		E419A0B0961458AD3CA031F8 /* Pods_Koguryo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Koguryo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -196,6 +200,7 @@
 		E1C4F9D71DD161BD0017F8DA /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				E17C20E71DD1A990003AD7F2 /* Animationable.swift */,
 				E1C4F9D81DD1621B0017F8DA /* PlaceholderTextView.swift */,
 				E1FFADE91DD19D62000AA173 /* PlaceholderTextField.swift */,
 			);
@@ -205,7 +210,8 @@
 		E1FFADE41DD191CA000AA173 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				E1FFADE51DD191D4000AA173 /* StoryboardManager.swift */,
+				E17C20E91DD1AA6E003AD7F2 /* StoryboardManager.swift */,
+				E17C20E31DD1A40B003AD7F2 /* ProgressHudManager.swift */,
 				E1FFADE71DD19B14000AA173 /* WriteMemoViewControllerElementsManager.swift */,
 			);
 			path = Manager;
@@ -424,12 +430,14 @@
 				E13F6B141DD04DF300E1BA98 /* MemoManager.swift in Sources */,
 				E13F6B0C1DD03E7600E1BA98 /* WriteMemoViewController.swift in Sources */,
 				E1C4F9D91DD1621B0017F8DA /* PlaceholderTextView.swift in Sources */,
-				E1FFADE61DD191D4000AA173 /* StoryboardManager.swift in Sources */,
 				E13F6B2C1DD053A000E1BA98 /* MemoListTableViewCell.swift in Sources */,
 				E13F6B0A1DD03E5F00E1BA98 /* MemoListViewController.swift in Sources */,
 				E13F6B281DD0537900E1BA98 /* CopyTextButtonTableViewCell.swift in Sources */,
+				E17C20EA1DD1AA6E003AD7F2 /* StoryboardManager.swift in Sources */,
 				E1FFADEA1DD19D62000AA173 /* PlaceholderTextField.swift in Sources */,
+				E17C20E81DD1A990003AD7F2 /* Animationable.swift in Sources */,
 				E13F6B101DD0457900E1BA98 /* MemoListSection.swift in Sources */,
+				E17C20E41DD1A40B003AD7F2 /* ProgressHudManager.swift in Sources */,
 				E13F6B121DD0493100E1BA98 /* Memo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

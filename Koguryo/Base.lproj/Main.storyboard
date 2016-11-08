@@ -124,16 +124,16 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="11" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="66R-Gs-IsQ" customClass="PlaceholderTextView" customModule="Koguryo" customModuleProvider="target">
-                                                    <rect key="frame" x="13" y="5" width="349" height="113.5"/>
+                                                    <rect key="frame" x="11" y="5" width="353" height="113.5"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="66R-Gs-IsQ" secondAttribute="trailing" constant="13" id="J4B-gP-Kox"/>
+                                                <constraint firstAttribute="trailing" secondItem="66R-Gs-IsQ" secondAttribute="trailing" constant="11" id="J4B-gP-Kox"/>
                                                 <constraint firstAttribute="bottom" secondItem="66R-Gs-IsQ" secondAttribute="bottom" constant="5" id="a3W-TT-gsc"/>
-                                                <constraint firstItem="66R-Gs-IsQ" firstAttribute="leading" secondItem="pzf-Tt-3WB" secondAttribute="leading" constant="13" id="fq5-ar-9fE"/>
+                                                <constraint firstItem="66R-Gs-IsQ" firstAttribute="leading" secondItem="pzf-Tt-3WB" secondAttribute="leading" constant="11" id="fq5-ar-9fE"/>
                                                 <constraint firstItem="66R-Gs-IsQ" firstAttribute="top" secondItem="pzf-Tt-3WB" secondAttribute="top" constant="5" id="kKC-La-gmH"/>
                                             </constraints>
                                         </tableViewCellContentView>
