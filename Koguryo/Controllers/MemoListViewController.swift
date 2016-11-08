@@ -100,7 +100,6 @@ extension MemoListViewController: UITableViewDataSource, MemoListTableViewCellDe
         let cell = tableView.dequeueReusableCell(withIdentifier: MemoListTableViewCell.identifier, for: indexPath) as! MemoListTableViewCell
         
         cell.configureCell(withMemo: memoListManager.getMemo(withIndexPath: indexPath), withIndexPath: indexPath)
-
         cell.eventDelegate = self
 
         return cell
