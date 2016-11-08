@@ -9,6 +9,7 @@ target 'Koguryo' do
   pod 'pop', '~> 1.0'
   pod 'MGSwipeTableCell'
   pod 'JGProgressHUD'
+  pod 'UIColor_Hex_Swift', '~> 3.0.2'
 
   target 'KoguryoTests' do
     inherit! :search_paths

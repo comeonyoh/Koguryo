@@ -2,17 +2,20 @@ PODS:
   - JGProgressHUD (1.4)
   - MGSwipeTableCell (1.5.6)
   - pop (1.0.9)
+  - UIColor_Hex_Swift (3.0.2)
 
 DEPENDENCIES:
   - JGProgressHUD
   - MGSwipeTableCell
   - pop (~> 1.0)
+  - UIColor_Hex_Swift (~> 3.0.2)
 
 SPEC CHECKSUMS:
   JGProgressHUD: 1617b0940cf80bb53e8f7d6f0fd69252ea45d6d4
   MGSwipeTableCell: 616700eb0ffd1c611ba909066cb7fd739790a0a7
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
+  UIColor_Hex_Swift: 95f718452092a3efc8a827dffd2c04d3237be02d
 
-PODFILE CHECKSUM: faed7770170f3508dbeec3b73330748c65f0ebb6
+PODFILE CHECKSUM: e2137c2eb5caa8c78b2de7a90123d68ea497f983
 
 COCOAPODS: 1.1.0.rc.2
