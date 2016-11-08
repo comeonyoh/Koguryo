@@ -143,10 +143,10 @@
 		E13F6AE71DD03C5500E1BA98 /* Koguryo */ = {
 			isa = PBXGroup;
 			children = (
-				E1FFADE41DD191CA000AA173 /* Manager */,
-				E1C4F9D71DD161BD0017F8DA /* Extensions */,
 				E13F6B0E1DD0440D00E1BA98 /* Views */,
 				E13F6B0D1DD0440D00E1BA98 /* Models */,
+				E1FFADE41DD191CA000AA173 /* Manager */,
+				E1C4F9D71DD161BD0017F8DA /* Extensions */,
 				E13F6B081DD03E5100E1BA98 /* Controllers */,
 				E13F6AE81DD03C5500E1BA98 /* AppDelegate.swift */,
 				E13F6AEC1DD03C5500E1BA98 /* Main.storyboard */,
