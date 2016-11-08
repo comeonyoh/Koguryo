@@ -10,12 +10,27 @@ import UIKit
 
 class WriteMemoViewController: UIViewController {
 
+    enum WriteType {
+        case newMemo
+        case modify
+    }
+    
+    static let identifier = "WriteMemoViewController"
+    
+    var writeType: WriteType = .newMemo
+    
+    var memoInfo: Memo?
+    
+    
     @IBOutlet weak var rightNavigationItem: UIBarButtonItem!
     
     @IBOutlet weak var inputTableView: UITableView!
     
+    
     let headerTitles = [NSLocalizedString("tag", comment: "tag"), NSLocalizedString("contents", comment: "")]
 
+
+    
     enum WriteMemoSection: Int {
         case placeholder
         case contents
@@ -25,12 +40,63 @@ class WriteMemoViewController: UIViewController {
         
         super.viewDidLoad()
         
-        _ = self.shouldAutorotate
-        _ = self.supportedInterfaceOrientations
+        self.registNotifications()
+        
+        self.setRightNavigationBarItemEnabled()
     }
+    
+    @IBAction func didRightBarButtonClicked(_ sender: Any) {
+    
+        _ = self.navigationController?.popViewController(animated: true)
+    }
+    
 
 }
 
+/**
+ * Extension about modify memo
+ */
+
+extension WriteMemoViewController {
+    
+    func setRightNavigationBarItemEnabled() {
+        
+        if self.writeType == .modify {
+            self.rightNavigationItem.isEnabled = true
+        }
+    }
+    
+}
+
+
+/**
+ * Extension about keyboard notification
+ */
+
+extension WriteMemoViewController {
+    
+    func registNotifications() {
+
+        NotificationCenter.default.addObserver(forName: Notification.Name(rawValue:PlaceholderTextView.NotificationTextViewDidChanged),
+                                               object: nil,
+                                               queue: OperationQueue.main) {
+                                                
+            if let info = $0.userInfo {
+                
+                let textView = info["info"] as! UITextView
+                
+                let text = textView.text!
+                
+                if text.characters.count > 0 {
+                    self.rightNavigationItem.isEnabled = true
+                }
+                else {
+                    self.rightNavigationItem.isEnabled = false
+                }
+            }
+        }
+    }
+}
 
 extension WriteMemoViewController: UITableViewDataSource {
     
@@ -45,6 +111,10 @@ extension WriteMemoViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: self.getCellReuseIdentifier(indexPath), for: indexPath)
+        
+        if self.writeType == .modify {
+
+        }
         
         return cell
     }
@@ -86,4 +156,12 @@ extension WriteMemoViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 10
     }
+}
+
+extension WriteMemoViewController: UIScrollViewDelegate {
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        self.view.endEditing(true)
+    }
+
 }

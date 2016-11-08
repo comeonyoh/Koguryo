@@ -141,7 +141,15 @@ extension MemoListViewController: UITableViewDataSource, MemoListTableViewCellDe
 extension MemoListViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        guard indexPath.section != 0 else {
+            return
+        }
+        
+//        self.moveToModifyViewController(indexPath)
+
     }
 
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -171,5 +179,17 @@ extension MemoListViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return 90.0
+    }
+    
+    func moveToModifyViewController(_ indexPath: IndexPath) {
+
+        let memo = self.memoListManager.getMemo(withIndexPath: indexPath)
+
+        let vc = StoryboardManager.getMainStoryboard().instantiateViewController(withIdentifier: WriteMemoViewController.identifier) as! WriteMemoViewController
+        
+        vc.memoInfo = memo
+        vc.writeType = .modify
+        
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
