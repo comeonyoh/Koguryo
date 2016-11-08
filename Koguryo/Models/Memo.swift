@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Memo: NSObject {
+class Memo: NSObject, NSCopying {
     
     var contents: String?
     
@@ -39,4 +39,11 @@ class Memo: NSObject {
         return false
     }
    
+    public func copy(with zone: NSZone? = nil) -> Any {
+        
+        let copiedMemo = Memo.init(memo: self.contents, withPlaceHolder: self.placeHolder)
+        
+        return copiedMemo
+    }
+
 }

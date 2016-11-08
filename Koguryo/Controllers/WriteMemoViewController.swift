@@ -93,6 +93,22 @@ extension WriteMemoViewController {
                 else {
                     self.rightNavigationItem.isEnabled = false
                 }
+                
+                if self.writeType == .modify {
+                    self.memoInfo?.contents = text
+                }
+            }
+        }
+        
+        NotificationCenter.default.addObserver(forName: Notification.Name(rawValue:PlaceholderTextField.NotificationTextFieldDidChanged), object: nil, queue: OperationQueue.main) {
+            
+            if let info = $0.userInfo {
+                
+                let value = info["info"] as! String
+                
+                if self.writeType == .modify {
+                    self.memoInfo?.placeHolder = value
+                }
             }
         }
     }
@@ -113,6 +129,8 @@ extension WriteMemoViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: self.getCellReuseIdentifier(indexPath), for: indexPath)
         
         if self.writeType == .modify {
+         
+            self.setModifyMemoData(indexPath, withCell: cell)
 
         }
         
@@ -134,7 +152,24 @@ extension WriteMemoViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return self.headerTitles[section]
     }
+    
+    func setModifyMemoData(_ indexPath: IndexPath, withCell cell: UITableViewCell) {
+        
+        if indexPath.section == WriteMemoSection.placeholder.rawValue {
+            
+            let textField = cell.viewWithTag(WriteMemoViewControllerElementsManager.kTextFieldElementTagId) as! UITextField
+            
+            textField.text = memoInfo?.placeHolder
+            
+        }
+        else if indexPath.section == WriteMemoSection.contents.rawValue {
+            
+            let textView = cell.viewWithTag(WriteMemoViewControllerElementsManager.kTextViewElementTagId) as! PlaceholderTextView
+            
+            textView.text = memoInfo?.contents
 
+        }
+    }
 }
 
 extension WriteMemoViewController: UITableViewDelegate {

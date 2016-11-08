@@ -24,6 +24,8 @@
 		E13F6B2D1DD053A000E1BA98 /* MemoListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E13F6B2B1DD053A000E1BA98 /* MemoListTableViewCell.xib */; };
 		E1C4F9D91DD1621B0017F8DA /* PlaceholderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C4F9D81DD1621B0017F8DA /* PlaceholderTextView.swift */; };
 		E1FFADE61DD191D4000AA173 /* StoryboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FFADE51DD191D4000AA173 /* StoryboardManager.swift */; };
+		E1FFADE81DD19B14000AA173 /* WriteMemoViewControllerElementsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FFADE71DD19B14000AA173 /* WriteMemoViewControllerElementsManager.swift */; };
+		E1FFADEA1DD19D62000AA173 /* PlaceholderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FFADE91DD19D62000AA173 /* PlaceholderTextField.swift */; };
 		F7218D066B930892B3DB4265 /* Pods_Koguryo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E419A0B0961458AD3CA031F8 /* Pods_Koguryo.framework */; };
 		F7F606F050F2A456664BDCF1 /* Pods_KoguryoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F01CFD58BB2EA45E1A8518DC /* Pods_KoguryoTests.framework */; };
 /* End PBXBuildFile section */
@@ -68,6 +70,8 @@
 		E13F6B2B1DD053A000E1BA98 /* MemoListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MemoListTableViewCell.xib; sourceTree = "<group>"; };
 		E1C4F9D81DD1621B0017F8DA /* PlaceholderTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceholderTextView.swift; sourceTree = "<group>"; };
 		E1FFADE51DD191D4000AA173 /* StoryboardManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardManager.swift; sourceTree = "<group>"; };
+		E1FFADE71DD19B14000AA173 /* WriteMemoViewControllerElementsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WriteMemoViewControllerElementsManager.swift; sourceTree = "<group>"; };
+		E1FFADE91DD19D62000AA173 /* PlaceholderTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceholderTextField.swift; sourceTree = "<group>"; };
 		E419A0B0961458AD3CA031F8 /* Pods_Koguryo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Koguryo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F01CFD58BB2EA45E1A8518DC /* Pods_KoguryoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KoguryoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -193,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				E1C4F9D81DD1621B0017F8DA /* PlaceholderTextView.swift */,
+				E1FFADE91DD19D62000AA173 /* PlaceholderTextField.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -201,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				E1FFADE51DD191D4000AA173 /* StoryboardManager.swift */,
+				E1FFADE71DD19B14000AA173 /* WriteMemoViewControllerElementsManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -414,6 +420,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E13F6AE91DD03C5500E1BA98 /* AppDelegate.swift in Sources */,
+				E1FFADE81DD19B14000AA173 /* WriteMemoViewControllerElementsManager.swift in Sources */,
 				E13F6B141DD04DF300E1BA98 /* MemoManager.swift in Sources */,
 				E13F6B0C1DD03E7600E1BA98 /* WriteMemoViewController.swift in Sources */,
 				E1C4F9D91DD1621B0017F8DA /* PlaceholderTextView.swift in Sources */,
@@ -421,6 +428,7 @@
 				E13F6B2C1DD053A000E1BA98 /* MemoListTableViewCell.swift in Sources */,
 				E13F6B0A1DD03E5F00E1BA98 /* MemoListViewController.swift in Sources */,
 				E13F6B281DD0537900E1BA98 /* CopyTextButtonTableViewCell.swift in Sources */,
+				E1FFADEA1DD19D62000AA173 /* PlaceholderTextField.swift in Sources */,
 				E13F6B101DD0457900E1BA98 /* MemoListSection.swift in Sources */,
 				E13F6B121DD0493100E1BA98 /* Memo.swift in Sources */,
 			);

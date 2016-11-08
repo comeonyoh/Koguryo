@@ -148,7 +148,7 @@ extension MemoListViewController: UITableViewDelegate {
             return
         }
         
-//        self.moveToModifyViewController(indexPath)
+        self.moveToModifyViewController(indexPath)
 
     }
 
@@ -187,7 +187,7 @@ extension MemoListViewController: UITableViewDelegate {
 
         let vc = StoryboardManager.getMainStoryboard().instantiateViewController(withIdentifier: WriteMemoViewController.identifier) as! WriteMemoViewController
         
-        vc.memoInfo = memo
+        vc.memoInfo = memo?.copy() as! Memo?
         vc.writeType = .modify
         
         self.navigationController?.pushViewController(vc, animated: true)

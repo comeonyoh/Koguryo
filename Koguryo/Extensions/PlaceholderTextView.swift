@@ -24,6 +24,14 @@ class PlaceholderTextView: UITextView {
     override func draw(_ rect: CGRect) {
         
         super.draw(rect)
+        
+        guard self.text.characters.count == 0 else {
+            
+            self.isEdited = true
+            
+            return
+        }
+        
         self.textColor = UIColor.init(red: 0.7803, green: 0.7803, blue: 0.8039, alpha: 1.0)
         self.text = NSLocalizedString("input_contents_placeholder", comment: "")
     }
@@ -53,9 +61,6 @@ extension PlaceholderTextView: UITextViewDelegate {
     }
     
     func textViewDidChange(_ textView: UITextView) {
-
-        print("textViewDidChange")
-        
         NotificationCenter.default.post(name: Notification.Name(rawValue: PlaceholderTextView.NotificationTextViewDidChanged), object: self, userInfo: ["info":textView])
     }
 }
