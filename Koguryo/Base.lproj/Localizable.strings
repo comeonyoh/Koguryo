@@ -22,3 +22,6 @@
 
 "tag" = "태그";
 "contents" = "내용";
+
+
+"input_contents_placeholder" = "저장할 내용을 입력해주십시오(필수사항)";
