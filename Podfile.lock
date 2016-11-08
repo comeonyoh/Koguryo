@@ -1,0 +1,18 @@
+PODS:
+  - JGProgressHUD (1.4)
+  - MGSwipeTableCell (1.5.6)
+  - pop (1.0.9)
+
+DEPENDENCIES:
+  - JGProgressHUD
+  - MGSwipeTableCell
+  - pop (~> 1.0)
+
+SPEC CHECKSUMS:
+  JGProgressHUD: 1617b0940cf80bb53e8f7d6f0fd69252ea45d6d4
+  MGSwipeTableCell: 616700eb0ffd1c611ba909066cb7fd739790a0a7
+  pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
+
+PODFILE CHECKSUM: faed7770170f3508dbeec3b73330748c65f0ebb6
+
+COCOAPODS: 1.1.0.rc.2
