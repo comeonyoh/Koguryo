@@ -57,7 +57,7 @@
         <!--추가하기-->
         <scene sceneID="7Jq-aQ-xia">
             <objects>
-                <viewController id="YJa-8Y-7bi" customClass="WriteMemoViewController" customModule="Koguryo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WriteMemoViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="YJa-8Y-7bi" customClass="WriteMemoViewController" customModule="Koguryo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ltf-BM-m0u"/>
                         <viewControllerLayoutGuide type="bottom" id="J9v-fS-pok"/>
@@ -70,46 +70,46 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="placeHolderTableViewCellId" id="dMh-qU-W60">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="placeHolderTableViewCellId" id="dMh-qU-W60">
                                         <rect key="frame" x="0.0" y="56" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dMh-qU-W60" id="Ffa-rC-Ho2">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="태그를 입력해주십시오(옵션사항)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BFh-aD-7YB">
-                                                    <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
+                                                <textField opaque="NO" clipsSubviews="YES" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="태그를 입력해주십시오(옵션사항)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BFh-aD-7YB">
+                                                    <rect key="frame" x="13" y="0.0" width="349" height="43.5"/>
                                                     <nil key="textColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="BFh-aD-7YB" firstAttribute="leading" secondItem="Ffa-rC-Ho2" secondAttribute="leading" constant="15" id="Pkq-E4-MHI"/>
-                                                <constraint firstAttribute="trailing" secondItem="BFh-aD-7YB" secondAttribute="trailing" constant="15" id="SGG-FX-fUd"/>
+                                                <constraint firstItem="BFh-aD-7YB" firstAttribute="leading" secondItem="Ffa-rC-Ho2" secondAttribute="leading" constant="13" id="Pkq-E4-MHI"/>
+                                                <constraint firstAttribute="trailing" secondItem="BFh-aD-7YB" secondAttribute="trailing" constant="13" id="SGG-FX-fUd"/>
                                                 <constraint firstItem="BFh-aD-7YB" firstAttribute="top" secondItem="Ffa-rC-Ho2" secondAttribute="top" id="Zx1-fC-Zku"/>
                                                 <constraint firstAttribute="bottom" secondItem="BFh-aD-7YB" secondAttribute="bottom" id="zss-tc-ro4"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="contentsTableViewCellId" rowHeight="124" id="prf-ak-2BE">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="contentsTableViewCellId" rowHeight="124" id="prf-ak-2BE">
                                         <rect key="frame" x="0.0" y="100" width="375" height="124"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="prf-ak-2BE" id="pzf-Tt-3WB">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="123"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="66R-Gs-IsQ">
-                                                    <rect key="frame" x="15" y="5" width="345" height="113.5"/>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="11" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="66R-Gs-IsQ" customClass="PlaceholderTextView" customModule="Koguryo" customModuleProvider="target">
+                                                    <rect key="frame" x="13" y="5" width="349" height="113.5"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="66R-Gs-IsQ" secondAttribute="trailing" constant="15" id="J4B-gP-Kox"/>
+                                                <constraint firstAttribute="trailing" secondItem="66R-Gs-IsQ" secondAttribute="trailing" constant="13" id="J4B-gP-Kox"/>
                                                 <constraint firstAttribute="bottom" secondItem="66R-Gs-IsQ" secondAttribute="bottom" constant="5" id="a3W-TT-gsc"/>
-                                                <constraint firstItem="66R-Gs-IsQ" firstAttribute="leading" secondItem="pzf-Tt-3WB" secondAttribute="leading" constant="15" id="fq5-ar-9fE"/>
+                                                <constraint firstItem="66R-Gs-IsQ" firstAttribute="leading" secondItem="pzf-Tt-3WB" secondAttribute="leading" constant="13" id="fq5-ar-9fE"/>
                                                 <constraint firstItem="66R-Gs-IsQ" firstAttribute="top" secondItem="pzf-Tt-3WB" secondAttribute="top" constant="5" id="kKC-La-gmH"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -130,7 +130,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="추가하기" id="qct-6i-nCF">
-                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="완료" id="orh-1z-BG1"/>
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="완료" id="orh-1z-BG1">
+                            <connections>
+                                <action selector="didRightBarButtonClicked:" destination="YJa-8Y-7bi" id="mgG-Ox-rEO"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="inputTableView" destination="oSR-q4-a19" id="7sk-3v-l4R"/>
