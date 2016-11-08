@@ -1,10 +1,10 @@
-/* 
-  Localizable.strings
-  Koguryo
-
-  Created by KimJungSu on 11/7/16.
-  Copyright © 2016 ODOV. All rights reserved.
-*/
+/*
+ Localizable.strings
+ Koguryo
+ 
+ Created by KimJungSu on 11/7/16.
+ Copyright © 2016 ODOV. All rights reserved.
+ */
 
 /**
  * Section Headers
@@ -19,3 +19,6 @@
 
 "delete" = "삭제";
 "modify" = "수정";
+
+"tag" = "태그";
+"contents" = "내용";

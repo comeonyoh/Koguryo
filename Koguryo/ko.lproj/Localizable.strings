@@ -19,3 +19,6 @@
 
 "delete" = "삭제";
 "modify" = "수정";
+
+"tag" = "태그";
+"contents" = "내용";
