@@ -25,6 +25,15 @@
 		E17C20E41DD1A40B003AD7F2 /* ProgressHudManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17C20E31DD1A40B003AD7F2 /* ProgressHudManager.swift */; };
 		E17C20E81DD1A990003AD7F2 /* Animationable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17C20E71DD1A990003AD7F2 /* Animationable.swift */; };
 		E17C20EA1DD1AA6E003AD7F2 /* StoryboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17C20E91DD1AA6E003AD7F2 /* StoryboardManager.swift */; };
+		E1935B3E1DD30CED00021E35 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1935B3D1DD30CED00021E35 /* NotificationCenter.framework */; };
+		E1935B411DD30CED00021E35 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1935B401DD30CED00021E35 /* TodayViewController.swift */; };
+		E1935B441DD30CED00021E35 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1935B421DD30CED00021E35 /* MainInterface.storyboard */; };
+		E1935B481DD30CED00021E35 /* ClipboardExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E1935B3C1DD30CED00021E35 /* ClipboardExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E1935B501DD30E0F00021E35 /* AddMemoButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1935B4E1DD30E0F00021E35 /* AddMemoButtonTableViewCell.swift */; };
+		E1935B511DD30E0F00021E35 /* AddMemoButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1935B4F1DD30E0F00021E35 /* AddMemoButtonTableViewCell.xib */; };
+		E1935B541DD30E1A00021E35 /* MemoListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1935B521DD30E1A00021E35 /* MemoListTableViewCell.swift */; };
+		E1935B551DD30E1A00021E35 /* MemoListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1935B531DD30E1A00021E35 /* MemoListTableViewCell.xib */; };
+		E1935B571DD3151F00021E35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1935B561DD3151F00021E35 /* Assets.xcassets */; };
 		E1C4F9D91DD1621B0017F8DA /* PlaceholderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C4F9D81DD1621B0017F8DA /* PlaceholderTextView.swift */; };
 		E1FFADE81DD19B14000AA173 /* WriteMemoViewControllerElementsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FFADE71DD19B14000AA173 /* WriteMemoViewControllerElementsManager.swift */; };
 		E1FFADEA1DD19D62000AA173 /* PlaceholderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FFADE91DD19D62000AA173 /* PlaceholderTextField.swift */; };
@@ -40,13 +49,35 @@
 			remoteGlobalIDString = E13F6AE41DD03C5500E1BA98;
 			remoteInfo = Koguryo;
 		};
+		E1935B461DD30CED00021E35 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E13F6ADD1DD03C5500E1BA98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E1935B3B1DD30CED00021E35;
+			remoteInfo = ClipboardExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E1935B4C1DD30CED00021E35 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				E1935B481DD30CED00021E35 /* ClipboardExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		658B6E14CA1E482035C768FB /* Pods-Koguryo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Koguryo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Koguryo/Pods-Koguryo.debug.xcconfig"; sourceTree = "<group>"; };
 		711A1B15B8FF31AF6EAA448D /* Pods-KoguryoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoguryoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KoguryoTests/Pods-KoguryoTests.release.xcconfig"; sourceTree = "<group>"; };
 		B5B6E82D578A33C0C8236FD7 /* Pods-KoguryoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoguryoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KoguryoTests/Pods-KoguryoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DDC01097025F47DA7B666491 /* Pods-Koguryo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Koguryo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Koguryo/Pods-Koguryo.release.xcconfig"; sourceTree = "<group>"; };
+		E13A44761DD3336C005A0CD9 /* ClipboardExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ClipboardExtension.entitlements; sourceTree = "<group>"; };
 		E13F6AE51DD03C5500E1BA98 /* Koguryo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Koguryo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E13F6AE81DD03C5500E1BA98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E13F6AED1DD03C5500E1BA98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -70,9 +101,22 @@
 		E13F6B271DD0537900E1BA98 /* CopyTextButtonTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CopyTextButtonTableViewCell.xib; sourceTree = "<group>"; };
 		E13F6B2A1DD053A000E1BA98 /* MemoListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoListTableViewCell.swift; sourceTree = "<group>"; };
 		E13F6B2B1DD053A000E1BA98 /* MemoListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MemoListTableViewCell.xib; sourceTree = "<group>"; };
+		E14B14311DD2AC2800BFDC50 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		E14B14321DD2AC2800BFDC50 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		E14B14331DD2AC2800BFDC50 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E17C20E31DD1A40B003AD7F2 /* ProgressHudManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressHudManager.swift; sourceTree = "<group>"; };
 		E17C20E71DD1A990003AD7F2 /* Animationable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animationable.swift; sourceTree = "<group>"; };
 		E17C20E91DD1AA6E003AD7F2 /* StoryboardManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardManager.swift; sourceTree = "<group>"; };
+		E1935B3C1DD30CED00021E35 /* ClipboardExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ClipboardExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1935B3D1DD30CED00021E35 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		E1935B401DD30CED00021E35 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		E1935B431DD30CED00021E35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		E1935B451DD30CED00021E35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1935B4E1DD30E0F00021E35 /* AddMemoButtonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMemoButtonTableViewCell.swift; sourceTree = "<group>"; };
+		E1935B4F1DD30E0F00021E35 /* AddMemoButtonTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddMemoButtonTableViewCell.xib; sourceTree = "<group>"; };
+		E1935B521DD30E1A00021E35 /* MemoListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoListTableViewCell.swift; sourceTree = "<group>"; };
+		E1935B531DD30E1A00021E35 /* MemoListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MemoListTableViewCell.xib; sourceTree = "<group>"; };
+		E1935B561DD3151F00021E35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E1C4F9D81DD1621B0017F8DA /* PlaceholderTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceholderTextView.swift; sourceTree = "<group>"; };
 		E1FFADE71DD19B14000AA173 /* WriteMemoViewControllerElementsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WriteMemoViewControllerElementsManager.swift; sourceTree = "<group>"; };
 		E1FFADE91DD19D62000AA173 /* PlaceholderTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceholderTextField.swift; sourceTree = "<group>"; };
@@ -97,6 +141,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E1935B391DD30CED00021E35 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1935B3E1DD30CED00021E35 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -105,6 +157,7 @@
 			children = (
 				E419A0B0961458AD3CA031F8 /* Pods_Koguryo.framework */,
 				F01CFD58BB2EA45E1A8518DC /* Pods_KoguryoTests.framework */,
+				E1935B3D1DD30CED00021E35 /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -125,6 +178,7 @@
 			children = (
 				E13F6AE71DD03C5500E1BA98 /* Koguryo */,
 				E13F6AFC1DD03C5500E1BA98 /* KoguryoTests */,
+				E1935B3F1DD30CED00021E35 /* ClipboardExtension */,
 				E13F6AE61DD03C5500E1BA98 /* Products */,
 				CDF841399DF3B8849D853199 /* Pods */,
 				C91C4C427FA1524B640FD8EB /* Frameworks */,
@@ -136,6 +190,7 @@
 			children = (
 				E13F6AE51DD03C5500E1BA98 /* Koguryo.app */,
 				E13F6AF91DD03C5500E1BA98 /* KoguryoTests.xctest */,
+				E1935B3C1DD30CED00021E35 /* ClipboardExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -197,6 +252,30 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		E1935B3F1DD30CED00021E35 /* ClipboardExtension */ = {
+			isa = PBXGroup;
+			children = (
+				E13A44761DD3336C005A0CD9 /* ClipboardExtension.entitlements */,
+				E1935B4D1DD30DF900021E35 /* Views */,
+				E1935B401DD30CED00021E35 /* TodayViewController.swift */,
+				E1935B421DD30CED00021E35 /* MainInterface.storyboard */,
+				E1935B451DD30CED00021E35 /* Info.plist */,
+				E1935B561DD3151F00021E35 /* Assets.xcassets */,
+			);
+			path = ClipboardExtension;
+			sourceTree = "<group>";
+		};
+		E1935B4D1DD30DF900021E35 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E1935B4E1DD30E0F00021E35 /* AddMemoButtonTableViewCell.swift */,
+				E1935B4F1DD30E0F00021E35 /* AddMemoButtonTableViewCell.xib */,
+				E1935B521DD30E1A00021E35 /* MemoListTableViewCell.swift */,
+				E1935B531DD30E1A00021E35 /* MemoListTableViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		E1C4F9D71DD161BD0017F8DA /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -230,10 +309,12 @@
 				E13F6AE31DD03C5500E1BA98 /* Resources */,
 				CCC6E111C71BFA698E374F10 /* [CP] Embed Pods Frameworks */,
 				9CF5AB1F82A5246B73C41E0E /* [CP] Copy Pods Resources */,
+				E1935B4C1DD30CED00021E35 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E1935B471DD30CED00021E35 /* PBXTargetDependency */,
 			);
 			name = Koguryo;
 			productName = Koguryo;
@@ -261,6 +342,23 @@
 			productReference = E13F6AF91DD03C5500E1BA98 /* KoguryoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		E1935B3B1DD30CED00021E35 /* ClipboardExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E1935B4B1DD30CED00021E35 /* Build configuration list for PBXNativeTarget "ClipboardExtension" */;
+			buildPhases = (
+				E1935B381DD30CED00021E35 /* Sources */,
+				E1935B391DD30CED00021E35 /* Frameworks */,
+				E1935B3A1DD30CED00021E35 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ClipboardExtension;
+			productName = ClipboardExtension;
+			productReference = E1935B3C1DD30CED00021E35 /* ClipboardExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -282,6 +380,16 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = E13F6AE41DD03C5500E1BA98;
 					};
+					E1935B3B1DD30CED00021E35 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = QWFDFURH3H;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
 				};
 			};
 			buildConfigurationList = E13F6AE01DD03C5500E1BA98 /* Build configuration list for PBXProject "Koguryo" */;
@@ -292,6 +400,7 @@
 				en,
 				Base,
 				ko,
+				ja,
 			);
 			mainGroup = E13F6ADC1DD03C5500E1BA98;
 			productRefGroup = E13F6AE61DD03C5500E1BA98 /* Products */;
@@ -300,6 +409,7 @@
 			targets = (
 				E13F6AE41DD03C5500E1BA98 /* Koguryo */,
 				E13F6AF81DD03C5500E1BA98 /* KoguryoTests */,
+				E1935B3B1DD30CED00021E35 /* ClipboardExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -322,6 +432,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1935B3A1DD30CED00021E35 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1935B441DD30CED00021E35 /* MainInterface.storyboard in Resources */,
+				E1935B551DD30E1A00021E35 /* MemoListTableViewCell.xib in Resources */,
+				E1935B571DD3151F00021E35 /* Assets.xcassets in Resources */,
+				E1935B511DD30E0F00021E35 /* AddMemoButtonTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,6 +571,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E1935B381DD30CED00021E35 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1935B501DD30E0F00021E35 /* AddMemoButtonTableViewCell.swift in Sources */,
+				E1935B541DD30E1A00021E35 /* MemoListTableViewCell.swift in Sources */,
+				E1935B411DD30CED00021E35 /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -457,6 +588,11 @@
 			isa = PBXTargetDependency;
 			target = E13F6AE41DD03C5500E1BA98 /* Koguryo */;
 			targetProxy = E13F6AFA1DD03C5500E1BA98 /* PBXContainerItemProxy */;
+		};
+		E1935B471DD30CED00021E35 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E1935B3B1DD30CED00021E35 /* ClipboardExtension */;
+			targetProxy = E1935B461DD30CED00021E35 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -466,6 +602,7 @@
 			children = (
 				E13F6AED1DD03C5500E1BA98 /* Base */,
 				E13F6B1D1DD0515800E1BA98 /* ko */,
+				E14B14311DD2AC2800BFDC50 /* ja */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -475,6 +612,7 @@
 			children = (
 				E13F6AF21DD03C5500E1BA98 /* Base */,
 				E13F6B1E1DD0515800E1BA98 /* ko */,
+				E14B14321DD2AC2800BFDC50 /* ja */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -485,8 +623,17 @@
 				E13F6B221DD0519800E1BA98 /* Base */,
 				E13F6B241DD0519E00E1BA98 /* en */,
 				E13F6B251DD0519F00E1BA98 /* ko */,
+				E14B14331DD2AC2800BFDC50 /* ja */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		E1935B421DD30CED00021E35 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E1935B431DD30CED00021E35 /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -591,6 +738,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 658B6E14CA1E482035C768FB /* Pods-Koguryo.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = QWFDFURH3H;
 				INFOPLIST_FILE = Koguryo/Info.plist;
@@ -605,6 +753,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DDC01097025F47DA7B666491 /* Pods-Koguryo.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = QWFDFURH3H;
 				INFOPLIST_FILE = Koguryo/Info.plist;
@@ -647,6 +796,34 @@
 			};
 			name = Release;
 		};
+		E1935B491DD30CED00021E35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ClipboardExtension/ClipboardExtension.entitlements;
+				DEVELOPMENT_TEAM = QWFDFURH3H;
+				INFOPLIST_FILE = ClipboardExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiger.odov.Koguryo.ClipboardExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		E1935B4A1DD30CED00021E35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ClipboardExtension/ClipboardExtension.entitlements;
+				DEVELOPMENT_TEAM = QWFDFURH3H;
+				INFOPLIST_FILE = ClipboardExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiger.odov.Koguryo.ClipboardExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -673,6 +850,15 @@
 			buildConfigurations = (
 				E13F6B061DD03C5500E1BA98 /* Debug */,
 				E13F6B071DD03C5500E1BA98 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E1935B4B1DD30CED00021E35 /* Build configuration list for PBXNativeTarget "ClipboardExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1935B491DD30CED00021E35 /* Debug */,
+				E1935B4A1DD30CED00021E35 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
