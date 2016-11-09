@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Today View Controller-->
+        <scene sceneID="cwh-vc-ff4">
+            <objects>
+                <viewController id="M4Y-Lb-cyx" customClass="TodayViewController" customModule="ClipboardExtension" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ft6-oW-KC0"/>
+                        <viewControllerLayoutGuide type="bottom" id="FKl-LY-JtV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="245"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3oh-V4-Svc">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="210"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="210" id="0bF-NW-8N6"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="M4Y-Lb-cyx" id="ogW-of-sxw"/>
+                                    <outlet property="delegate" destination="M4Y-Lb-cyx" id="mSe-r6-VZ7"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="메로를 클릭해주십시오." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cMD-dG-stq">
+                                <rect key="frame" x="96" y="220" width="129" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_setting" translatesAutoresizingMaskIntoConstraints="NO" id="vgl-pT-RBd">
+                                <rect key="frame" x="10" y="216" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="Hii-Nb-QXg"/>
+                                    <constraint firstAttribute="width" constant="25" id="PPR-fJ-Lq9"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="cMD-dG-stq" firstAttribute="top" secondItem="3oh-V4-Svc" secondAttribute="bottom" constant="10" id="AQ1-1e-iWO"/>
+                            <constraint firstItem="cMD-dG-stq" firstAttribute="centerX" secondItem="3oh-V4-Svc" secondAttribute="centerX" id="JOd-fp-gbc"/>
+                            <constraint firstItem="vgl-pT-RBd" firstAttribute="centerY" secondItem="cMD-dG-stq" secondAttribute="centerY" id="LAA-bk-QHS"/>
+                            <constraint firstAttribute="trailing" secondItem="3oh-V4-Svc" secondAttribute="trailing" id="XM2-ub-MAw"/>
+                            <constraint firstItem="3oh-V4-Svc" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" id="YFp-CK-Jyf"/>
+                            <constraint firstItem="vgl-pT-RBd" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" constant="10" id="h7A-bh-YOX"/>
+                            <constraint firstItem="3oh-V4-Svc" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" id="qdS-Wo-aUo"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="245"/>
+                    <connections>
+                        <outlet property="clipboardTableView" destination="3oh-V4-Svc" id="Bp3-Hi-CfX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-734.39999999999998" y="112.44377811094454"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icon_setting" width="25" height="25"/>
+    </resources>
+</document>
