@@ -38,15 +38,15 @@ extension MemoListViewController {
     
     func makeSampleData() {
 
-        let memo_1 = Memo.init(memo: "Test Memo A")
-        let memo_2 = Memo.init(memo: "Test Memo B", withPlaceHolder: "PlaceHolder")
-        let memo_3 = Memo.init(memo: "Test Memo C")
-        let memo_4 = Memo.init(memo: "Test Memo D", withPlaceHolder: "PlaceHolder")
-        let memo_5 = Memo.init(memo: "Test Memo E", withPlaceHolder: "PlaceHolder")
+        let memo_1 = Memo.init(memo: "나는 왜 사는 것인가?")
+        let memo_2 = Memo.init(memo: "010-3509-8592", withPlaceHolder: "내 전화번호")
+        let memo_3 = Memo.init(memo: "www.tigrison.com")
+        let memo_4 = Memo.init(memo: "comeonyoh89@gmail.com", withPlaceHolder: "이메일 주소")
+        let memo_5 = Memo.init(memo: "서울시 관악구 낙성대동", withPlaceHolder: "집 주소")
         let memo_6 = Memo.init(memo: "Test Memo F")
-        let memo_7 = Memo.init(memo: "Test Memo G", withPlaceHolder: "PlaceHolder")
+        let memo_7 = Memo.init(memo: "www.tigrison.com", withPlaceHolder: "회사 홈페이지")
         let memo_8 = Memo.init(memo: "Test Memo H")
-        let memo_9 = Memo.init(memo: "Test Memo I", withPlaceHolder: "PlaceHolder")
+        let memo_9 = Memo.init(memo: "010-3509-8592", withPlaceHolder: "내 전화번호")
         let memo_10 = Memo.init(memo: "Test Memo J")
 
         self.memoListManager.allOfMemos?.append(memo_1)
