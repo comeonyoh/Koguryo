@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A1A840E71DD4D766002EE4C8 /* CopyPasteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A840E61DD4D766002EE4C8 /* CopyPasteManager.swift */; };
 		E13F6AE91DD03C5500E1BA98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13F6AE81DD03C5500E1BA98 /* AppDelegate.swift */; };
 		E13F6AEE1DD03C5500E1BA98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E13F6AEC1DD03C5500E1BA98 /* Main.storyboard */; };
 		E13F6AF01DD03C5500E1BA98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E13F6AEF1DD03C5500E1BA98 /* Assets.xcassets */; };
@@ -75,6 +76,7 @@
 /* Begin PBXFileReference section */
 		658B6E14CA1E482035C768FB /* Pods-Koguryo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Koguryo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Koguryo/Pods-Koguryo.debug.xcconfig"; sourceTree = "<group>"; };
 		711A1B15B8FF31AF6EAA448D /* Pods-KoguryoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoguryoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KoguryoTests/Pods-KoguryoTests.release.xcconfig"; sourceTree = "<group>"; };
+		A1A840E61DD4D766002EE4C8 /* CopyPasteManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CopyPasteManager.swift; sourceTree = "<group>"; };
 		B5B6E82D578A33C0C8236FD7 /* Pods-KoguryoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoguryoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KoguryoTests/Pods-KoguryoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DDC01097025F47DA7B666491 /* Pods-Koguryo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Koguryo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Koguryo/Pods-Koguryo.release.xcconfig"; sourceTree = "<group>"; };
 		E13A44761DD3336C005A0CD9 /* ClipboardExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ClipboardExtension.entitlements; sourceTree = "<group>"; };
@@ -152,6 +154,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A1A840E51DD4D751002EE4C8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A1A840E61DD4D766002EE4C8 /* CopyPasteManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		C91C4C427FA1524B640FD8EB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -256,6 +266,7 @@
 			isa = PBXGroup;
 			children = (
 				E13A44761DD3336C005A0CD9 /* ClipboardExtension.entitlements */,
+				A1A840E51DD4D751002EE4C8 /* Model */,
 				E1935B4D1DD30DF900021E35 /* Views */,
 				E1935B401DD30CED00021E35 /* TodayViewController.swift */,
 				E1935B421DD30CED00021E35 /* MainInterface.storyboard */,
@@ -575,6 +586,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1A840E71DD4D766002EE4C8 /* CopyPasteManager.swift in Sources */,
 				E1935B501DD30E0F00021E35 /* AddMemoButtonTableViewCell.swift in Sources */,
 				E1935B541DD30E1A00021E35 /* MemoListTableViewCell.swift in Sources */,
 				E1935B411DD30CED00021E35 /* TodayViewController.swift in Sources */,
