@@ -13,6 +13,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     
     let addClipboardRowIndex = 0
     
+    @IBOutlet weak var statusLabel: UILabel!
     
     @IBOutlet weak var clipboardTableView: UITableView!
 
@@ -92,6 +93,12 @@ extension TodayViewController: UITableViewDataSource {
 }
 
 extension TodayViewController: UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    
+        CopyPasteManager.copyFromPasteboard("위젯 테스트")
+        
+    }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         guard indexPath.row != 0 else {

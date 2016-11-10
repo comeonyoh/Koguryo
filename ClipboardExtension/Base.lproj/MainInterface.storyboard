@@ -64,6 +64,7 @@
                     <size key="freeformSize" width="320" height="245"/>
                     <connections>
                         <outlet property="clipboardTableView" destination="3oh-V4-Svc" id="Bp3-Hi-CfX"/>
+                        <outlet property="statusLabel" destination="cMD-dG-stq" id="ZoB-6L-ENo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
