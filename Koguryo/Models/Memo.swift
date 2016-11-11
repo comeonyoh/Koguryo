@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Memo: NSObject, NSCopying {
+class Memo: NSObject, NSCopying, Realmable {
     
     var contents: String?
     
@@ -44,6 +44,11 @@ class Memo: NSObject, NSCopying {
         let copiedMemo = Memo.init(memo: self.contents, withPlaceHolder: self.placeHolder)
         
         return copiedMemo
+    }
+    
+    
+    func realmDictionary() -> Dictionary <String, AnyObject> {
+        return ["contents": self.contents as AnyObject, "placeHolder": self.placeHolder as AnyObject, "createDate": self.createDate as AnyObject]
     }
 
 }

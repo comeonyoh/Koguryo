@@ -67,6 +67,9 @@ class KoguryoTests: XCTestCase {
     
 }
 
+/**
+ * Extension about pasteboard
+ */
 
 extension KoguryoTests {
     
@@ -87,13 +90,6 @@ extension KoguryoTests {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
+/**
+ * Extension about Realm
+ */

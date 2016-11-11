@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		A1A840E71DD4D766002EE4C8 /* CopyPasteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A840E61DD4D766002EE4C8 /* CopyPasteManager.swift */; };
+		E120F5141DD56012007E8E4F /* RealmClipboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E120F5131DD56012007E8E4F /* RealmClipboard.swift */; };
+		E120F51A1DD5867F007E8E4F /* config.plist in Resources */ = {isa = PBXBuildFile; fileRef = E120F5191DD5867F007E8E4F /* config.plist */; };
 		E13F6AE91DD03C5500E1BA98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13F6AE81DD03C5500E1BA98 /* AppDelegate.swift */; };
 		E13F6AEE1DD03C5500E1BA98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E13F6AEC1DD03C5500E1BA98 /* Main.storyboard */; };
 		E13F6AF01DD03C5500E1BA98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E13F6AEF1DD03C5500E1BA98 /* Assets.xcassets */; };
@@ -36,6 +38,9 @@
 		E1935B551DD30E1A00021E35 /* MemoListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1935B531DD30E1A00021E35 /* MemoListTableViewCell.xib */; };
 		E1935B571DD3151F00021E35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1935B561DD3151F00021E35 /* Assets.xcassets */; };
 		E1C4F9D91DD1621B0017F8DA /* PlaceholderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C4F9D81DD1621B0017F8DA /* PlaceholderTextView.swift */; };
+		E1F594471DD555AB0052C44D /* MemoRealmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F594461DD555AB0052C44D /* MemoRealmTests.swift */; };
+		E1F5944A1DD557F20052C44D /* RealmMemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F594491DD557F20052C44D /* RealmMemo.swift */; };
+		E1F5944C1DD559BD0052C44D /* Realmable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F5944B1DD559BD0052C44D /* Realmable.swift */; };
 		E1FFADE81DD19B14000AA173 /* WriteMemoViewControllerElementsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FFADE71DD19B14000AA173 /* WriteMemoViewControllerElementsManager.swift */; };
 		E1FFADEA1DD19D62000AA173 /* PlaceholderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FFADE91DD19D62000AA173 /* PlaceholderTextField.swift */; };
 		F7218D066B930892B3DB4265 /* Pods_Koguryo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E419A0B0961458AD3CA031F8 /* Pods_Koguryo.framework */; };
@@ -79,6 +84,8 @@
 		A1A840E61DD4D766002EE4C8 /* CopyPasteManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CopyPasteManager.swift; sourceTree = "<group>"; };
 		B5B6E82D578A33C0C8236FD7 /* Pods-KoguryoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoguryoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KoguryoTests/Pods-KoguryoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DDC01097025F47DA7B666491 /* Pods-Koguryo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Koguryo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Koguryo/Pods-Koguryo.release.xcconfig"; sourceTree = "<group>"; };
+		E120F5131DD56012007E8E4F /* RealmClipboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmClipboard.swift; sourceTree = "<group>"; };
+		E120F5191DD5867F007E8E4F /* config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config.plist; sourceTree = "<group>"; };
 		E13A44761DD3336C005A0CD9 /* ClipboardExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ClipboardExtension.entitlements; sourceTree = "<group>"; };
 		E13F6AE51DD03C5500E1BA98 /* Koguryo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Koguryo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E13F6AE81DD03C5500E1BA98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -120,6 +127,9 @@
 		E1935B531DD30E1A00021E35 /* MemoListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MemoListTableViewCell.xib; sourceTree = "<group>"; };
 		E1935B561DD3151F00021E35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E1C4F9D81DD1621B0017F8DA /* PlaceholderTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceholderTextView.swift; sourceTree = "<group>"; };
+		E1F594461DD555AB0052C44D /* MemoRealmTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoRealmTests.swift; sourceTree = "<group>"; };
+		E1F594491DD557F20052C44D /* RealmMemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmMemo.swift; sourceTree = "<group>"; };
+		E1F5944B1DD559BD0052C44D /* Realmable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Realmable.swift; sourceTree = "<group>"; };
 		E1FFADE71DD19B14000AA173 /* WriteMemoViewControllerElementsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WriteMemoViewControllerElementsManager.swift; sourceTree = "<group>"; };
 		E1FFADE91DD19D62000AA173 /* PlaceholderTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceholderTextField.swift; sourceTree = "<group>"; };
 		E419A0B0961458AD3CA031F8 /* Pods_Koguryo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Koguryo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -213,11 +223,13 @@
 				E1FFADE41DD191CA000AA173 /* Manager */,
 				E1C4F9D71DD161BD0017F8DA /* Extensions */,
 				E13F6B081DD03E5100E1BA98 /* Controllers */,
+				E1F594481DD557D50052C44D /* RealmService */,
 				E13F6AE81DD03C5500E1BA98 /* AppDelegate.swift */,
 				E13F6AEC1DD03C5500E1BA98 /* Main.storyboard */,
 				E13F6AEF1DD03C5500E1BA98 /* Assets.xcassets */,
 				E13F6AF11DD03C5500E1BA98 /* LaunchScreen.storyboard */,
 				E13F6AF41DD03C5500E1BA98 /* Info.plist */,
+				E120F5191DD5867F007E8E4F /* config.plist */,
 				E13F6B231DD0519800E1BA98 /* Localizable.strings */,
 			);
 			path = Koguryo;
@@ -226,8 +238,9 @@
 		E13F6AFC1DD03C5500E1BA98 /* KoguryoTests */ = {
 			isa = PBXGroup;
 			children = (
-				E13F6AFD1DD03C5500E1BA98 /* KoguryoTests.swift */,
 				E13F6AFF1DD03C5500E1BA98 /* Info.plist */,
+				E13F6AFD1DD03C5500E1BA98 /* KoguryoTests.swift */,
+				E1F594461DD555AB0052C44D /* MemoRealmTests.swift */,
 			);
 			path = KoguryoTests;
 			sourceTree = "<group>";
@@ -295,6 +308,16 @@
 				E1FFADE91DD19D62000AA173 /* PlaceholderTextField.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E1F594481DD557D50052C44D /* RealmService */ = {
+			isa = PBXGroup;
+			children = (
+				E1F5944B1DD559BD0052C44D /* Realmable.swift */,
+				E1F594491DD557F20052C44D /* RealmMemo.swift */,
+				E120F5131DD56012007E8E4F /* RealmClipboard.swift */,
+			);
+			path = RealmService;
 			sourceTree = "<group>";
 		};
 		E1FFADE41DD191CA000AA173 /* Manager */ = {
@@ -430,6 +453,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E120F51A1DD5867F007E8E4F /* config.plist in Resources */,
 				E13F6AF31DD03C5500E1BA98 /* LaunchScreen.storyboard in Resources */,
 				E13F6B2D1DD053A000E1BA98 /* MemoListTableViewCell.xib in Resources */,
 				E13F6B211DD0519800E1BA98 /* Localizable.strings in Resources */,
@@ -561,6 +585,8 @@
 				E1FFADE81DD19B14000AA173 /* WriteMemoViewControllerElementsManager.swift in Sources */,
 				E13F6B141DD04DF300E1BA98 /* MemoManager.swift in Sources */,
 				E13F6B0C1DD03E7600E1BA98 /* WriteMemoViewController.swift in Sources */,
+				E1F5944A1DD557F20052C44D /* RealmMemo.swift in Sources */,
+				E1F5944C1DD559BD0052C44D /* Realmable.swift in Sources */,
 				E1C4F9D91DD1621B0017F8DA /* PlaceholderTextView.swift in Sources */,
 				E13F6B2C1DD053A000E1BA98 /* MemoListTableViewCell.swift in Sources */,
 				E13F6B0A1DD03E5F00E1BA98 /* MemoListViewController.swift in Sources */,
@@ -571,6 +597,7 @@
 				E13F6B101DD0457900E1BA98 /* MemoListSection.swift in Sources */,
 				E17C20E41DD1A40B003AD7F2 /* ProgressHudManager.swift in Sources */,
 				E13F6B121DD0493100E1BA98 /* Memo.swift in Sources */,
+				E120F5141DD56012007E8E4F /* RealmClipboard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -579,6 +606,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E13F6AFE1DD03C5500E1BA98 /* KoguryoTests.swift in Sources */,
+				E1F594471DD555AB0052C44D /* MemoRealmTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,10 +10,13 @@ target 'Koguryo' do
   pod 'MGSwipeTableCell'
   pod 'JGProgressHUD'
   pod 'UIColor_Hex_Swift', '~> 3.0.2'
+  pod 'RealmSwift'
 
   target 'KoguryoTests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'RealmSwift'
+
   end
 
 end

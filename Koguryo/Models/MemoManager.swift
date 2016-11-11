@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import RealmSwift
 
 class MemoManager: NSObject {
 
@@ -110,4 +111,13 @@ extension MemoManager {
         
     }
     
+}
+
+
+/**
+ * Extension about Realm Service
+ */
+
+extension MemoManager {
+
 }

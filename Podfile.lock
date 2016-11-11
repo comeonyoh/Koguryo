@@ -2,20 +2,28 @@ PODS:
   - JGProgressHUD (1.4)
   - MGSwipeTableCell (1.5.6)
   - pop (1.0.9)
+  - Realm (2.0.1):
+    - Realm/Headers (= 2.0.1)
+  - Realm/Headers (2.0.1)
+  - RealmSwift (2.0.1):
+    - Realm (= 2.0.1)
   - UIColor_Hex_Swift (3.0.2)
 
 DEPENDENCIES:
   - JGProgressHUD
   - MGSwipeTableCell
   - pop (~> 1.0)
+  - RealmSwift
   - UIColor_Hex_Swift (~> 3.0.2)
 
 SPEC CHECKSUMS:
   JGProgressHUD: 1617b0940cf80bb53e8f7d6f0fd69252ea45d6d4
   MGSwipeTableCell: 616700eb0ffd1c611ba909066cb7fd739790a0a7
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
+  Realm: 0557ee0e4ab4f0936c90e370056d1ed6265f93d6
+  RealmSwift: 64e00af79bdcd7d2a7a23fdc1cb3faf22b80ae4c
   UIColor_Hex_Swift: 95f718452092a3efc8a827dffd2c04d3237be02d
 
-PODFILE CHECKSUM: e2137c2eb5caa8c78b2de7a90123d68ea497f983
+PODFILE CHECKSUM: a24cecb6cd380fee6adb79698d2c792604ccf95f
 
 COCOAPODS: 1.1.0.rc.2
