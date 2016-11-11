@@ -21,7 +21,4 @@ class MemoRealmTests: XCTestCase {
         super.tearDown()
     }
     
-    func testInsertFavoriteMember() {
-        
-    }
 }

@@ -26,11 +26,3 @@ class KoguryoTests: XCTestCase {
         XCTAssertEqual(2, MemoListSection.list.rawValue)
     }
 }
-
-/**
- * Extension about pasteboard
- */
-
-extension KoguryoTests {
-   
-}
