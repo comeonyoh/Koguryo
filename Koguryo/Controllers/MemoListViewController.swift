@@ -18,8 +18,6 @@ class MemoListViewController: UIViewController {
         
         super.viewDidLoad()
 
-        self.makeSampleData()
-
         self.setLayout()
     }
 
@@ -34,36 +32,6 @@ extension MemoListViewController {
         self.memoListTableView.rowHeight = UITableViewAutomaticDimension
         self.memoListTableView.register(UINib.init(nibName: MemoListTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: MemoListTableViewCell.identifier)
         self.memoListTableView.register(UINib.init(nibName: CopyTextButtonTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: CopyTextButtonTableViewCell.identifier)
-    }
-    
-    func makeSampleData() {
-
-        let memo_1 = Memo.init(memo: "나는 왜 사는 것인가?")
-        let memo_2 = Memo.init(memo: "010-3509-8592", withPlaceHolder: "내 전화번호")
-        let memo_3 = Memo.init(memo: "www.tigrison.com")
-        let memo_4 = Memo.init(memo: "comeonyoh89@gmail.com", withPlaceHolder: "이메일 주소")
-        let memo_5 = Memo.init(memo: "서울시 관악구 낙성대동", withPlaceHolder: "집 주소")
-        let memo_6 = Memo.init(memo: "Test Memo F")
-        let memo_7 = Memo.init(memo: "www.tigrison.com", withPlaceHolder: "회사 홈페이지")
-        let memo_8 = Memo.init(memo: "Test Memo H")
-        let memo_9 = Memo.init(memo: "010-3509-8592", withPlaceHolder: "내 전화번호")
-        let memo_10 = Memo.init(memo: "Test Memo J")
-
-        self.memoListManager.allOfMemos?.append(memo_1)
-        self.memoListManager.allOfMemos?.append(memo_2)
-        self.memoListManager.allOfMemos?.append(memo_3)
-        self.memoListManager.allOfMemos?.append(memo_4)
-        self.memoListManager.allOfMemos?.append(memo_5)
-        self.memoListManager.allOfMemos?.append(memo_6)
-        self.memoListManager.allOfMemos?.append(memo_7)
-        self.memoListManager.allOfMemos?.append(memo_8)
-        self.memoListManager.allOfMemos?.append(memo_9)
-        self.memoListManager.allOfMemos?.append(memo_10)
-        
-        _ = self.memoListManager.addFavoriteMemo(memo_3)
-        _ = self.memoListManager.addFavoriteMemo(memo_7)
-        _ = self.memoListManager.addFavoriteMemo(memo_9)
-        
     }
 }
 
@@ -99,7 +67,7 @@ extension MemoListViewController: UITableViewDataSource, MemoListTableViewCellDe
         
         let cell = tableView.dequeueReusableCell(withIdentifier: MemoListTableViewCell.identifier, for: indexPath) as! MemoListTableViewCell
         
-        cell.configureCell(withMemo: memoListManager.getMemo(withIndexPath: indexPath), withIndexPath: indexPath)
+//        cell.configureCell(withMemo: memoListManager.getMemo(withIndexPath: indexPath), withIndexPath: indexPath)
         cell.eventDelegate = self
 
         return cell
@@ -192,11 +160,11 @@ extension MemoListViewController: UITableViewDelegate {
     
     func moveToModifyViewController(_ indexPath: IndexPath) {
 
-        let memo = self.memoListManager.getMemo(withIndexPath: indexPath)
+//        let memo = self.memoListManager.getMemo(withIndexPath: indexPath)
 
         let vc = StoryboardManager.getMainStoryboard().instantiateViewController(withIdentifier: WriteMemoViewController.identifier) as! WriteMemoViewController
         
-        vc.memoInfo = memo?.copy() as! Memo?
+//        vc.memoInfo = memo?.copy() as! Memo?
         vc.writeType = .modify
         
         self.navigationController?.pushViewController(vc, animated: true)

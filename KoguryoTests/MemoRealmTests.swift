@@ -8,6 +8,7 @@
 
 import XCTest
 import RealmSwift
+
 @testable import Koguryo
 
 class MemoRealmTests: XCTestCase {
@@ -17,8 +18,10 @@ class MemoRealmTests: XCTestCase {
     }
     
     override func tearDown() {
-        
         super.tearDown()
+    }
+    
+    func testInsertFavoriteMember() {
         
     }
 }

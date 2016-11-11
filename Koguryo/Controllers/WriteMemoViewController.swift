@@ -19,7 +19,7 @@ class WriteMemoViewController: UIViewController {
     
     var writeType: WriteType = .newMemo
     
-    var memoInfo: Memo?
+    var memoInfo: RealmMemo?
     
     
     @IBOutlet weak var rightNavigationItem: UIBarButtonItem!
