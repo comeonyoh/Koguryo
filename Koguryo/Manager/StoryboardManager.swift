@@ -16,3 +16,12 @@ class StoryboardManager: NSObject {
         return UIStoryboard.init(name: StoryboardManager.mainStoryboard, bundle: nil)
     }
 }
+
+/**
+ * Manager about segue
+ */
+extension StoryboardManager {
+    
+    static let segueWriteMemo = "segue_write_memo"
+    
+}

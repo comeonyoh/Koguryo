@@ -20,6 +20,16 @@ class MemoListViewController: UIViewController {
 
         self.setLayout()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == StoryboardManager.segueWriteMemo {
+            
+            let vc = segue.destination as! WriteMemoViewController
+            
+            vc.delegate = self
+        }
+    }
 
 }
 
@@ -165,8 +175,17 @@ extension MemoListViewController: UITableViewDelegate {
         let vc = StoryboardManager.getMainStoryboard().instantiateViewController(withIdentifier: WriteMemoViewController.identifier) as! WriteMemoViewController
         
 //        vc.memoInfo = memo?.copy() as! Memo?
+        vc.delegate = self
         vc.writeType = .modify
         
         self.navigationController?.pushViewController(vc, animated: true)
     }
+}
+
+extension MemoListViewController: WriteMemoViewControllerDelegate {
+    
+    func didMemoWritten(_ memoInfo: Dictionary<String, String>, withType type: WriteType) {
+        
+    }
+
 }

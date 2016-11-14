@@ -36,6 +36,13 @@ extension MemoManager {
     /**
      * Open Interface that can community with ViewController
      */
+    func hasMemo() -> Bool {
+        
+        if (allOfMemos?.count)! > 0 {
+            return true
+        }
+        return false
+    }
     
     func hasFavoriteMemos() -> Bool {
         
@@ -49,38 +56,28 @@ extension MemoManager {
         return false
     }
     
-    func hasMemo() -> Bool {
+    func addMemo(_ memo: RealmMemo) {
         
-        if (allOfMemos?.count)! > 0 {
-            return true
+        let realm = self.configRealm()
+        
+        try! realm.write {
+            realm.add(memo)
         }
-        return false
     }
     
-//    func addFavoriteMemo(_ memo: Memo) -> Bool {
-//        
-//        if (favoriteMemos?.count)! < maxCountOfFavoriteMemos {
-//            
-//            favoriteMemos?.append(memo)
-//            
-//            return true
-//        }
-//        
-//        return false
-//    }
-//    
-//    func getMemo(withIndexPath indexPath: IndexPath) -> Memo? {
-//        
-//        if indexPath.section == MemoListSection.favorite.rawValue {
-//            return favoriteMemos?[indexPath.row]
-//        }
-//        else if indexPath.section == MemoListSection.list.rawValue {
-//            return allOfMemos?[indexPath.row]
-//        }
-//        
-//        return nil
-//    }
+    func getMemoCount(withType type: MemoType) -> Int {
+        
+        let realm = self.configRealm()
 
+        guard type == .normal else {
+            
+            return realm.objects(RealmMemo.self).filter(NSPredicate.init(format: "isFavorite = 1")).count
+        }
+        let memos = realm.objects(RealmMemo.self)
+        
+        return memos.count
+    }
+    
 }
 
 
@@ -114,13 +111,20 @@ extension MemoManager {
     
 }
 
-
 /**
- * Extension about Realm Service
+ * Private method
  */
 
 extension MemoManager {
-
     
-    
+    fileprivate func configRealm() -> Realm {
+        
+        var config = Realm.Configuration()
+        
+        config.schemaVersion = 0
+        
+        return try! Realm()
+    }
 }
+
+

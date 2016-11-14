@@ -8,18 +8,26 @@
 
 import UIKit
 
+enum WriteType {
+    case newMemo
+    case modify
+}
+
+protocol WriteMemoViewControllerDelegate: class {
+
+    func didMemoWritten(_ memoInfo: Dictionary<String, String>, withType type: WriteType)
+}
+
 class WriteMemoViewController: UIViewController {
 
-    enum WriteType {
-        case newMemo
-        case modify
-    }
-    
     static let identifier = "WriteMemoViewController"
     
     var writeType: WriteType = .newMemo
     
     var memoInfo: RealmMemo?
+    
+    weak var delegate: WriteMemoViewControllerDelegate?
+    
     
     
     @IBOutlet weak var rightNavigationItem: UIBarButtonItem!
@@ -47,6 +55,12 @@ class WriteMemoViewController: UIViewController {
     
     @IBAction func didRightBarButtonClicked(_ sender: Any) {
     
+        //  save Memo to into realm
+        
+        //  post notification alarm
+        self.delegate?.didMemoWritten(self.getInputtedMemoInfo(), withType: self.writeType)
+
+        //  navigation pop
         _ = self.navigationController?.popViewController(animated: true)
     }
     
@@ -100,7 +114,9 @@ extension WriteMemoViewController {
             }
         }
         
-        NotificationCenter.default.addObserver(forName: Notification.Name(rawValue:PlaceholderTextField.NotificationTextFieldDidChanged), object: nil, queue: OperationQueue.main) {
+        NotificationCenter.default.addObserver(forName: Notification.Name(rawValue:PlaceholderTextField.NotificationTextFieldDidChanged),
+                                               object: nil,
+                                               queue: OperationQueue.main) {
             
             if let info = $0.userInfo {
                 
@@ -131,7 +147,6 @@ extension WriteMemoViewController: UITableViewDataSource {
         if self.writeType == .modify {
          
             self.setModifyMemoData(indexPath, withCell: cell)
-
         }
         
         return cell
@@ -170,6 +185,25 @@ extension WriteMemoViewController: UITableViewDataSource {
 
         }
     }
+    
+    func getInputtedMemoInfo() -> Dictionary<String, String> {
+        
+        let placeHolderCell = self.inputTableView.cellForRow(at: IndexPath.init(row: 0, section: WriteMemoSection.placeholder.rawValue))
+        
+        let textField = placeHolderCell?.viewWithTag(WriteMemoViewControllerElementsManager.kTextFieldElementTagId) as! UITextField
+        
+        let contentsCell = self.inputTableView.cellForRow(at: IndexPath.init(row: 0, section: WriteMemoSection.contents.rawValue))
+
+        let textView = contentsCell?.viewWithTag(WriteMemoViewControllerElementsManager.kTextViewElementTagId) as! PlaceholderTextView
+        
+        var memoInfo = [String: String]()
+        
+        memoInfo["contents"] = textView.text
+        memoInfo["placeHolder"] = textField.text
+
+        return memoInfo
+    }
+    
 }
 
 extension WriteMemoViewController: UITableViewDelegate {

@@ -42,7 +42,7 @@
                     <navigationItem key="navigationItem" title="메모장" id="4yt-NJ-dVE">
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="6Ej-Uo-kB4">
                             <connections>
-                                <segue destination="YJa-8Y-7bi" kind="show" id="IBT-pH-Rft"/>
+                                <segue destination="YJa-8Y-7bi" kind="show" identifier="segue_write_memo" id="IBT-pH-Rft"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
