@@ -108,17 +108,23 @@ extension MemoManager {
         return memos.count
     }
     
-    func updateMemo(withMemo memo: RealmMemo, withNewInfo newInfo: Dictionary<String, String>)  {
+    func updateMemo(withMemoId memoId: String, withNewInfo newInfo: Dictionary<String, String>)  {
 
         let realm = self.configRealm()
 
-        try! realm.write {
-            
-            memo.contents = newInfo["contents"]
-            memo.placeHolder = newInfo["placeHolder"]
-            
-            realm.add(memo, update: true)
+        let memo = realm.objects(RealmMemo.self).filter(NSPredicate.init(format: "memoId = %@", memoId))
+        
+        if memo.first != nil {
+
+            try! realm.write {
+                
+                memo.first?.contents = newInfo["contents"]
+                memo.first?.placeHolder = newInfo["placeHolder"]
+
+                realm.add(memo, update: true)
+            }
         }
+        
     }
 }
 

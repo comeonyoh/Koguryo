@@ -55,6 +55,7 @@ extension RealmMemo: NSCopying, NonEmptyString {
         let copiedMemo = RealmMemo.init(value: ["contents" : self.protectStringNonEmpty(self.contents),
                                                 "placeHolder": self.protectStringNonEmpty(self.placeHolder),
                                                 "createDate": self.createDate,
+                                                "memoId" : self.memoId,
                                                 "isFavorite": self.isFavorite])
         
         return copiedMemo

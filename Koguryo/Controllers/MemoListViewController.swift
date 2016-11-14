@@ -178,22 +178,27 @@ extension MemoListViewController: UITableViewDelegate {
         
         vc.delegate = self
         vc.writeType = .modify
-        vc.memoInfo = memoListManager.getMemoAt(indexPath).copy() as? RealmMemo
         
+        let memo = memoListManager.getMemoAt(indexPath)
+        
+        vc.memoId = memo.memoId
+        vc.contents = memo.contents
+        vc.placeholder = memo.placeHolder
+
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }
 
 extension MemoListViewController: WriteMemoViewControllerDelegate {
     
-    func didMemoWritten(_ memoInfo: Dictionary<String, String>, withType type: WriteType, withMemo memo: RealmMemo?) {
+    func didMemoWritten(_ memoInfo: Dictionary<String, String>, withType type: WriteType, withMemoId memoId: String?) {
 
         if type == .newMemo {
             memoListManager.addMemo(RealmMemo.init(value: memoInfo))
         }
         
-        else if type == .modify && memo != nil {
-            memoListManager.updateMemo(withMemo: memo!, withNewInfo: memoInfo)
+        else if type == .modify && memoId != nil {
+            memoListManager.updateMemo(withMemoId: memoId!, withNewInfo: memoInfo)
         }
 
         self.memoListTableView.reloadData()

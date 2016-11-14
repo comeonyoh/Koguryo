@@ -15,7 +15,8 @@ enum WriteType {
 
 protocol WriteMemoViewControllerDelegate: class {
 
-    func didMemoWritten(_ memoInfo: Dictionary<String, String>, withType type: WriteType, withMemo memo: RealmMemo?)
+    func didMemoWritten(_ memoInfo: Dictionary<String, String>, withType type: WriteType, withMemoId memoId: String?)
+
 }
 
 class WriteMemoViewController: UIViewController {
@@ -26,10 +27,18 @@ class WriteMemoViewController: UIViewController {
 
     var writeType: WriteType = .newMemo
     
-    var memoInfo: RealmMemo?
-    
     weak var delegate: WriteMemoViewControllerDelegate?
+
     
+    /**
+     * properties for modify memo item
+     */
+    
+    var placeholder: String?
+    
+    var contents: String?
+
+    var memoId: String?
     
     
     @IBOutlet weak var rightNavigationItem: UIBarButtonItem!
@@ -53,8 +62,7 @@ class WriteMemoViewController: UIViewController {
     @IBAction func didRightBarButtonClicked(_ sender: Any) {
     
         //  post delegate alarm with memo info
-        
-        self.delegate?.didMemoWritten(self.getInputtedMemoInfo(), withType: self.writeType, withMemo: self.memoInfo)
+        self.delegate?.didMemoWritten(self.getInputtedMemoInfo(), withType: self.writeType, withMemoId: self.memoId)
 
         //  navigation pop
         _ = self.navigationController?.popViewController(animated: true)
@@ -105,7 +113,7 @@ extension WriteMemoViewController {
                 }
                 
                 if self.writeType == .modify {
-                    self.memoInfo?.contents = text
+                    self.contents = text
                 }
             }
         }
@@ -116,10 +124,10 @@ extension WriteMemoViewController {
             
             if let info = $0.userInfo {
                 
-                let value = info["info"] as! String
+                let text = info["info"] as! String
                 
                 if self.writeType == .modify {
-                    self.memoInfo?.placeHolder = value
+                    self.placeholder = text
                 }
             }
         }
@@ -170,14 +178,14 @@ extension WriteMemoViewController: UITableViewDataSource {
             
             let textField = cell.viewWithTag(WriteMemoViewControllerElementsManager.kTextFieldElementTagId) as! UITextField
             
-            textField.text = memoInfo?.placeHolder
+            textField.text = self.placeholder
             
         }
         else if indexPath.section == WriteMemoSection.contents.rawValue {
             
             let textView = cell.viewWithTag(WriteMemoViewControllerElementsManager.kTextViewElementTagId) as! PlaceholderTextView
             
-            textView.text = memoInfo?.contents
+            textView.text = self.contents
 
         }
     }

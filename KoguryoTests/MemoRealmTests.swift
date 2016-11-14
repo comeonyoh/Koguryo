@@ -143,7 +143,7 @@ class MemoRealmTests: XCTestCase {
         let newInfo = ["contents" : "modified_contents", "placeHolder" : "modified_placeholder"]
         XCTAssertEqual(manager.getMemoCount(withType: .normal), 1)
 
-        manager.updateMemo(withMemo: memo_1, withNewInfo: newInfo)
+        manager.updateMemo(withMemoId: memo_1.memoId, withNewInfo: newInfo)
         
         let modifiedMemo = manager.getMemoAt(0, withType: .normal)
         
