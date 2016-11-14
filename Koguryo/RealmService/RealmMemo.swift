@@ -38,14 +38,16 @@ class RealmMemo: Object {
     
 }
 
-extension RealmMemo: NSCopying {
+extension RealmMemo: NSCopying, NonEmptyString {
     
     public func copy(with zone: NSZone? = nil) -> Any {
         
-        let copiedMemo = RealmMemo.init(value: ["contents" : self.contents, "placeHolder": self.placeHolder, "createDate": self.createDate, "isFavorite": self.isFavorite])
+        let copiedMemo = RealmMemo.init(value: ["contents" : self.protectStringNonEmpty(self.contents),
+                                                "placeHolder": self.protectStringNonEmpty(self.placeHolder),
+                                                "createDate": self.createDate,
+                                                "isFavorite": self.isFavorite])
         
         return copiedMemo
     }
-    
 }
 
