@@ -145,9 +145,12 @@ extension MemoManager {
         
         let content = UIPasteboard.general.string
 
-        let newMemo = RealmMemo(value: ["content" : content, "memoId" : content?.encryption()])
-        
-        self.addMemo(newMemo)
+        if content != nil && (content?.characters.count)! > 0 {
+
+            let newMemo = RealmMemo(value: ["contents" : content, "memoId" : content?.encryption()])
+            
+            self.addMemo(newMemo)
+        }
         
     }
     

@@ -58,7 +58,7 @@ class MemoListTableViewCell: MGSwipeTableCell, MGSwipeTableCellDelegate {
     
     func configureCell(withMemo memo: RealmMemo?, withIndexPath indexPath: IndexPath)  {
         
-        if (memo?.placeHolder?.characters.count)! > 0 {
+        if memo?.placeHolder != nil && (memo?.placeHolder?.characters.count)! > 0{
             messageContentsLabel.text = memo?.placeHolder
         }
         else {
