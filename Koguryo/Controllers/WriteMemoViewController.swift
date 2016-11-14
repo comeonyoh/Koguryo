@@ -15,7 +15,7 @@ enum WriteType {
 
 protocol WriteMemoViewControllerDelegate: class {
 
-    func didMemoWritten(_ memoInfo: Dictionary<String, String>, withType type: WriteType)
+    func didMemoWritten(_ memoInfo: Dictionary<String, String>, withType type: WriteType, withMemo memo: RealmMemo?)
 }
 
 class WriteMemoViewController: UIViewController {
@@ -53,7 +53,8 @@ class WriteMemoViewController: UIViewController {
     @IBAction func didRightBarButtonClicked(_ sender: Any) {
     
         //  post delegate alarm with memo info
-        self.delegate?.didMemoWritten(self.getInputtedMemoInfo(), withType: self.writeType)
+        
+        self.delegate?.didMemoWritten(self.getInputtedMemoInfo(), withType: self.writeType, withMemo: self.memoInfo)
 
         //  navigation pop
         _ = self.navigationController?.popViewController(animated: true)
@@ -195,7 +196,10 @@ extension WriteMemoViewController: UITableViewDataSource {
         
         memoInfo["contents"] = textView.text
         memoInfo["placeHolder"] = textField.text
-        memoInfo["memoId"] = textView.text.encryption()
+        
+        if self.writeType == .newMemo {
+            memoInfo["memoId"] = textView.text.encryption()
+        }
         
         return memoInfo
     }

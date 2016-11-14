@@ -80,10 +80,10 @@ extension MemoListViewController: UITableViewDataSource, MemoListTableViewCellDe
         cell.eventDelegate = self
 
         if indexPath.section == MemoListSection.favorite.rawValue {
-            cell.configureCell(withMemo: memoListManager.getMemoAt(indexPath.row, withType: .favorite), withIndexPath: indexPath)
+            cell.configureCell(withMemo: memoListManager.getMemoAt(indexPath), withIndexPath: indexPath)
         }
         else {
-            cell.configureCell(withMemo: memoListManager.getMemoAt(indexPath.row, withType: .normal), withIndexPath: indexPath)
+            cell.configureCell(withMemo: memoListManager.getMemoAt(indexPath), withIndexPath: indexPath)
         }
 
         return cell
@@ -174,13 +174,11 @@ extension MemoListViewController: UITableViewDelegate {
     
     func moveToModifyViewController(_ indexPath: IndexPath) {
 
-//        let memo = self.memoListManager.getMemo(withIndexPath: indexPath)
-
         let vc = StoryboardManager.getMainStoryboard().instantiateViewController(withIdentifier: WriteMemoViewController.identifier) as! WriteMemoViewController
         
-//        vc.memoInfo = memo?.copy() as! Memo?
         vc.delegate = self
         vc.writeType = .modify
+        vc.memoInfo = memoListManager.getMemoAt(indexPath).copy() as? RealmMemo
         
         self.navigationController?.pushViewController(vc, animated: true)
     }
@@ -188,11 +186,16 @@ extension MemoListViewController: UITableViewDelegate {
 
 extension MemoListViewController: WriteMemoViewControllerDelegate {
     
-    func didMemoWritten(_ memoInfo: Dictionary<String, String>, withType type: WriteType) {
+    func didMemoWritten(_ memoInfo: Dictionary<String, String>, withType type: WriteType, withMemo memo: RealmMemo?) {
 
-        memoListManager.addMemo(RealmMemo.init(value: memoInfo))
+        if type == .newMemo {
+            memoListManager.addMemo(RealmMemo.init(value: memoInfo))
+        }
+        
+        else if type == .modify && memo != nil {
+            memoListManager.updateMemo(withMemo: memo!, withNewInfo: memoInfo)
+        }
 
         self.memoListTableView.reloadData()
     }
-
 }

@@ -95,7 +95,7 @@ class MemoRealmTests: XCTestCase {
 
         XCTAssertEqual(5, manager.getMemoCount(withType: .normal))
         
-        manager.deleteMemo(withMemoId: memo_1)
+        manager.deleteMemo(withMemo: memo_1)
         
         XCTAssertEqual(4, manager.getMemoCount(withType: .normal))
     }
@@ -119,6 +119,12 @@ class MemoRealmTests: XCTestCase {
 
         XCTAssertEqual(manager.getMemoAt(1, withType: .normal), memo_2)
         XCTAssertEqual(manager.getMemoAt(0, withType: .favorite), memo_4)
+        
+        let m_memo_1 = manager.getMemoAt(IndexPath.init(row: 0, section: MemoListSection.list.rawValue))
+        
+        XCTAssertEqual(m_memo_1, memo_1)
+        XCTAssertEqual(manager.getMemoAt(IndexPath.init(row: 0, section: MemoListSection.favorite.rawValue)), memo_4)
+        
     }
     
     //  Memo add from clipboard
@@ -128,13 +134,22 @@ class MemoRealmTests: XCTestCase {
     //  update memo contents and placeholder
     func testModifyMemoAtIndex() {
         
-//        let manager = MemoManager.init()
-//        
-//        let memo_1 = RealmMemo.init(value: ["contents" : "contents_1", "placeHolder": "placeHolder_1", "memoId" : "contents_1".encryption()])
-//
-//        manager.addMemo(memo_1)
-//
-//        XCTAssertEqual(manager.getMemoAt(0, withType: .normal).contents, "Modified_contes")
+        let manager = MemoManager.init()
+        
+        let memo_1 = RealmMemo.init(value: ["contents" : "contents_1", "placeHolder": "placeHolder_1", "memoId" : "contents_1".encryption()])
+        
+        manager.addMemo(memo_1)
+        
+        let newInfo = ["contents" : "modified_contents", "placeHolder" : "modified_placeholder"]
+        XCTAssertEqual(manager.getMemoCount(withType: .normal), 1)
+
+        manager.updateMemo(withMemo: memo_1, withNewInfo: newInfo)
+        
+        let modifiedMemo = manager.getMemoAt(0, withType: .normal)
+        
+        XCTAssertEqual(modifiedMemo.contents, newInfo["contents"])
+        XCTAssertEqual(manager.getMemoCount(withType: .normal), 1)
+
     }
 
 }

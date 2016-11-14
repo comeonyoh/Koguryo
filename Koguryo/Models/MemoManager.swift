@@ -65,13 +65,24 @@ extension MemoManager {
         }
     }
 
-    func deleteMemo(withMemoId memo: RealmMemo) {
+    func deleteMemo(withMemo memo: RealmMemo) {
         
         let realm = self.configRealm()
 
         try! realm.write {
             realm.delete(memo)
         }
+    }
+    
+    func getMemoAt(_ indexPath: IndexPath) -> RealmMemo {
+
+        let realm = self.configRealm()
+        
+        guard indexPath.section == MemoListSection.list.rawValue else {
+            return realm.objects(RealmMemo.self).filter(NSPredicate.init(format: "isFavorite = 1"))[indexPath.row]
+        }
+
+        return realm.objects(RealmMemo.self)[indexPath.row]
     }
     
     func getMemoAt(_ index: Int, withType type: MemoType) -> RealmMemo {
@@ -97,6 +108,18 @@ extension MemoManager {
         return memos.count
     }
     
+    func updateMemo(withMemo memo: RealmMemo, withNewInfo newInfo: Dictionary<String, String>)  {
+
+        let realm = self.configRealm()
+
+        try! realm.write {
+            
+            memo.contents = newInfo["contents"]
+            memo.placeHolder = newInfo["placeHolder"]
+            
+            realm.add(memo, update: true)
+        }
+    }
 }
 
 
