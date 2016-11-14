@@ -111,8 +111,6 @@ extension MemoListViewController: UITableViewDataSource, MemoListTableViewCellDe
 
     func copyTextButtonTableViewCell(didCopyButtonClicked: UIView) {
         
-        print("copyTextButtonTableViewCell")
-        
         self.memoListManager.copyFromPasteboard()
         
         self.memoListTableView.reloadData()
@@ -126,7 +124,7 @@ extension MemoListViewController: UITableViewDelegate {
         
         tableView.deselectRow(at: indexPath, animated: true)
         
-        guard indexPath.section != 0 else {
+        guard indexPath.section != MemoListSection.addButton.rawValue else {
             
             let addSectionCell = tableView.cellForRow(at: indexPath) as! CopyTextButtonTableViewCell
             
@@ -186,6 +184,15 @@ extension MemoListViewController: WriteMemoViewControllerDelegate {
     
     func didMemoWritten(_ memoInfo: Dictionary<String, String>, withType type: WriteType) {
         
+        if type == .newMemo {
+            
+            //  Add memo
+            
+        }
+        else if type == .modify {
+            
+            //  Modify memo
+        }
     }
 
 }

@@ -21,7 +21,9 @@ protocol WriteMemoViewControllerDelegate: class {
 class WriteMemoViewController: UIViewController {
 
     static let identifier = "WriteMemoViewController"
-    
+
+    let headerTitles = [NSLocalizedString("tag", comment: "tag"), NSLocalizedString("contents", comment: "")]
+
     var writeType: WriteType = .newMemo
     
     var memoInfo: RealmMemo?
@@ -33,11 +35,6 @@ class WriteMemoViewController: UIViewController {
     @IBOutlet weak var rightNavigationItem: UIBarButtonItem!
     
     @IBOutlet weak var inputTableView: UITableView!
-    
-    
-    let headerTitles = [NSLocalizedString("tag", comment: "tag"), NSLocalizedString("contents", comment: "")]
-
-
     
     enum WriteMemoSection: Int {
         case placeholder
@@ -55,17 +52,15 @@ class WriteMemoViewController: UIViewController {
     
     @IBAction func didRightBarButtonClicked(_ sender: Any) {
     
-        //  save Memo to into realm
-        
-        //  post notification alarm
+        //  post delegate alarm with memo info
         self.delegate?.didMemoWritten(self.getInputtedMemoInfo(), withType: self.writeType)
 
         //  navigation pop
         _ = self.navigationController?.popViewController(animated: true)
     }
     
-
 }
+
 
 /**
  * Extension about modify memo
@@ -232,5 +227,4 @@ extension WriteMemoViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         self.view.endEditing(true)
     }
-
 }
