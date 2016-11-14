@@ -14,7 +14,11 @@ import RealmSwift
 class MemoRealmTests: XCTestCase {
     
     override func setUp() {
+        
         super.setUp()
+        
+        self.deleteAllMemos()
+
     }
     
     override func tearDown() {
@@ -30,7 +34,7 @@ class MemoRealmTests: XCTestCase {
         
         let manager = MemoManager.init()
         
-        let memo = RealmMemo.init(value: ["contents" : "contents", "placeHolder": "placeHolder"])
+        let memo = RealmMemo.init(value: ["contents" : "contents", "placeHolder": "placeHolder", "memoId" : "contents".encryption()])
 
         manager.addMemo(memo)
         
@@ -41,9 +45,9 @@ class MemoRealmTests: XCTestCase {
         
         let manager = MemoManager.init()
         
-        let memo_1 = RealmMemo.init(value: ["contents" : "contents_1", "placeHolder": "placeHolder_1"])
-        let memo_2 = RealmMemo.init(value: ["contents" : "contents_2", "placeHolder": "placeHolder_2"])
-        let memo_3 = RealmMemo.init(value: ["contents" : "contents_3", "placeHolder": "placeHolder_3"])
+        let memo_1 = RealmMemo.init(value: ["contents" : "contents_1", "placeHolder": "placeHolder_1", "memoId" : "contents_1".encryption()])
+        let memo_2 = RealmMemo.init(value: ["contents" : "contents_2", "placeHolder": "placeHolder_2", "memoId" : "contents_2".encryption()])
+        let memo_3 = RealmMemo.init(value: ["contents" : "contents_3", "placeHolder": "placeHolder_3", "memoId" : "contents_3".encryption()])
         
         manager.addMemo(memo_1)
         manager.addMemo(memo_2)
@@ -52,16 +56,14 @@ class MemoRealmTests: XCTestCase {
         XCTAssertEqual(3, manager.getMemoCount(withType: .normal))
     }
 
-    
     //  Favorite memo count
-    
     func testCountFavoriteMemos() {
 
         let manager = MemoManager.init()
         
-        let memo_1 = RealmMemo.init(value: ["contents" : "contents_1", "placeHolder": "placeHolder_1"])
-        let memo_2 = RealmMemo.init(value: ["contents" : "contents_2", "placeHolder": "placeHolder_2"])
-        let memo_3 = RealmMemo.init(value: ["contents" : "contents_3", "placeHolder": "placeHolder_3"])
+        let memo_1 = RealmMemo.init(value: ["contents" : "contents_1", "placeHolder": "placeHolder_1", "memoId" : "contents_1".encryption()])
+        let memo_2 = RealmMemo.init(value: ["contents" : "contents_2", "placeHolder": "placeHolder_2", "memoId" : "contents_2".encryption()])
+        let memo_3 = RealmMemo.init(value: ["contents" : "contents_3", "placeHolder": "placeHolder_3", "memoId" : "contents_3".encryption()])
         
         memo_2.isFavorite = true
         memo_3.isFavorite = true
@@ -70,16 +72,76 @@ class MemoRealmTests: XCTestCase {
         manager.addMemo(memo_2)
         manager.addMemo(memo_3)
         
+        XCTAssertEqual(3, manager.getMemoCount(withType: .normal))
         XCTAssertEqual(2, manager.getMemoCount(withType: .favorite))
     }
     
     //  Memo delete
+    func testDeleteMemo() {
+       
+        let manager = MemoManager.init()
+        
+        let memo_1 = RealmMemo.init(value: ["contents" : "contents_1", "placeHolder": "placeHolder_1", "memoId" : "contents_1".encryption()])
+        let memo_2 = RealmMemo.init(value: ["contents" : "contents_2", "placeHolder": "placeHolder_2", "memoId" : "contents_2".encryption()])
+        let memo_3 = RealmMemo.init(value: ["contents" : "contents_3", "placeHolder": "placeHolder_3", "memoId" : "contents_3".encryption()])
+        let memo_4 = RealmMemo.init(value: ["contents" : "contents_4", "placeHolder": "placeHolder_4", "memoId" : "contents_4".encryption()])
+        let memo_5 = RealmMemo.init(value: ["contents" : "contents_5", "placeHolder": "placeHolder_5", "memoId" : "contents_5".encryption()])
+        
+        manager.addMemo(memo_1)
+        manager.addMemo(memo_2)
+        manager.addMemo(memo_3)
+        manager.addMemo(memo_4)
+        manager.addMemo(memo_5)
+
+        XCTAssertEqual(5, manager.getMemoCount(withType: .normal))
+        
+        manager.deleteMemo(withMemoId: memo_1)
+        
+        XCTAssertEqual(4, manager.getMemoCount(withType: .normal))
+    }
+    
+    //  get Memo with Index
+    func testGetMemoAtIndex() {
+        
+        let manager = MemoManager.init()
+        
+        let memo_1 = RealmMemo.init(value: ["contents" : "contents_1", "placeHolder": "placeHolder_1", "memoId" : "contents_1".encryption()])
+        let memo_2 = RealmMemo.init(value: ["contents" : "contents_2", "placeHolder": "placeHolder_2", "memoId" : "contents_2".encryption()])
+        let memo_3 = RealmMemo.init(value: ["contents" : "contents_3", "placeHolder": "placeHolder_3", "memoId" : "contents_3".encryption()])
+        let memo_4 = RealmMemo.init(value: ["contents" : "contents_4", "placeHolder": "placeHolder_4", "memoId" : "contents_4".encryption()])
+
+        memo_4.isFavorite = true
+
+        manager.addMemo(memo_1)
+        manager.addMemo(memo_2)
+        manager.addMemo(memo_3)
+        manager.addMemo(memo_4)
+
+        XCTAssertEqual(manager.getMemoAt(1, withType: .normal), memo_2)
+        XCTAssertEqual(manager.getMemoAt(0, withType: .favorite), memo_4)
+    }
     
     //  Memo add from clipboard
     
     //  update memo set favorite
-    
+ 
+    //  update memo contents and placeholder
+    func testModifyMemoAtIndex() {
+        
+//        let manager = MemoManager.init()
+//        
+//        let memo_1 = RealmMemo.init(value: ["contents" : "contents_1", "placeHolder": "placeHolder_1", "memoId" : "contents_1".encryption()])
+//
+//        manager.addMemo(memo_1)
+//
+//        XCTAssertEqual(manager.getMemoAt(0, withType: .normal).contents, "Modified_contes")
+    }
+
 }
+
+
+
+
 
 /**
  * Private Methods
@@ -87,7 +149,7 @@ class MemoRealmTests: XCTestCase {
  
 extension MemoRealmTests {
    
-    func deleteAllMemos() {
+    fileprivate func deleteAllMemos() {
         
         let realm = try! Realm()
         

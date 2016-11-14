@@ -55,10 +55,10 @@ extension MemoListViewController: UITableViewDataSource, MemoListTableViewCellDe
             return 1
         }
         else if section == MemoListSection.favorite.rawValue {
-            return (self.memoListManager.favoriteMemos?.count)!
+            return self.memoListManager.getMemoCount(withType: .favorite)
         }
         else if section == MemoListSection.list.rawValue {
-            return (self.memoListManager.allOfMemos?.count)!
+            return self.memoListManager.getMemoCount(withType: .normal)
         }
         
         return 0
@@ -76,9 +76,15 @@ extension MemoListViewController: UITableViewDataSource, MemoListTableViewCellDe
         }
         
         let cell = tableView.dequeueReusableCell(withIdentifier: MemoListTableViewCell.identifier, for: indexPath) as! MemoListTableViewCell
-        
-//        cell.configureCell(withMemo: memoListManager.getMemo(withIndexPath: indexPath), withIndexPath: indexPath)
+
         cell.eventDelegate = self
+
+        if indexPath.section == MemoListSection.favorite.rawValue {
+            cell.configureCell(withMemo: memoListManager.getMemoAt(indexPath.row, withType: .favorite), withIndexPath: indexPath)
+        }
+        else {
+            cell.configureCell(withMemo: memoListManager.getMemoAt(indexPath.row, withType: .normal), withIndexPath: indexPath)
+        }
 
         return cell
     }
@@ -163,7 +169,7 @@ extension MemoListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat { return 0.0 }
 
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 90.0
+        return 80.0
     }
     
     func moveToModifyViewController(_ indexPath: IndexPath) {
@@ -183,16 +189,10 @@ extension MemoListViewController: UITableViewDelegate {
 extension MemoListViewController: WriteMemoViewControllerDelegate {
     
     func didMemoWritten(_ memoInfo: Dictionary<String, String>, withType type: WriteType) {
-        
-        if type == .newMemo {
-            
-            //  Add memo
-            
-        }
-        else if type == .modify {
-            
-            //  Modify memo
-        }
+
+        memoListManager.addMemo(RealmMemo.init(value: memoInfo))
+
+        self.memoListTableView.reloadData()
     }
 
 }

@@ -195,7 +195,8 @@ extension WriteMemoViewController: UITableViewDataSource {
         
         memoInfo["contents"] = textView.text
         memoInfo["placeHolder"] = textField.text
-
+        memoInfo["memoId"] = textView.text.encryption()
+        
         return memoInfo
     }
     

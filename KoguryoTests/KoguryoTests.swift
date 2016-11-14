@@ -25,4 +25,12 @@ class KoguryoTests: XCTestCase {
         XCTAssertEqual(1, MemoListSection.favorite.rawValue)
         XCTAssertEqual(2, MemoListSection.list.rawValue)
     }
+    
+    func testGenerateUUIDNotEqual() {
+        
+        let memo_1 = "ABC".encryption()
+        let memo_2 = "DEF".encryption()
+
+        XCTAssertNotEqual(memo_1, memo_2)
+    }
 }

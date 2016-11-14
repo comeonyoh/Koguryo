@@ -15,7 +15,10 @@ enum MemoType {
 }
 
 class RealmMemo: Object {
-
+    
+    //  primary key
+    dynamic var memoId: String = ""
+    
     dynamic var contents: String?
     
     dynamic var placeHolder: String?
@@ -23,12 +26,19 @@ class RealmMemo: Object {
     dynamic var isFavorite: Bool = false
    
     dynamic var createDate: Date = Date.init()
+
+    
+    
+    
+    override static func primaryKey() -> String? {
+        return "memoId"
+    }
     
     override func isEqual(_ object: Any?) -> Bool {
-        
+
         if object is RealmMemo, let anotherMemo = object as! RealmMemo! {
             
-            if anotherMemo.createDate == self.createDate {
+            if anotherMemo.memoId == self.memoId {
                 return true
             }
         }
