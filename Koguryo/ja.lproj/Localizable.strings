@@ -10,21 +10,21 @@
  * Section Headers
  */
 
-"section_title_favorite" = "즐겨찾기";
-"section_title_items" = "저장된 노트";
+"section_title_favorite" = "お気に入り";
+"section_title_items" = "ノート";
 
 /**
  * Common Words
  */
 
-"delete" = "삭제";
-"modify" = "수정";
+"delete" = "削除";
+"modify" = "変更する";
 
-"tag" = "태그";
-"contents" = "내용";
-"copy" = "복사 완료!";
+"tag" = "タグ";
+"contents" = "内容";
+"copy" = "コピー完了!";
 
-"favorite_add" = "즐겨찾기 추가";
-"favorite_delete" = "즐겨찾기 삭제";
+"favorite_add" = "お気に入りを追加";
+"favorite_delete" = "お気に入りを削除する";
 
-"input_contents_placeholder" = "저장할 내용을 입력해주십시오(필수사항)";
+"input_contents_placeholder" = "保存内容を入力してください（必須)";

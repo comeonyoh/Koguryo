@@ -1,12 +1,12 @@
 
 /* Class = "UINavigationItem"; title = "메모장"; ObjectID = "4yt-NJ-dVE"; */
-"4yt-NJ-dVE.title" = "메모장";
+"4yt-NJ-dVE.title" = "メモ帳";
 
 /* Class = "UITextField"; placeholder = "태그를 입력해주십시오(옵션사항)"; ObjectID = "BFh-aD-7YB"; */
-"BFh-aD-7YB.placeholder" = "태그를 입력해주십시오(옵션사항)";
+"BFh-aD-7YB.placeholder" = "タグを入力してください（オプション）";
 
 /* Class = "UIBarButtonItem"; title = "완료"; ObjectID = "orh-1z-BG1"; */
-"orh-1z-BG1.title" = "완료";
+"orh-1z-BG1.title" = "完了";
 
 /* Class = "UINavigationItem"; title = "추가하기"; ObjectID = "qct-6i-nCF"; */
-"qct-6i-nCF.title" = "추가하기";
+"qct-6i-nCF.title" = "追加する";

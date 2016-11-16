@@ -6,7 +6,7 @@
 "BFh-aD-7YB.placeholder" = "Input tag(Optional)";
 
 /* Class = "UIBarButtonItem"; title = "완료"; ObjectID = "orh-1z-BG1"; */
-"orh-1z-BG1.title" = "Complete!";
+"orh-1z-BG1.title" = "Save";
 
 /* Class = "UINavigationItem"; title = "추가하기"; ObjectID = "qct-6i-nCF"; */
 "qct-6i-nCF.title" = "Add Note";
