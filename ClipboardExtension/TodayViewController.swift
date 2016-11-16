@@ -17,7 +17,6 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     
     @IBOutlet weak var clipboardTableView: UITableView!
 
-    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -28,6 +27,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     }
     
     func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
+        
         completionHandler(NCUpdateResult.newData)
     }
     
@@ -79,14 +79,17 @@ extension TodayViewController: UITableViewDataSource {
         if indexPath.row == 1 {
             memoCell.textLabel?.text = "우리집 주소"
         }
+            
         else if indexPath.row == 2 {
             memoCell.textLabel?.text = "내 계좌번호"
         }
+            
         else if indexPath.row == 3{
             memoCell.textLabel?.text = "www.naver.com"
         }
         
         memoCell.detailTextLabel?.text = "복사하기"
+        
         return memoCell
     }
 
@@ -98,12 +101,20 @@ extension TodayViewController: UITableViewDelegate {
     
         CopyPasteManager.copyFromPasteboard("위젯 테스트")
         
+        DispatchQueue.main.async {
+            self.statusLabel.text = "테스트1"
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: { 
+                self.statusLabel.text = "테스트2"
+            })
+        }
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
         guard indexPath.row != 0 else {
             return 45
         }
+        
         return 55
     }
     

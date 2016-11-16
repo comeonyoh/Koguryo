@@ -20,7 +20,6 @@
 		E13F6B141DD04DF300E1BA98 /* MemoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13F6B131DD04DF300E1BA98 /* MemoManager.swift */; };
 		E13F6B211DD0519800E1BA98 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E13F6B231DD0519800E1BA98 /* Localizable.strings */; };
 		E13F6B281DD0537900E1BA98 /* CopyTextButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13F6B261DD0537900E1BA98 /* CopyTextButtonTableViewCell.swift */; };
-		E13F6B291DD0537900E1BA98 /* CopyTextButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E13F6B271DD0537900E1BA98 /* CopyTextButtonTableViewCell.xib */; };
 		E13F6B2C1DD053A000E1BA98 /* MemoListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13F6B2A1DD053A000E1BA98 /* MemoListTableViewCell.swift */; };
 		E13F6B2D1DD053A000E1BA98 /* MemoListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E13F6B2B1DD053A000E1BA98 /* MemoListTableViewCell.xib */; };
 		E17C20E41DD1A40B003AD7F2 /* ProgressHudManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17C20E31DD1A40B003AD7F2 /* ProgressHudManager.swift */; };
@@ -31,10 +30,11 @@
 		E1935B441DD30CED00021E35 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1935B421DD30CED00021E35 /* MainInterface.storyboard */; };
 		E1935B481DD30CED00021E35 /* ClipboardExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E1935B3C1DD30CED00021E35 /* ClipboardExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E1935B501DD30E0F00021E35 /* AddMemoButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1935B4E1DD30E0F00021E35 /* AddMemoButtonTableViewCell.swift */; };
-		E1935B511DD30E0F00021E35 /* AddMemoButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1935B4F1DD30E0F00021E35 /* AddMemoButtonTableViewCell.xib */; };
 		E1935B541DD30E1A00021E35 /* MemoListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1935B521DD30E1A00021E35 /* MemoListTableViewCell.swift */; };
 		E1935B551DD30E1A00021E35 /* MemoListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1935B531DD30E1A00021E35 /* MemoListTableViewCell.xib */; };
 		E1935B571DD3151F00021E35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1935B561DD3151F00021E35 /* Assets.xcassets */; };
+		E1AC86681DDBEC7D00B9914A /* AddMemoButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1AC866A1DDBEC7D00B9914A /* AddMemoButtonTableViewCell.xib */; };
+		E1AC86731DDBED0600B9914A /* CopyTextButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1AC86751DDBED0600B9914A /* CopyTextButtonTableViewCell.xib */; };
 		E1C4F9D91DD1621B0017F8DA /* PlaceholderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C4F9D81DD1621B0017F8DA /* PlaceholderTextView.swift */; };
 		E1CE48BA1DD957A10035F5E1 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CE48B91DD957A10035F5E1 /* StringExtension.swift */; };
 		E1F594471DD555AB0052C44D /* MemoRealmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F594461DD555AB0052C44D /* MemoRealmTests.swift */; };
@@ -97,13 +97,11 @@
 		E13F6B0B1DD03E7600E1BA98 /* WriteMemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WriteMemoViewController.swift; sourceTree = "<group>"; };
 		E13F6B0F1DD0457900E1BA98 /* MemoListSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoListSection.swift; sourceTree = "<group>"; };
 		E13F6B131DD04DF300E1BA98 /* MemoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoManager.swift; sourceTree = "<group>"; };
-		E13F6B1D1DD0515800E1BA98 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Main.strings; sourceTree = "<group>"; };
 		E13F6B1E1DD0515800E1BA98 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		E13F6B221DD0519800E1BA98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E13F6B241DD0519E00E1BA98 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E13F6B251DD0519F00E1BA98 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E13F6B261DD0537900E1BA98 /* CopyTextButtonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CopyTextButtonTableViewCell.swift; sourceTree = "<group>"; };
-		E13F6B271DD0537900E1BA98 /* CopyTextButtonTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CopyTextButtonTableViewCell.xib; sourceTree = "<group>"; };
 		E13F6B2A1DD053A000E1BA98 /* MemoListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoListTableViewCell.swift; sourceTree = "<group>"; };
 		E13F6B2B1DD053A000E1BA98 /* MemoListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MemoListTableViewCell.xib; sourceTree = "<group>"; };
 		E14B14311DD2AC2800BFDC50 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
@@ -119,10 +117,22 @@
 		E1935B431DD30CED00021E35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		E1935B451DD30CED00021E35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1935B4E1DD30E0F00021E35 /* AddMemoButtonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMemoButtonTableViewCell.swift; sourceTree = "<group>"; };
-		E1935B4F1DD30E0F00021E35 /* AddMemoButtonTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddMemoButtonTableViewCell.xib; sourceTree = "<group>"; };
 		E1935B521DD30E1A00021E35 /* MemoListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoListTableViewCell.swift; sourceTree = "<group>"; };
 		E1935B531DD30E1A00021E35 /* MemoListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MemoListTableViewCell.xib; sourceTree = "<group>"; };
 		E1935B561DD3151F00021E35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E1AC86691DDBEC7D00B9914A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/AddMemoButtonTableViewCell.xib; sourceTree = "<group>"; };
+		E1AC866C1DDBEC7F00B9914A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/AddMemoButtonTableViewCell.strings; sourceTree = "<group>"; };
+		E1AC866E1DDBEC8000B9914A /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/AddMemoButtonTableViewCell.strings; sourceTree = "<group>"; };
+		E1AC86701DDBEC8200B9914A /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/AddMemoButtonTableViewCell.strings; sourceTree = "<group>"; };
+		E1AC86721DDBEC9900B9914A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		E1AC86741DDBED0600B9914A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/CopyTextButtonTableViewCell.xib; sourceTree = "<group>"; };
+		E1AC86771DDBED0700B9914A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/CopyTextButtonTableViewCell.strings; sourceTree = "<group>"; };
+		E1AC86791DDBED0800B9914A /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/CopyTextButtonTableViewCell.strings; sourceTree = "<group>"; };
+		E1AC867B1DDBED0900B9914A /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/CopyTextButtonTableViewCell.strings; sourceTree = "<group>"; };
+		E1AC867C1DDBEE5B00B9914A /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Main.strings; sourceTree = "<group>"; };
+		E1AC867E1DDBEEE600B9914A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MainInterface.strings; sourceTree = "<group>"; };
+		E1AC86801DDBEEE800B9914A /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/MainInterface.strings; sourceTree = "<group>"; };
+		E1AC86821DDBEEE900B9914A /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/MainInterface.strings; sourceTree = "<group>"; };
 		E1C4F9D81DD1621B0017F8DA /* PlaceholderTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceholderTextView.swift; sourceTree = "<group>"; };
 		E1CE48B91DD957A10035F5E1 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		E1F594461DD555AB0052C44D /* MemoRealmTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoRealmTests.swift; sourceTree = "<group>"; };
@@ -266,7 +276,7 @@
 			children = (
 				E13F6B2B1DD053A000E1BA98 /* MemoListTableViewCell.xib */,
 				E13F6B2A1DD053A000E1BA98 /* MemoListTableViewCell.swift */,
-				E13F6B271DD0537900E1BA98 /* CopyTextButtonTableViewCell.xib */,
+				E1AC86751DDBED0600B9914A /* CopyTextButtonTableViewCell.xib */,
 				E13F6B261DD0537900E1BA98 /* CopyTextButtonTableViewCell.swift */,
 			);
 			path = Views;
@@ -289,10 +299,10 @@
 		E1935B4D1DD30DF900021E35 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				E1935B4E1DD30E0F00021E35 /* AddMemoButtonTableViewCell.swift */,
-				E1935B4F1DD30E0F00021E35 /* AddMemoButtonTableViewCell.xib */,
 				E1935B521DD30E1A00021E35 /* MemoListTableViewCell.swift */,
 				E1935B531DD30E1A00021E35 /* MemoListTableViewCell.xib */,
+				E1935B4E1DD30E0F00021E35 /* AddMemoButtonTableViewCell.swift */,
+				E1AC866A1DDBEC7D00B9914A /* AddMemoButtonTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -454,7 +464,7 @@
 				E13F6AF31DD03C5500E1BA98 /* LaunchScreen.storyboard in Resources */,
 				E13F6B2D1DD053A000E1BA98 /* MemoListTableViewCell.xib in Resources */,
 				E13F6B211DD0519800E1BA98 /* Localizable.strings in Resources */,
-				E13F6B291DD0537900E1BA98 /* CopyTextButtonTableViewCell.xib in Resources */,
+				E1AC86731DDBED0600B9914A /* CopyTextButtonTableViewCell.xib in Resources */,
 				E13F6AF01DD03C5500E1BA98 /* Assets.xcassets in Resources */,
 				E13F6AEE1DD03C5500E1BA98 /* Main.storyboard in Resources */,
 			);
@@ -474,7 +484,7 @@
 				E1935B441DD30CED00021E35 /* MainInterface.storyboard in Resources */,
 				E1935B551DD30E1A00021E35 /* MemoListTableViewCell.xib in Resources */,
 				E1935B571DD3151F00021E35 /* Assets.xcassets in Resources */,
-				E1935B511DD30E0F00021E35 /* AddMemoButtonTableViewCell.xib in Resources */,
+				E1AC86681DDBEC7D00B9914A /* AddMemoButtonTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -636,8 +646,9 @@
 			isa = PBXVariantGroup;
 			children = (
 				E13F6AED1DD03C5500E1BA98 /* Base */,
-				E13F6B1D1DD0515800E1BA98 /* ko */,
 				E14B14311DD2AC2800BFDC50 /* ja */,
+				E1AC86721DDBEC9900B9914A /* en */,
+				E1AC867C1DDBEE5B00B9914A /* ko */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -667,8 +678,33 @@
 			isa = PBXVariantGroup;
 			children = (
 				E1935B431DD30CED00021E35 /* Base */,
+				E1AC867E1DDBEEE600B9914A /* en */,
+				E1AC86801DDBEEE800B9914A /* ko */,
+				E1AC86821DDBEEE900B9914A /* ja */,
 			);
 			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+		E1AC866A1DDBEC7D00B9914A /* AddMemoButtonTableViewCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E1AC86691DDBEC7D00B9914A /* Base */,
+				E1AC866C1DDBEC7F00B9914A /* en */,
+				E1AC866E1DDBEC8000B9914A /* ko */,
+				E1AC86701DDBEC8200B9914A /* ja */,
+			);
+			name = AddMemoButtonTableViewCell.xib;
+			sourceTree = "<group>";
+		};
+		E1AC86751DDBED0600B9914A /* CopyTextButtonTableViewCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E1AC86741DDBED0600B9914A /* Base */,
+				E1AC86771DDBED0700B9914A /* en */,
+				E1AC86791DDBED0800B9914A /* ko */,
+				E1AC867B1DDBED0900B9914A /* ja */,
+			);
+			name = CopyTextButtonTableViewCell.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

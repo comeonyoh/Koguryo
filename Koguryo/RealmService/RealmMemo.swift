@@ -26,7 +26,6 @@ class RealmMemo: Object {
     dynamic var isFavorite: Bool = false
    
     dynamic var createDate: Date = Date.init()
-
     
     
     
