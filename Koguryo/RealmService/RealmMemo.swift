@@ -27,8 +27,6 @@ class RealmMemo: Object {
    
     dynamic var createDate: Date = Date.init()
     
-    
-    
     override static func primaryKey() -> String? {
         return "memoId"
     }
@@ -58,6 +56,11 @@ extension RealmMemo: NSCopying, NonEmptyString {
                                                 "isFavorite": self.isFavorite])
         
         return copiedMemo
+    }
+    
+    func dictionary() -> Dictionary <String, String> {
+        
+        return ["memoId": self.memoId, "contents": self.protectStringNonEmpty(self.contents), "placeHolder": self.protectStringNonEmpty(self.placeHolder)]
     }
 }
 

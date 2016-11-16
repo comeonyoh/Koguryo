@@ -19,6 +19,8 @@ class MemoListViewController: UIViewController {
         super.viewDidLoad()
 
         self.setLayout()
+        
+        self.synchronizeDataBetweenAppAndExtension()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -33,6 +35,24 @@ class MemoListViewController: UIViewController {
 
 }
 
+
+/**
+ * Data sharing between app and extension.
+ */
+
+extension MemoListViewController {
+    
+    func synchronizeDataBetweenAppAndExtension() {
+        
+        let shareInfo = UserDefaults.init(suiteName: GroupKey.groupKey)
+        
+        shareInfo?.set(memoListManager.getFavoriteMemos(), forKey: GroupKey.favorites)
+    }
+}
+
+/**
+ * Layout
+ */
 
 extension MemoListViewController {
     
@@ -141,6 +161,8 @@ extension MemoListViewController: UITableViewDataSource, MemoListTableViewCellDe
                 self.showAlertView(withPrompt: NSLocalizedString("warning_favorite_max_count", comment: ""))
             }
         }
+
+        self.synchronizeDataBetweenAppAndExtension()
 
         self.memoListTableView.reloadData()
 

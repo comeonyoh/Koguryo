@@ -17,6 +17,8 @@ enum ClipboardIndex: Int {
 
 class TodayViewController: UIViewController, NCWidgetProviding {
     
+    var favoriteMemos: Array<Memo> = [Memo]()
+    
     @IBOutlet weak var statusLabel: UILabel!
     
     @IBOutlet weak var clipboardTableView: UITableView!
@@ -28,6 +30,8 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         self.setLayout()
 
         self.extensionContext?.widgetLargestAvailableDisplayMode = .expanded
+        
+        self.synchronizeDataBetweenAppAndExtension()
     }
     
     func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
@@ -54,11 +58,13 @@ class TodayViewController: UIViewController, NCWidgetProviding {
 }
 
 /**
- * set Layout
+ * Set layout
  */
+
 extension TodayViewController {
 
     func setLayout() {
+        
         
         self.clipboardTableView.register(UINib.init(nibName: MemoListTableViewCell.identifier, bundle: nil),
                                          forCellReuseIdentifier: MemoListTableViewCell.identifier)
@@ -68,10 +74,34 @@ extension TodayViewController {
     }
 }
 
+extension TodayViewController {
+
+    func synchronizeDataBetweenAppAndExtension() {
+        
+        let shareInfo = UserDefaults.init(suiteName: GroupKey.groupKey)
+    
+        let favoriteMemos = shareInfo?.object(forKey: GroupKey.favorites) as! Array<Dictionary<String, String>>?
+        
+        if favoriteMemos != nil {
+            
+            for( _ , memoInfo) in (favoriteMemos?.enumerated())! {
+                
+                let memo = Memo.init(memoInfo)
+                
+                self.favoriteMemos.insert(memo, at: 0)
+            }
+        }
+        
+        self.clipboardTableView.reloadData()
+    }
+
+}
+
 extension TodayViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        
+        return 1 + self.favoriteMemos.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -85,19 +115,16 @@ extension TodayViewController: UITableViewDataSource {
         
         let memoCell = tableView.dequeueReusableCell(withIdentifier: MemoListTableViewCell.identifier, for: indexPath)
         
-        if indexPath.row == 1 {
-            memoCell.textLabel?.text = "우리집 주소"
-        }
-            
-        else if indexPath.row == 2 {
-            memoCell.textLabel?.text = "내 계좌번호"
-        }
-            
-        else if indexPath.row == 3{
-            memoCell.textLabel?.text = "www.naver.com"
-        }
+        let memo = self.favoriteMemos[indexPath.row - 1]
         
-        memoCell.detailTextLabel?.text = "복사하기"
+        if memo.placeHolder != nil && (memo.placeHolder?.characters.count)! > 0 {
+            memoCell.textLabel?.text = memo.placeHolder
+        }
+        else {
+            memoCell.textLabel?.text = memo.contents
+        }
+
+        memoCell.detailTextLabel?.text = NSLocalizedString("copy", comment: "")
         
         return memoCell
     }
@@ -114,8 +141,8 @@ extension TodayViewController: UITableViewDelegate {
             
             return
         }
-
-        CopyPasteManager.copyFromPasteboard("위젯 테스트")
+        
+        CopyPasteManager.copyFromPasteboard(self.favoriteMemos[indexPath.row - 1].contents)
 
         DispatchQueue.main.async {
             self.statusLabel.text = NSLocalizedString("copy_success", comment: "")

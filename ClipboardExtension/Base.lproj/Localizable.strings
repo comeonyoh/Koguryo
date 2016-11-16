@@ -8,3 +8,5 @@
 
 "copy_success" = "Copy!";
 "copy_wait" = "Click a memo to copy.";
+
+"copy" = "Copy";

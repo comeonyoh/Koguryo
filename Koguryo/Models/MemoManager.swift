@@ -148,6 +148,26 @@ extension MemoManager {
         
         return true
     }
+    
+    func getFavoriteMemos() -> Array<Dictionary<String, String>>? {
+        
+        let realm = self.configRealm()
+        
+        //  Search favorite memos
+        let queryResult = realm.objects(RealmMemo.self).filter(NSPredicate.init(format: "isFavorite = 1"))
+        
+        guard queryResult.count > 0 else {
+            return nil
+        }
+        
+        var resultInfo = [Dictionary<String, String>]()
+        
+        for (_, resultItem ) in queryResult.enumerated() {
+            resultInfo.append(resultItem.dictionary())
+        }
+        
+        return resultInfo
+    }
 }
 
 

@@ -179,7 +179,32 @@ class MemoRealmTests: XCTestCase {
         XCTAssertEqual(manager.getMemoCount(withType: .normal), 1)
     }
     
-    //  delete memo 
+    //  get only favorite memo
+    func testGetOnlyFavoriteMemos() {
+
+        let manager = MemoManager.init()
+        
+        let memo_1 = RealmMemo.init(value: ["contents" : "contents_1", "placeHolder": "placeHolder_1", "memoId" : "contents_1".encryption()])
+        let memo_2 = RealmMemo.init(value: ["contents" : "contents_2", "placeHolder": "placeHolder_2", "memoId" : "contents_2".encryption()])
+        let memo_3 = RealmMemo.init(value: ["contents" : "contents_3", "placeHolder": "placeHolder_3", "memoId" : "contents_3".encryption()])
+        let memo_4 = RealmMemo.init(value: ["contents" : "contents_4", "placeHolder": "placeHolder_4", "memoId" : "contents_4".encryption()])
+        
+        memo_2.isFavorite = true
+        memo_4.isFavorite = true
+        
+        XCTAssertTrue(memo_2.isFavorite)
+        XCTAssertTrue(memo_4.isFavorite)
+        
+        manager.addMemo(memo_1)
+        manager.addMemo(memo_2)
+        manager.addMemo(memo_3)
+        manager.addMemo(memo_4)
+        
+        let result = manager.getFavoriteMemos()
+        
+        XCTAssertEqual(result?.count, 2)
+
+    }
 }
 
 
