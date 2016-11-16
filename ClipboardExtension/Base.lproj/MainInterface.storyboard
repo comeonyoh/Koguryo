@@ -18,14 +18,14 @@
                         <viewControllerLayoutGuide type="bottom" id="FKl-LY-JtV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="245"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3oh-V4-Svc">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="210"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="165"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="210" id="0bF-NW-8N6"/>
+                                    <constraint firstAttribute="height" constant="165" id="0bF-NW-8N6"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="dataSource" destination="M4Y-Lb-cyx" id="ogW-of-sxw"/>
@@ -33,13 +33,13 @@
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="복사하실 메모를 선택해주세요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cMD-dG-stq">
-                                <rect key="frame" x="75" y="220" width="170" height="17"/>
+                                <rect key="frame" x="75" y="175" width="170" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oEV-tj-ten">
-                                <rect key="frame" x="10" y="213.5" width="30" height="30"/>
+                                <rect key="frame" x="10" y="168.5" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="AlR-kp-V3i"/>
                                     <constraint firstAttribute="width" constant="30" id="hCe-vz-23W"/>
@@ -65,7 +65,7 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="245"/>
+                    <size key="freeformSize" width="320" height="200"/>
                     <connections>
                         <outlet property="clipboardTableView" destination="3oh-V4-Svc" id="Bp3-Hi-CfX"/>
                         <outlet property="statusLabel" destination="cMD-dG-stq" id="ZoB-6L-ENo"/>

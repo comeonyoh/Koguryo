@@ -42,7 +42,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     func widgetActiveDisplayModeDidChange(_ activeDisplayMode: NCWidgetDisplayMode, withMaximumSize maxSize: CGSize) {
         
         if activeDisplayMode == .expanded {
-            self.preferredContentSize = CGSize.init(width: 0.0, height: 245.0)
+            self.preferredContentSize = CGSize.init(width: 0.0, height: 200.0)
         }
             
         else if activeDisplayMode == .compact {
@@ -101,21 +101,21 @@ extension TodayViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 1 + self.favoriteMemos.count
+        return self.favoriteMemos.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard indexPath.row != ClipboardIndex.addMemo.rawValue else {
-            
-            let addPlusCell = tableView.dequeueReusableCell(withIdentifier: AddMemoButtonTableViewCell.identifier, for: indexPath)
-            
-            return addPlusCell
-        }
+//        guard indexPath.row != ClipboardIndex.addMemo.rawValue else {
+//            
+//            let addPlusCell = tableView.dequeueReusableCell(withIdentifier: AddMemoButtonTableViewCell.identifier, for: indexPath)
+//            
+//            return addPlusCell
+//        }
         
         let memoCell = tableView.dequeueReusableCell(withIdentifier: MemoListTableViewCell.identifier, for: indexPath)
         
-        let memo = self.favoriteMemos[indexPath.row - 1]
+        let memo = self.favoriteMemos[indexPath.row]
         
         if memo.placeHolder != nil && (memo.placeHolder?.characters.count)! > 0 {
             memoCell.textLabel?.text = memo.placeHolder
@@ -135,14 +135,14 @@ extension TodayViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     
-        guard indexPath.row != ClipboardIndex.addMemo.rawValue else {
-            
-            CopyPasteManager.copyToPasteboard()
-            
-            return
-        }
+//        guard indexPath.row != ClipboardIndex.addMemo.rawValue else {
+//            
+//            CopyPasteManager.copyToPasteboard()
+//            
+//            return
+//        }
         
-        CopyPasteManager.copyFromPasteboard(self.favoriteMemos[indexPath.row - 1].contents)
+        CopyPasteManager.copyFromPasteboard(self.favoriteMemos[indexPath.row].contents)
 
         DispatchQueue.main.async {
             self.statusLabel.text = NSLocalizedString("copy_success", comment: "")
@@ -153,10 +153,6 @@ extension TodayViewController: UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        
-        guard indexPath.row != 0 else {
-            return 45
-        }
         
         return 55
     }
