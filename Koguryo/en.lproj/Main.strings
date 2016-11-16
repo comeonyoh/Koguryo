@@ -1,9 +1,9 @@
 
 /* Class = "UINavigationItem"; title = "메모장"; ObjectID = "4yt-NJ-dVE"; */
-"4yt-NJ-dVE.title" = "Notes";
+"4yt-NJ-dVE.title" = "Note";
 
 /* Class = "UITextField"; placeholder = "태그를 입력해주십시오(옵션사항)"; ObjectID = "BFh-aD-7YB"; */
-"BFh-aD-7YB.placeholder" = "Input tag(Optional)";
+"BFh-aD-7YB.placeholder" = "Enter tag(optional)";
 
 /* Class = "UIBarButtonItem"; title = "완료"; ObjectID = "orh-1z-BG1"; */
 "orh-1z-BG1.title" = "Save";

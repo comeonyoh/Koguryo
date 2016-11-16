@@ -339,9 +339,9 @@
 			isa = PBXGroup;
 			children = (
 				E17C20E71DD1A990003AD7F2 /* Animationable.swift */,
+				E1CE48B91DD957A10035F5E1 /* StringExtension.swift */,
 				E1C4F9D81DD1621B0017F8DA /* PlaceholderTextView.swift */,
 				E1FFADE91DD19D62000AA173 /* PlaceholderTextField.swift */,
-				E1CE48B91DD957A10035F5E1 /* StringExtension.swift */,
 				E1EA46F11DDC1FB800B3F098 /* UIViewControllerAlert.swift */,
 			);
 			path = Extensions;

@@ -10,7 +10,7 @@
  * Section Headers
  */
 
-"section_title_favorite" = "Favorite";
+"section_title_favorite" = "Bookmarks";
 "section_title_items" = "Notes";
 
 /**
@@ -18,18 +18,18 @@
  */
 
 "delete" = "Delete";
-"modify" = "Modify";
+"modify" = "Edit";
 
 "tag" = "Tag";
 "contents" = "Contents";
 "copy" = "Copy!";
 
-"favorite_add" = "Add Favorites";
-"favorite_delete" = "Delete Favorites";
+"favorite_add" = "Add to bookmarks";
+"favorite_delete" = "Remove from bookmarks";
 
-"input_contents_placeholder" = "Input contetns(Required)";
+"input_contents_placeholder" = "Enter text (Necessary)";
 
 "confirm" = "OK";
 "cancel" = "cancel";
-"warning_favorite_max_count" = "Cannot add more than 3 notes";
+"warning_favorite_max_count" = "Cannot add more than 3 notes to bookmark";
 "warning_delete_sure" = "Are you sure to delete?";
