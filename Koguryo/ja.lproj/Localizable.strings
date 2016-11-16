@@ -33,3 +33,4 @@
 "cancel" = "キャンセル";
 "warning_favorite_max_count" = "お気に入りは3つ以上追加できません";
 "warning_delete_sure" = "本当に削除しますか?";
+"section_footer_add_favorite" = "If you add it to your Bookmarks, you can check it in the widget.";

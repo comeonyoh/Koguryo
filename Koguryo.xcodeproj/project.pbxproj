@@ -44,6 +44,8 @@
 		E1EA46F21DDC1FB800B3F098 /* UIViewControllerAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EA46F11DDC1FB800B3F098 /* UIViewControllerAlert.swift */; };
 		E1F594471DD555AB0052C44D /* MemoRealmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F594461DD555AB0052C44D /* MemoRealmTests.swift */; };
 		E1F5944A1DD557F20052C44D /* RealmMemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F594491DD557F20052C44D /* RealmMemo.swift */; };
+		E1F84B801DDC5DC8003B4368 /* MemoListFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F84B7F1DDC5DC8003B4368 /* MemoListFooterView.swift */; };
+		E1F84B811DDC6195003B4368 /* MemoListFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1F84B831DDC6195003B4368 /* MemoListFooterView.xib */; };
 		E1FFADE81DD19B14000AA173 /* WriteMemoViewControllerElementsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FFADE71DD19B14000AA173 /* WriteMemoViewControllerElementsManager.swift */; };
 		E1FFADEA1DD19D62000AA173 /* PlaceholderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FFADE91DD19D62000AA173 /* PlaceholderTextField.swift */; };
 		F7218D066B930892B3DB4265 /* Pods_Koguryo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E419A0B0961458AD3CA031F8 /* Pods_Koguryo.framework */; };
@@ -153,6 +155,11 @@
 		E1EA47271DDC3B6B00B3F098 /* Koguryo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Koguryo.entitlements; sourceTree = "<group>"; };
 		E1F594461DD555AB0052C44D /* MemoRealmTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoRealmTests.swift; sourceTree = "<group>"; };
 		E1F594491DD557F20052C44D /* RealmMemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmMemo.swift; sourceTree = "<group>"; };
+		E1F84B7F1DDC5DC8003B4368 /* MemoListFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoListFooterView.swift; sourceTree = "<group>"; };
+		E1F84B821DDC6195003B4368 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MemoListFooterView.xib; sourceTree = "<group>"; };
+		E1F84B851DDC6197003B4368 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MemoListFooterView.strings; sourceTree = "<group>"; };
+		E1F84B871DDC6198003B4368 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/MemoListFooterView.strings; sourceTree = "<group>"; };
+		E1F84B891DDC6199003B4368 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/MemoListFooterView.strings; sourceTree = "<group>"; };
 		E1FFADE71DD19B14000AA173 /* WriteMemoViewControllerElementsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WriteMemoViewControllerElementsManager.swift; sourceTree = "<group>"; };
 		E1FFADE91DD19D62000AA173 /* PlaceholderTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceholderTextField.swift; sourceTree = "<group>"; };
 		E419A0B0961458AD3CA031F8 /* Pods_Koguryo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Koguryo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -297,6 +304,8 @@
 				E13F6B2A1DD053A000E1BA98 /* MemoListTableViewCell.swift */,
 				E1AC86751DDBED0600B9914A /* CopyTextButtonTableViewCell.xib */,
 				E13F6B261DD0537900E1BA98 /* CopyTextButtonTableViewCell.swift */,
+				E1F84B831DDC6195003B4368 /* MemoListFooterView.xib */,
+				E1F84B7F1DDC5DC8003B4368 /* MemoListFooterView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -497,6 +506,7 @@
 				E120F51A1DD5867F007E8E4F /* config.plist in Resources */,
 				E13F6AF31DD03C5500E1BA98 /* LaunchScreen.storyboard in Resources */,
 				E1805DE91DDC4C6D00867240 /* MemoListTableViewCell.xib in Resources */,
+				E1F84B811DDC6195003B4368 /* MemoListFooterView.xib in Resources */,
 				E13F6B211DD0519800E1BA98 /* Localizable.strings in Resources */,
 				E1AC86731DDBED0600B9914A /* CopyTextButtonTableViewCell.xib in Resources */,
 				E13F6AF01DD03C5500E1BA98 /* Assets.xcassets in Resources */,
@@ -626,6 +636,7 @@
 				E13F6AE91DD03C5500E1BA98 /* AppDelegate.swift in Sources */,
 				E1FFADE81DD19B14000AA173 /* WriteMemoViewControllerElementsManager.swift in Sources */,
 				E1CE48BA1DD957A10035F5E1 /* StringExtension.swift in Sources */,
+				E1F84B801DDC5DC8003B4368 /* MemoListFooterView.swift in Sources */,
 				E13F6B141DD04DF300E1BA98 /* MemoManager.swift in Sources */,
 				E13F6B0C1DD03E7600E1BA98 /* WriteMemoViewController.swift in Sources */,
 				E1F5944A1DD557F20052C44D /* RealmMemo.swift in Sources */,
@@ -766,6 +777,17 @@
 				E1AC868A1DDBF4B600B9914A /* ko */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		E1F84B831DDC6195003B4368 /* MemoListFooterView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E1F84B821DDC6195003B4368 /* Base */,
+				E1F84B851DDC6197003B4368 /* en */,
+				E1F84B871DDC6198003B4368 /* ko */,
+				E1F84B891DDC6199003B4368 /* ja */,
+			);
+			name = MemoListFooterView.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

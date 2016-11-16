@@ -33,3 +33,4 @@
 "cancel" = "취소";
 "warning_favorite_max_count" = "즐겨찾기는 3개 이상 \n추가할 수 없습니다";
 "warning_delete_sure" = "정말로 삭제하시겠습니까?";
+"section_footer_add_favorite" = "즐겨찾기에 추가하시면 위젯에서 확인할 수 있습니다.";

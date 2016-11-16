@@ -43,10 +43,10 @@ class MemoListViewController: UIViewController {
 extension MemoListViewController {
     
     func synchronizeDataBetweenAppAndExtension() {
-        
+
         let shareInfo = UserDefaults.init(suiteName: GroupKey.groupKey)
         
-        shareInfo?.set(memoListManager.getFavoriteMemos(), forKey: GroupKey.favorites)
+        shareInfo?.set(self.memoListManager.getFavoriteMemos(), forKey: GroupKey.favorites)
     }
 }
 
@@ -59,6 +59,7 @@ extension MemoListViewController {
     func setLayout() {
 
         self.memoListTableView.estimatedRowHeight = 90
+        self.memoListTableView.estimatedSectionFooterHeight = 30
         self.memoListTableView.rowHeight = UITableViewAutomaticDimension
         self.memoListTableView.register(UINib.init(nibName: MemoListTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: MemoListTableViewCell.identifier)
         self.memoListTableView.register(UINib.init(nibName: CopyTextButtonTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: CopyTextButtonTableViewCell.identifier)
@@ -126,7 +127,7 @@ extension MemoListViewController: UITableViewDataSource, MemoListTableViewCellDe
         
         return nil
     }
-
+    
     
     //MARK: MemoListTableViewCellDelegate
     
@@ -149,6 +150,10 @@ extension MemoListViewController: UITableViewDataSource, MemoListTableViewCellDe
                     let memo = self.memoListManager.getMemoAt(indexPath)
                     
                     self.memoListManager.deleteMemo(withMemo: memo)
+                    
+                    self.memoListTableView.reloadData()
+                    
+                    self.synchronizeDataBetweenAppAndExtension()
                 }
             })
         }
@@ -160,11 +165,12 @@ extension MemoListViewController: UITableViewDataSource, MemoListTableViewCellDe
             if result == false {
                 self.showAlertView(withPrompt: NSLocalizedString("warning_favorite_max_count", comment: ""))
             }
+            
+            self.memoListTableView.reloadData()
+            
+            self.synchronizeDataBetweenAppAndExtension()
         }
 
-        self.synchronizeDataBetweenAppAndExtension()
-
-        self.memoListTableView.reloadData()
 
     }
 
@@ -221,10 +227,37 @@ extension MemoListViewController: UITableViewDelegate {
         return 0
     }
     
-    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat { return 0.0 }
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        
+        guard section != MemoListSection.list.rawValue else {
+            return 60.0
+        }
+        return 30.0
+    }
+
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        
+        guard section != MemoListSection.list.rawValue else {
+            
+            if memoListManager.hasMemo() == true {
+                return MemoListFooterView(frame: CGRect.init(x: 0, y: 0, width: 0, height: 50))
+            }
+            return nil
+
+        }
+        return nil
+    }
 
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80.0
+    }
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForFooterInSection section: Int) -> CGFloat {
+
+        guard section != MemoListSection.list.rawValue else {
+            return 60.0
+        }
+        return 30.0
     }
     
     func moveToModifyViewController(_ indexPath: IndexPath) {
