@@ -1,0 +1,7 @@
+
+/* Class = "UIButton"; normalTitle = "+ 저장하기"; ObjectID = "Apk-EB-m6G"; */
+"Apk-EB-m6G.normalTitle" = "+ 저장하기";
+
+/* Class = "UILabel"; text = "클릭하시면 현재 클립보드에 저장된 글이 
+노트에 저장됩니다."; ObjectID = "Qnk-3i-thf"; */
+"Qnk-3i-thf.text" = "클릭하시면 현재 클립보드에 저장된 글이 \n노트에 저장됩니다.";
