@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  Koguryo
+
+  Created by KimJungSu on 11/16/16.
+  Copyright © 2016 ODOV. All rights reserved.
+*/
+
+"copy_success" = "복사 완료!";
+"copy_wait" = "복사하실 메모를 선택해주세요.";

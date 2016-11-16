@@ -35,25 +35,29 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="복사하실 메모를 선택해주세요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cMD-dG-stq">
                                 <rect key="frame" x="75" y="220" width="170" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_setting" translatesAutoresizingMaskIntoConstraints="NO" id="vgl-pT-RBd">
-                                <rect key="frame" x="10" y="216" width="25" height="25"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oEV-tj-ten">
+                                <rect key="frame" x="10" y="213.5" width="30" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="25" id="Hii-Nb-QXg"/>
-                                    <constraint firstAttribute="width" constant="25" id="PPR-fJ-Lq9"/>
+                                    <constraint firstAttribute="height" constant="30" id="AlR-kp-V3i"/>
+                                    <constraint firstAttribute="width" constant="30" id="hCe-vz-23W"/>
                                 </constraints>
-                            </imageView>
+                                <state key="normal" image="icon_setting"/>
+                                <connections>
+                                    <action selector="didSettingButtonClicked:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="i5r-Gu-50S"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="cMD-dG-stq" firstAttribute="top" secondItem="3oh-V4-Svc" secondAttribute="bottom" constant="10" id="AQ1-1e-iWO"/>
                             <constraint firstItem="cMD-dG-stq" firstAttribute="centerX" secondItem="3oh-V4-Svc" secondAttribute="centerX" id="JOd-fp-gbc"/>
-                            <constraint firstItem="vgl-pT-RBd" firstAttribute="centerY" secondItem="cMD-dG-stq" secondAttribute="centerY" id="LAA-bk-QHS"/>
                             <constraint firstAttribute="trailing" secondItem="3oh-V4-Svc" secondAttribute="trailing" id="XM2-ub-MAw"/>
                             <constraint firstItem="3oh-V4-Svc" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" id="YFp-CK-Jyf"/>
-                            <constraint firstItem="vgl-pT-RBd" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" constant="10" id="h7A-bh-YOX"/>
+                            <constraint firstItem="oEV-tj-ten" firstAttribute="centerY" secondItem="cMD-dG-stq" secondAttribute="centerY" id="qH5-Oh-Lwf"/>
                             <constraint firstItem="3oh-V4-Svc" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" id="qdS-Wo-aUo"/>
+                            <constraint firstItem="oEV-tj-ten" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" constant="10" id="yyK-qy-7vA"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
@@ -69,7 +73,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-734.39999999999998" y="112.44377811094454"/>
+            <point key="canvasLocation" x="-734.39999999999998" y="111.99400299850076"/>
         </scene>
     </scenes>
     <resources>

@@ -9,9 +9,13 @@
 import UIKit
 import NotificationCenter
 
+
+enum ClipboardIndex: Int {
+    case addMemo
+    case normalMemo
+}
+
 class TodayViewController: UIViewController, NCWidgetProviding {
-    
-    let addClipboardRowIndex = 0
     
     @IBOutlet weak var statusLabel: UILabel!
     
@@ -41,7 +45,12 @@ class TodayViewController: UIViewController, NCWidgetProviding {
             self.preferredContentSize = maxSize
         }
     }
-
+    
+    @IBAction func didSettingButtonClicked(_ sender: Any) {
+        
+        self.extensionContext?.open(URL.init(string: "Koguryo://")!, completionHandler: nil)
+    }
+    
 }
 
 /**
@@ -67,7 +76,7 @@ extension TodayViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard indexPath.row != self.addClipboardRowIndex else {
+        guard indexPath.row != ClipboardIndex.addMemo.rawValue else {
             
             let addPlusCell = tableView.dequeueReusableCell(withIdentifier: AddMemoButtonTableViewCell.identifier, for: indexPath)
             
@@ -99,12 +108,19 @@ extension TodayViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     
+        guard indexPath.row != ClipboardIndex.addMemo.rawValue else {
+            
+            CopyPasteManager.copyToPasteboard()
+            
+            return
+        }
+
         CopyPasteManager.copyFromPasteboard("위젯 테스트")
-        
+
         DispatchQueue.main.async {
-            self.statusLabel.text = "테스트1"
+            self.statusLabel.text = NSLocalizedString("copy_success", comment: "")
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: { 
-                self.statusLabel.text = "테스트2"
+                self.statusLabel.text = NSLocalizedString("copy_wait", comment: "")
             })
         }
     }
