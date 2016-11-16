@@ -36,7 +36,7 @@ extension MemoManager {
         
         let realm = self.configRealm()
 
-        let memos = realm.objects(RealmMemo.self)
+        let memos = realm.objects(RealmMemo.self).filter(NSPredicate.init(format: "isFavorite = 0"))
 
         if memos.count > 0 {
             return true
