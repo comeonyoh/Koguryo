@@ -6,7 +6,7 @@
   Copyright © 2016 ODOV. All rights reserved.
 */
 
-"copy_success" = "Copy!";
+"copy_success" = "コピー完了！";
 "copy_wait" = "コピーするメモをクリックする";
 
-"copy" = "Copy";
+"copy" = "コピー";
