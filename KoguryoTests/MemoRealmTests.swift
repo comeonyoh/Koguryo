@@ -117,12 +117,14 @@ class MemoRealmTests: XCTestCase {
         manager.addMemo(memo_3)
         manager.addMemo(memo_4)
 
-        XCTAssertEqual(manager.getMemoAt(1, withType: .normal), memo_2)
+        let getMemo = manager.getMemoAt(1, withType: .normal)
+        
+        XCTAssertEqual(getMemo, memo_3)
         XCTAssertEqual(manager.getMemoAt(0, withType: .favorite), memo_4)
         
         let m_memo_1 = manager.getMemoAt(IndexPath.init(row: 0, section: MemoListSection.list.rawValue))
         
-        XCTAssertEqual(m_memo_1, memo_1)
+        XCTAssertEqual(m_memo_1, memo_4)
         XCTAssertEqual(manager.getMemoAt(IndexPath.init(row: 0, section: MemoListSection.favorite.rawValue)), memo_4)
         
     }
