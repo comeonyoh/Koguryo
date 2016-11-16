@@ -22,7 +22,7 @@
 
 "tag" = "Tag";
 "contents" = "Contents";
-"copy" = "Copy it!";
+"copy" = "Copy!";
 
 "favorite_add" = "Add Favorites";
 "favorite_delete" = "Delete Favorites";
