@@ -38,6 +38,7 @@
 		E1AC86851DDBF4B200B9914A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E1AC86871DDBF4B200B9914A /* Localizable.strings */; };
 		E1C4F9D91DD1621B0017F8DA /* PlaceholderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C4F9D81DD1621B0017F8DA /* PlaceholderTextView.swift */; };
 		E1CE48BA1DD957A10035F5E1 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CE48B91DD957A10035F5E1 /* StringExtension.swift */; };
+		E1EA46F21DDC1FB800B3F098 /* UIViewControllerAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EA46F11DDC1FB800B3F098 /* UIViewControllerAlert.swift */; };
 		E1F594471DD555AB0052C44D /* MemoRealmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F594461DD555AB0052C44D /* MemoRealmTests.swift */; };
 		E1F5944A1DD557F20052C44D /* RealmMemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F594491DD557F20052C44D /* RealmMemo.swift */; };
 		E1FFADE81DD19B14000AA173 /* WriteMemoViewControllerElementsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FFADE71DD19B14000AA173 /* WriteMemoViewControllerElementsManager.swift */; };
@@ -140,6 +141,7 @@
 		E1AC868A1DDBF4B600B9914A /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E1C4F9D81DD1621B0017F8DA /* PlaceholderTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceholderTextView.swift; sourceTree = "<group>"; };
 		E1CE48B91DD957A10035F5E1 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		E1EA46F11DDC1FB800B3F098 /* UIViewControllerAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerAlert.swift; sourceTree = "<group>"; };
 		E1F594461DD555AB0052C44D /* MemoRealmTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoRealmTests.swift; sourceTree = "<group>"; };
 		E1F594491DD557F20052C44D /* RealmMemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmMemo.swift; sourceTree = "<group>"; };
 		E1FFADE71DD19B14000AA173 /* WriteMemoViewControllerElementsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WriteMemoViewControllerElementsManager.swift; sourceTree = "<group>"; };
@@ -320,6 +322,7 @@
 				E1C4F9D81DD1621B0017F8DA /* PlaceholderTextView.swift */,
 				E1FFADE91DD19D62000AA173 /* PlaceholderTextField.swift */,
 				E1CE48B91DD957A10035F5E1 /* StringExtension.swift */,
+				E1EA46F11DDC1FB800B3F098 /* UIViewControllerAlert.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -606,6 +609,7 @@
 				E13F6B0A1DD03E5F00E1BA98 /* MemoListViewController.swift in Sources */,
 				E13F6B281DD0537900E1BA98 /* CopyTextButtonTableViewCell.swift in Sources */,
 				E17C20EA1DD1AA6E003AD7F2 /* StoryboardManager.swift in Sources */,
+				E1EA46F21DDC1FB800B3F098 /* UIViewControllerAlert.swift in Sources */,
 				E1FFADEA1DD19D62000AA173 /* PlaceholderTextField.swift in Sources */,
 				E17C20E81DD1A990003AD7F2 /* Animationable.swift in Sources */,
 				E13F6B101DD0457900E1BA98 /* MemoListSection.swift in Sources */,

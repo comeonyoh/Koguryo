@@ -19,6 +19,8 @@ enum SwipeButtonEvent {
 protocol MemoListTableViewCellDelegate: class {
     
     func memoListTableViewCell(didCopyButtonClicked copyButton: UIButton, withIndexPath indexPath: IndexPath)
+    
+    func memoListTableViewCell(didSwipeButtonClicked event: SwipeButtonEvent, withIndexPath indexPath: IndexPath)
 }
 
 
@@ -88,7 +90,16 @@ class MemoListTableViewCell: MGSwipeTableCell, MGSwipeTableCellDelegate {
     }
     
     func swipeTableCell(_ cell: MGSwipeTableCell, tappedButtonAt index: Int, direction: MGSwipeDirection, fromExpansion: Bool) -> Bool {
-        print("swipeTableCell clicked")
+        
+        //  add favorite or not
+        if direction == .leftToRight {
+            self.eventDelegate?.memoListTableViewCell(didSwipeButtonClicked: .favorite, withIndexPath: self.indexPath!)
+        }
+        //  delete
+        else if direction == .rightToLeft {
+            self.eventDelegate?.memoListTableViewCell(didSwipeButtonClicked: .remove, withIndexPath: self.indexPath!)
+        }
+
         return true
     }
 

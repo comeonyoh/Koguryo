@@ -107,6 +107,9 @@ extension MemoListViewController: UITableViewDataSource, MemoListTableViewCellDe
         return nil
     }
 
+    
+    //MARK: MemoListTableViewCellDelegate
+    
     func memoListTableViewCell(didCopyButtonClicked copyButton: UIButton, withIndexPath indexPath: IndexPath) {
         
         self.memoListManager.copyToPasteboard(withIndex: indexPath)
@@ -114,7 +117,31 @@ extension MemoListViewController: UITableViewDataSource, MemoListTableViewCellDe
         //  Show success alert view
         ProgressHudManager.showCopyHUD(inView: self.view)
     }
+    
+    func memoListTableViewCell(didSwipeButtonClicked event: SwipeButtonEvent, withIndexPath indexPath: IndexPath) {
+        
+        if event == .remove {
+            
+            let memo = self.memoListManager.getMemoAt(indexPath)
+            
+            self.memoListManager.deleteMemo(withMemo: memo)
+        }
+        
+        else if event == .favorite {
+            
+            let result = self.memoListManager.updateMemoFavorite(withIndexPath: indexPath)
+            
+            if result == false {
+                self.showAlertView(withPrompt: NSLocalizedString("warning_favorite_max_count", comment: ""))
+            }
+        }
 
+        self.memoListTableView.reloadData()
+
+    }
+
+    //MARK: CopyTextButtonTableViewCellDelegate
+    
     func copyTextButtonTableViewCell(didCopyButtonClicked: UIView) {
         
         self.memoListManager.copyFromPasteboard()

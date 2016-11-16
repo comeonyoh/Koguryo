@@ -28,3 +28,6 @@
 "favorite_delete" = "즐겨찾기 삭제";
 
 "input_contents_placeholder" = "저장할 내용을 입력해주십시오(필수사항)";
+
+"confirm" = "확인";
+"warning_favorite_max_count" = "즐겨찾기는 3개 이상 \n추가할 수 없습니다";

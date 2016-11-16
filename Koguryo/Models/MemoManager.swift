@@ -82,7 +82,7 @@ extension MemoManager {
             return realm.objects(RealmMemo.self).filter(NSPredicate.init(format: "isFavorite = 1")).sorted(byProperty: "createDate", ascending: false)[indexPath.row]
         }
 
-        return realm.objects(RealmMemo.self).sorted(byProperty: "createDate", ascending: false)[indexPath.row]
+        return realm.objects(RealmMemo.self).filter(NSPredicate.init(format: "isFavorite = 0")).sorted(byProperty: "createDate", ascending: false)[indexPath.row]
     }
     
     func getMemoAt(_ index: Int, withType type: MemoType) -> RealmMemo {
@@ -92,7 +92,7 @@ extension MemoManager {
         guard type == .normal else {
             return realm.objects(RealmMemo.self).filter(NSPredicate.init(format: "isFavorite = 1")).sorted(byProperty: "createDate", ascending: false)[index]
         }
-        return realm.objects(RealmMemo.self).sorted(byProperty: "createDate", ascending: false)[index]
+        return realm.objects(RealmMemo.self).filter(NSPredicate.init(format: "isFavorite = 0")).sorted(byProperty: "createDate", ascending: false)[index]
     }
     
     func getMemoCount(withType type: MemoType) -> Int {
@@ -103,7 +103,7 @@ extension MemoManager {
             return realm.objects(RealmMemo.self).filter(NSPredicate.init(format: "isFavorite = 1")).count
         }
         
-        let memos = realm.objects(RealmMemo.self)
+        let memos = realm.objects(RealmMemo.self).filter(NSPredicate.init(format: "isFavorite = 0"))
         
         return memos.count
     }
@@ -124,7 +124,29 @@ extension MemoManager {
                 realm.add(memo, update: true)
             }
         }
+    }
+    
+    func updateMemoFavorite(withIndexPath indexPath: IndexPath) -> Bool{
         
+        let memo = self.getMemoAt(indexPath)
+        
+        let realm = self.configRealm()
+
+        if memo.isFavorite == false {
+
+            guard realm.objects(RealmMemo.self).filter(NSPredicate.init(format: "isFavorite = 1")).count < 3 else {
+                return false
+            }
+        }
+
+        try! realm.write {
+
+            memo.isFavorite = !memo.isFavorite
+            
+            realm.add(memo, update: true)
+        }
+        
+        return true
     }
 }
 

@@ -28,3 +28,6 @@
 "favorite_delete" = "Delete Favorites";
 
 "input_contents_placeholder" = "Input contetns(Required)";
+
+"confirm" = "confirm";
+"warning_favorite_max_count" = "즐겨찾기는 3개 이상 추가할 수 없습니다";

@@ -72,7 +72,7 @@ class MemoRealmTests: XCTestCase {
         manager.addMemo(memo_2)
         manager.addMemo(memo_3)
         
-        XCTAssertEqual(3, manager.getMemoCount(withType: .normal))
+        XCTAssertEqual(1, manager.getMemoCount(withType: .normal))
         XCTAssertEqual(2, manager.getMemoCount(withType: .favorite))
     }
     
@@ -119,20 +119,46 @@ class MemoRealmTests: XCTestCase {
 
         let getMemo = manager.getMemoAt(1, withType: .normal)
         
-        XCTAssertEqual(getMemo, memo_3)
+        XCTAssertEqual(getMemo, memo_2)
         XCTAssertEqual(manager.getMemoAt(0, withType: .favorite), memo_4)
         
         let m_memo_1 = manager.getMemoAt(IndexPath.init(row: 0, section: MemoListSection.list.rawValue))
         
-        XCTAssertEqual(m_memo_1, memo_4)
+        XCTAssertEqual(m_memo_1, memo_3)
         XCTAssertEqual(manager.getMemoAt(IndexPath.init(row: 0, section: MemoListSection.favorite.rawValue)), memo_4)
         
     }
     
-    //  Memo add from clipboard
     
     //  update memo set favorite
- 
+    func testUpdateMemoFavorite() {
+     
+        let manager = MemoManager.init()
+        
+        let memo_1 = RealmMemo.init(value: ["contents" : "contents_1", "placeHolder": "placeHolder_1", "memoId" : "contents_1".encryption()])
+        let memo_2 = RealmMemo.init(value: ["contents" : "contents_2", "placeHolder": "placeHolder_2", "memoId" : "contents_2".encryption()])
+        let memo_3 = RealmMemo.init(value: ["contents" : "contents_3", "placeHolder": "placeHolder_3", "memoId" : "contents_3".encryption()])
+        let memo_4 = RealmMemo.init(value: ["contents" : "contents_4", "placeHolder": "placeHolder_4", "memoId" : "contents_4".encryption()])
+
+        XCTAssertFalse(memo_1.isFavorite)
+        
+        manager.addMemo(memo_1)
+        manager.addMemo(memo_2)
+        manager.addMemo(memo_3)
+        manager.addMemo(memo_4)
+        
+        let r1 = manager.updateMemoFavorite(withIndexPath: IndexPath.init(row: 0, section: MemoListSection.list.rawValue))
+        let r2 = manager.updateMemoFavorite(withIndexPath: IndexPath.init(row: 0, section: MemoListSection.list.rawValue))
+        let r3 = manager.updateMemoFavorite(withIndexPath: IndexPath.init(row: 0, section: MemoListSection.list.rawValue))
+        let r4 = manager.updateMemoFavorite(withIndexPath: IndexPath.init(row: 0, section: MemoListSection.list.rawValue))
+        
+        XCTAssertTrue(r1)
+        XCTAssertTrue(r2)
+        XCTAssertTrue(r3)
+        XCTAssertFalse(r4)
+
+    }
+    
     //  update memo contents and placeholder
     func testModifyMemoAtIndex() {
         
@@ -151,9 +177,9 @@ class MemoRealmTests: XCTestCase {
         
         XCTAssertEqual(modifiedMemo.contents, newInfo["contents"])
         XCTAssertEqual(manager.getMemoCount(withType: .normal), 1)
-
     }
-
+    
+    //  delete memo 
 }
 
 

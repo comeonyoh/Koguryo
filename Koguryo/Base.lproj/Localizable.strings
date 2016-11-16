@@ -28,3 +28,6 @@
 "favorite_delete" = "Delete Favorites";
 
 "input_contents_placeholder" = "Input contetns(Required)";
+
+"confirm" = "OK";
+"warning_favorite_max_count" = "Cannot add more than 3 notes";
