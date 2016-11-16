@@ -30,4 +30,6 @@
 "input_contents_placeholder" = "保存内容を入力してください（必須)";
 
 "confirm" = "확인";
+"cancel" = "cancel";
 "warning_favorite_max_count" = "즐겨찾기는 3개 이상 추가할 수 없습니다";
+"warning_delete_sure" = "Are you sure to delete?";

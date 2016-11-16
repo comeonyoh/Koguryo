@@ -122,9 +122,15 @@ extension MemoListViewController: UITableViewDataSource, MemoListTableViewCellDe
         
         if event == .remove {
             
-            let memo = self.memoListManager.getMemoAt(indexPath)
-            
-            self.memoListManager.deleteMemo(withMemo: memo)
+            self.showAlertView(withPromt: NSLocalizedString("warning_delete_sure", comment: ""), withSelectIndex: {
+
+                if $0 == AnswerType.OK {
+
+                    let memo = self.memoListManager.getMemoAt(indexPath)
+                    
+                    self.memoListManager.deleteMemo(withMemo: memo)
+                }
+            })
         }
         
         else if event == .favorite {

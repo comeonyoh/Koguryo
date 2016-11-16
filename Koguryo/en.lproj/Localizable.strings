@@ -29,5 +29,7 @@
 
 "input_contents_placeholder" = "Input contetns(Required)";
 
-"confirm" = "confirm";
-"warning_favorite_max_count" = "즐겨찾기는 3개 이상 추가할 수 없습니다";
+"confirm" = "OK";
+"cancel" = "cancel";
+"warning_favorite_max_count" = "Cannot add more than 3 notes";
+"warning_delete_sure" = "Are you sure to delete?";

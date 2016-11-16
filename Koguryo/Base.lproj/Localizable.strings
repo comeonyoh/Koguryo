@@ -30,4 +30,6 @@
 "input_contents_placeholder" = "Input contetns(Required)";
 
 "confirm" = "OK";
+"cancel" = "cancel";
 "warning_favorite_max_count" = "Cannot add more than 3 notes";
+"warning_delete_sure" = "Are you sure to delete?";
