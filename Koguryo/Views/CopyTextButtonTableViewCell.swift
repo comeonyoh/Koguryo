@@ -21,6 +21,11 @@ class CopyTextButtonTableViewCell: UITableViewCell, Animationable {
 
     weak var delegate: CopyTextButtonTableViewCellDelegate?
     
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+    }
+    
     @IBAction func didSaveButtonClicked(_ sender: Any) {
 
         let btn = sender as! UIButton

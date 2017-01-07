@@ -61,9 +61,11 @@ extension MemoListViewController {
         self.memoListTableView.estimatedRowHeight = 90
         self.memoListTableView.estimatedSectionFooterHeight = 30
         self.memoListTableView.rowHeight = UITableViewAutomaticDimension
-        self.memoListTableView.register(UINib.init(nibName: MemoListTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: MemoListTableViewCell.identifier)
+        self.memoListTableView.register(UINib.init(nibName: MemoListTableViewCell.identifier, bundle: nil),
+                                        forCellReuseIdentifier: MemoListTableViewCell.identifier)
         self.memoListTableView.register(UINib.init(nibName: CopyTextButtonTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: CopyTextButtonTableViewCell.identifier)
     }
+    
 }
 
 extension MemoListViewController: UITableViewDataSource, MemoListTableViewCellDelegate, CopyTextButtonTableViewCellDelegate {
@@ -118,6 +120,7 @@ extension MemoListViewController: UITableViewDataSource, MemoListTableViewCellDe
                 return NSLocalizedString("section_title_favorite", comment: "title for favorite memo items")
             }
         }
+            
         else {
             
             if memoListManager.hasMemo() == true {
