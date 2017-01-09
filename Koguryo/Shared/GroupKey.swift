@@ -10,7 +10,7 @@ import Foundation
 
 struct GroupKey {
     
-    static let groupKey = "group.com.odov.koguryo"
+    static let groupKey = "group.com.odov.pinyo"
     
     static let favorites = "favorites"
     

@@ -449,7 +449,7 @@
 				TargetAttributes = {
 					E13F6AE41DD03C5500E1BA98 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = QWFDFURH3H;
+						DevelopmentTeam = NP69P64E7J;
 						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -466,7 +466,7 @@
 					};
 					E1935B3B1DD30CED00021E35 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = QWFDFURH3H;
+						DevelopmentTeam = NP69P64E7J;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
@@ -896,8 +896,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Koguryo/Koguryo.entitlements;
-				DEVELOPMENT_TEAM = QWFDFURH3H;
+				DEVELOPMENT_TEAM = NP69P64E7J;
 				INFOPLIST_FILE = Koguryo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.odov.jsworld.pinyo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -915,8 +916,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Koguryo/Koguryo.entitlements;
-				DEVELOPMENT_TEAM = QWFDFURH3H;
+				DEVELOPMENT_TEAM = NP69P64E7J;
 				INFOPLIST_FILE = Koguryo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.odov.jsworld.pinyo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -961,10 +963,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = ClipboardExtension/ClipboardExtension.entitlements;
-				DEVELOPMENT_TEAM = QWFDFURH3H;
+				DEVELOPMENT_TEAM = NP69P64E7J;
 				INFOPLIST_FILE = ClipboardExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tiger.odov.Koguryo.ClipboardExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.odov.jsworld.pinyo.clipboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -975,10 +978,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = ClipboardExtension/ClipboardExtension.entitlements;
-				DEVELOPMENT_TEAM = QWFDFURH3H;
+				DEVELOPMENT_TEAM = NP69P64E7J;
 				INFOPLIST_FILE = ClipboardExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tiger.odov.Koguryo.ClipboardExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.odov.jsworld.pinyo.clipboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
