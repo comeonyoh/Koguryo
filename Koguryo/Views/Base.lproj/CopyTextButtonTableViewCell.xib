@@ -16,13 +16,13 @@
             <rect key="frame" x="0.0" y="0.0" width="545" height="124"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="545" height="124"/>
+                <rect key="frame" x="0.0" y="0.0" width="545" height="123.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click to save" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qnk-3i-thf">
-                        <rect key="frame" x="234" y="44" width="77" height="43"/>
+                        <rect key="frame" x="234" y="44" width="77" height="20"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="43" id="Kfc-fq-Vny"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="Kfc-fq-Vny"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
