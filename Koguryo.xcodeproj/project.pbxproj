@@ -444,7 +444,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = ODOV;
 				TargetAttributes = {
 					E13F6AE41DD03C5500E1BA98 = {
@@ -899,7 +899,7 @@
 				DEVELOPMENT_TEAM = QWFDFURH3H;
 				INFOPLIST_FILE = Koguryo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tiger.odov.Koguryo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.odov.jsworld.pinyo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Koguryo/Koguryo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -918,7 +918,7 @@
 				DEVELOPMENT_TEAM = QWFDFURH3H;
 				INFOPLIST_FILE = Koguryo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tiger.odov.Koguryo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.odov.jsworld.pinyo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Koguryo/Koguryo-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
