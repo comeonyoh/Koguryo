@@ -29,7 +29,11 @@ class TodayViewController: UIViewController, NCWidgetProviding {
 
         self.setLayout()
 
-        self.extensionContext?.widgetLargestAvailableDisplayMode = .expanded
+        if #available(iOSApplicationExtension 10.0, *) {
+            self.extensionContext?.widgetLargestAvailableDisplayMode = .expanded
+        } else {
+            // Fallback on earlier versions
+        }
         
         self.synchronizeDataBetweenAppAndExtension()
     }
@@ -39,6 +43,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         completionHandler(NCUpdateResult.newData)
     }
     
+    @available(iOSApplicationExtension 10.0, *)
     func widgetActiveDisplayModeDidChange(_ activeDisplayMode: NCWidgetDisplayMode, withMaximumSize maxSize: CGSize) {
         
         if activeDisplayMode == .expanded {
