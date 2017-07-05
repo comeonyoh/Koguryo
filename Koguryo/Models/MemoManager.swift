@@ -189,6 +189,7 @@ extension MemoManager {
             
             UIPasteboard.general.string = self.getMemoAt(indexPath.row, withType: .favorite).contents
         }
+        
         else if indexPath.section == MemoListSection.list.rawValue {
 
             UIPasteboard.general.string = self.getMemoAt(indexPath.row, withType: .normal).contents
