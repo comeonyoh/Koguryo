@@ -60,6 +60,12 @@ extension MemoManager {
         
         let realm = self.configRealm()
         
+        let currentMemoCount = self.getMemoCount(withType: .favorite)
+        
+        if currentMemoCount < 3 {
+            memo.isFavorite = true
+        }
+        
         try! realm.write {
             realm.add(memo, update: true)
         }

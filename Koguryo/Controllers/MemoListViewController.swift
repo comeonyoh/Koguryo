@@ -184,6 +184,8 @@ extension MemoListViewController: UITableViewDataSource, MemoListTableViewCellDe
         self.memoListManager.copyFromPasteboard()
         
         self.memoListTableView.reloadData()
+
+        self.synchronizeDataBetweenAppAndExtension()
     }
 
 }
@@ -293,5 +295,7 @@ extension MemoListViewController: WriteMemoViewControllerDelegate {
         }
 
         self.memoListTableView.reloadData()
+
+        self.synchronizeDataBetweenAppAndExtension()
     }
 }
