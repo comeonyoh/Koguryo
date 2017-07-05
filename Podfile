@@ -11,7 +11,8 @@ target 'Koguryo' do
   pod 'JGProgressHUD'
   pod 'UIColor_Hex_Swift', '~> 3.0.2'
   pod 'RealmSwift'
-
+  pod 'Firebase/Core'
+  
   target 'KoguryoTests' do
     inherit! :search_paths
     # Pods for testing
