@@ -1,4 +1,18 @@
 PODS:
+  - Firebase/Core (4.0.0):
+    - FirebaseAnalytics (= 4.0.0)
+    - FirebaseCore (= 4.0.0)
+  - FirebaseAnalytics (4.0.0):
+    - FirebaseCore (~> 4.0)
+    - FirebaseInstanceID (~> 2.0)
+    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+  - FirebaseCore (4.0.0):
+    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+  - FirebaseInstanceID (2.0.0):
+    - FirebaseCore (~> 4.0)
+  - GoogleToolboxForMac/Defines (2.1.1)
+  - GoogleToolboxForMac/NSData+zlib (2.1.1):
+    - GoogleToolboxForMac/Defines (= 2.1.1)
   - JGProgressHUD (1.4)
   - MGSwipeTableCell (1.5.6)
   - pop (1.0.9)
@@ -10,6 +24,7 @@ PODS:
   - UIColor_Hex_Swift (3.0.2)
 
 DEPENDENCIES:
+  - Firebase/Core
   - JGProgressHUD
   - MGSwipeTableCell
   - pop (~> 1.0)
@@ -17,6 +32,11 @@ DEPENDENCIES:
   - UIColor_Hex_Swift (~> 3.0.2)
 
 SPEC CHECKSUMS:
+  Firebase: 284eea779b73fdff309791817da7c68bff8dd572
+  FirebaseAnalytics: 6f08e746f7d66f5452931bc2e822b5df9c66b64a
+  FirebaseCore: 85ad466044c2f013cdb167f85d426d15b128114a
+  FirebaseInstanceID: 9fbf536668f4d3f0880e7438456dabd1376e294b
+  GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   JGProgressHUD: 1617b0940cf80bb53e8f7d6f0fd69252ea45d6d4
   MGSwipeTableCell: 616700eb0ffd1c611ba909066cb7fd739790a0a7
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
@@ -24,6 +44,6 @@ SPEC CHECKSUMS:
   RealmSwift: 64e00af79bdcd7d2a7a23fdc1cb3faf22b80ae4c
   UIColor_Hex_Swift: 95f718452092a3efc8a827dffd2c04d3237be02d
 
-PODFILE CHECKSUM: a24cecb6cd380fee6adb79698d2c792604ccf95f
+PODFILE CHECKSUM: 4ad7ac55232f67e6cc6eb2a7345e545c97f71324
 
-COCOAPODS: 1.1.0.rc.2
+COCOAPODS: 1.1.1
