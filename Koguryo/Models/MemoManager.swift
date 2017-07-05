@@ -11,6 +11,12 @@ import Foundation
 import UIKit
 import RealmSwift
 
+enum PasteboardItem {
+    case none
+    case string
+    case image
+}
+
 class MemoManager: NSObject {
 
     let maxCountOfFavoriteMemos = 3
@@ -206,7 +212,18 @@ extension MemoManager {
             
             self.addMemo(newMemo)
         }
+    }
+    
+    func hasPasteboardItem() -> PasteboardItem {
         
+        if UIPasteboard.general.string != nil {
+            return .string
+        }
+        else if UIPasteboard.general.image != nil {
+            return .image
+        }
+        
+        return .none
     }
     
 }

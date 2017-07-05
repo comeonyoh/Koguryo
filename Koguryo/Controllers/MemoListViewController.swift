@@ -22,6 +22,10 @@ class MemoListViewController: UIViewController {
         
         self.synchronizeDataBetweenAppAndExtension()
     }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
@@ -61,8 +65,7 @@ extension MemoListViewController {
         self.memoListTableView.estimatedRowHeight = 90
         self.memoListTableView.estimatedSectionFooterHeight = 30
         self.memoListTableView.rowHeight = UITableViewAutomaticDimension
-        self.memoListTableView.register(UINib.init(nibName: MemoListTableViewCell.identifier, bundle: nil),
-                                        forCellReuseIdentifier: MemoListTableViewCell.identifier)
+        self.memoListTableView.register(UINib.init(nibName: MemoListTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: MemoListTableViewCell.identifier)
         self.memoListTableView.register(UINib.init(nibName: CopyTextButtonTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: CopyTextButtonTableViewCell.identifier)
     }
     
@@ -173,8 +176,6 @@ extension MemoListViewController: UITableViewDataSource, MemoListTableViewCellDe
             
             self.synchronizeDataBetweenAppAndExtension()
         }
-
-
     }
 
     //MARK: CopyTextButtonTableViewCellDelegate
@@ -211,32 +212,16 @@ extension MemoListViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         
-        if section == MemoListSection.addButton.rawValue {
-            return 0
-        }
+        if section == MemoListSection.addButton.rawValue { return 0 }
             
-        else if section == MemoListSection.favorite.rawValue {
-
-            if memoListManager.hasFavoriteMemos() == true{
-                return 20.0
-            }
-        }
+        else if section == MemoListSection.favorite.rawValue { return 20.0 }
             
-        else {
-            
-            if memoListManager.hasMemo() == true{
-                return 20.0
-            }
-        }
-        
-        return 0
+        else { return 20.0 }
     }
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         
-        guard section != MemoListSection.list.rawValue else {
-            return 60.0
-        }
+        guard section != MemoListSection.list.rawValue else { return 60.0 }
         return 30.0
     }
 
@@ -254,6 +239,10 @@ extension MemoListViewController: UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80.0
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80.0
     }
     
