@@ -60,6 +60,9 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         self.extensionContext?.open(URL.init(string: "Koguryo://")!, completionHandler: nil)
     }
     
+    @IBAction func didPasteButtonClicked(_ sender: Any) {
+    }
+    
 }
 
 /**
@@ -111,13 +114,6 @@ extension TodayViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-//        guard indexPath.row != ClipboardIndex.addMemo.rawValue else {
-//            
-//            let addPlusCell = tableView.dequeueReusableCell(withIdentifier: AddMemoButtonTableViewCell.identifier, for: indexPath)
-//            
-//            return addPlusCell
-//        }
-        
         let memoCell = tableView.dequeueReusableCell(withIdentifier: MemoListTableViewCell.identifier, for: indexPath)
         
         let memo = self.favoriteMemos[indexPath.row]
@@ -139,14 +135,7 @@ extension TodayViewController: UITableViewDataSource {
 extension TodayViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    
-//        guard indexPath.row != ClipboardIndex.addMemo.rawValue else {
-//            
-//            CopyPasteManager.copyToPasteboard()
-//            
-//            return
-//        }
-        
+
         CopyPasteManager.copyFromPasteboard(self.favoriteMemos[indexPath.row].contents)
 
         DispatchQueue.main.async {

@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,28 +20,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="복사하실 메모를 선택해주세요." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cMD-dG-stq">
+                                <rect key="frame" x="50" y="0.0" width="220" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3oh-V4-Svc">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="165"/>
+                                <rect key="frame" x="0.0" y="35" width="320" height="165"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="165" id="0bF-NW-8N6"/>
+                                    <constraint firstAttribute="height" constant="165" id="Kh5-0y-qJe"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="dataSource" destination="M4Y-Lb-cyx" id="ogW-of-sxw"/>
                                     <outlet property="delegate" destination="M4Y-Lb-cyx" id="mSe-r6-VZ7"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="복사하실 메모를 선택해주세요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cMD-dG-stq">
-                                <rect key="frame" x="75" y="175" width="170" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oEV-tj-ten">
-                                <rect key="frame" x="10" y="168" width="30" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3p1-jG-2BG">
+                                <rect key="frame" x="250" y="0.0" width="70" height="35"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="AlR-kp-V3i"/>
-                                    <constraint firstAttribute="width" constant="30" id="hCe-vz-23W"/>
+                                    <constraint firstAttribute="width" constant="70" id="tU9-1f-Ark"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="Paste"/>
+                                <connections>
+                                    <action selector="didPasteButtonClicked:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="gFz-IP-s9H"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oEV-tj-ten">
+                                <rect key="frame" x="0.0" y="0.0" width="70" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="jkh-VP-gR9"/>
                                 </constraints>
                                 <state key="normal" image="icon_setting"/>
                                 <connections>
@@ -51,13 +60,20 @@
                             </button>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="cMD-dG-stq" firstAttribute="top" secondItem="3oh-V4-Svc" secondAttribute="bottom" constant="10" id="AQ1-1e-iWO"/>
-                            <constraint firstItem="cMD-dG-stq" firstAttribute="centerX" secondItem="3oh-V4-Svc" secondAttribute="centerX" id="JOd-fp-gbc"/>
-                            <constraint firstAttribute="trailing" secondItem="3oh-V4-Svc" secondAttribute="trailing" id="XM2-ub-MAw"/>
-                            <constraint firstItem="3oh-V4-Svc" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" id="YFp-CK-Jyf"/>
-                            <constraint firstItem="oEV-tj-ten" firstAttribute="centerY" secondItem="cMD-dG-stq" secondAttribute="centerY" id="qH5-Oh-Lwf"/>
-                            <constraint firstItem="3oh-V4-Svc" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" id="qdS-Wo-aUo"/>
-                            <constraint firstItem="oEV-tj-ten" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" constant="10" id="yyK-qy-7vA"/>
+                            <constraint firstAttribute="trailing" secondItem="cMD-dG-stq" secondAttribute="trailing" constant="50" id="2LD-m1-Qow"/>
+                            <constraint firstItem="3oh-V4-Svc" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" id="42F-C7-UPR"/>
+                            <constraint firstItem="cMD-dG-stq" firstAttribute="centerX" secondItem="S3S-Oj-5AN" secondAttribute="centerX" id="65Q-A9-T5O"/>
+                            <constraint firstItem="oEV-tj-ten" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" id="OHh-r2-7sl"/>
+                            <constraint firstItem="3p1-jG-2BG" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" id="S4f-J9-6wn"/>
+                            <constraint firstItem="3oh-V4-Svc" firstAttribute="top" secondItem="cMD-dG-stq" secondAttribute="bottom" id="WBm-gc-s9k"/>
+                            <constraint firstAttribute="trailing" secondItem="3p1-jG-2BG" secondAttribute="trailing" id="XCz-Y2-bo5"/>
+                            <constraint firstAttribute="trailing" secondItem="3oh-V4-Svc" secondAttribute="trailing" id="Xsi-X1-BaQ"/>
+                            <constraint firstItem="3oh-V4-Svc" firstAttribute="top" secondItem="3p1-jG-2BG" secondAttribute="bottom" id="Zo5-JX-ILY"/>
+                            <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="3oh-V4-Svc" secondAttribute="bottom" id="aVs-8H-d80"/>
+                            <constraint firstItem="3oh-V4-Svc" firstAttribute="top" secondItem="oEV-tj-ten" secondAttribute="bottom" id="hLP-m4-75x"/>
+                            <constraint firstItem="oEV-tj-ten" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" id="m2Q-5B-ZA6"/>
+                            <constraint firstItem="cMD-dG-stq" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" constant="50" id="t0J-1k-Uhw"/>
+                            <constraint firstItem="cMD-dG-stq" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" id="uNB-AI-ONU"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
@@ -73,7 +89,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1238" y="74"/>
+            <point key="canvasLocation" x="-1238.4000000000001" y="73.763118440779621"/>
         </scene>
     </scenes>
     <resources>
