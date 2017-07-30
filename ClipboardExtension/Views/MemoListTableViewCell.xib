@@ -22,15 +22,18 @@
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IKy-Pg-gNT">
-                        <rect key="frame" x="274.5" y="13.5" width="35.5" height="17"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="복사하기" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IKy-Pg-gNT">
+                        <rect key="frame" x="250" y="13.5" width="60" height="17"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="YXb-Z6-g4x"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="IKy-Pg-gNT" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vnp-DN-wdJ" secondAttribute="trailing" constant="10" id="Vhz-4B-zrj"/>
+                    <constraint firstItem="IKy-Pg-gNT" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vnp-DN-wdJ" secondAttribute="trailing" priority="750" constant="10" id="Vhz-4B-zrj"/>
                     <constraint firstAttribute="trailing" secondItem="IKy-Pg-gNT" secondAttribute="trailing" constant="10" id="WBe-vk-kQk"/>
                     <constraint firstItem="vnp-DN-wdJ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="cg7-Jf-X0q"/>
                     <constraint firstItem="vnp-DN-wdJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="hKb-6e-gYt"/>

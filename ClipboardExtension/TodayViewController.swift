@@ -31,9 +31,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
 
         if #available(iOSApplicationExtension 10.0, *) {
             self.extensionContext?.widgetLargestAvailableDisplayMode = .expanded
-        } else {
-            // Fallback on earlier versions
-        }
+        } 
         
         self.synchronizeDataBetweenAppAndExtension()
     }
@@ -73,12 +71,8 @@ extension TodayViewController {
 
     func setLayout() {
         
-        
         self.clipboardTableView.register(UINib.init(nibName: MemoListTableViewCell.identifier, bundle: nil),
                                          forCellReuseIdentifier: MemoListTableViewCell.identifier)
-        
-//        self.clipboardTableView.register(UINib.init(nibName: AddMemoButtonTableViewCell.identifier, bundle: nil),
-//                                         forCellReuseIdentifier: AddMemoButtonTableViewCell.identifier)
     }
 }
 
@@ -114,18 +108,18 @@ extension TodayViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let memoCell = tableView.dequeueReusableCell(withIdentifier: MemoListTableViewCell.identifier, for: indexPath)
+        let memoCell = tableView.dequeueReusableCell(withIdentifier: MemoListTableViewCell.identifier, for: indexPath) as! MemoListTableViewCell
         
         let memo = self.favoriteMemos[indexPath.row]
         
         if memo.placeHolder != nil && (memo.placeHolder?.characters.count)! > 0 {
-            memoCell.textLabel?.text = memo.placeHolder
+            memoCell.titleLabel?.text = memo.placeHolder
         }
         else {
-            memoCell.textLabel?.text = memo.contents
+            memoCell.titleLabel?.text = memo.contents
         }
 
-        memoCell.detailTextLabel?.text = NSLocalizedString("copy", comment: "")
+        memoCell.copyLabel?.text = NSLocalizedString("copy", comment: "")
         
         return memoCell
     }
