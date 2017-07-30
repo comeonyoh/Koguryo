@@ -1,6 +1,0 @@
-
-/* Class = "UILabel"; text = "+ 추가하기"; ObjectID = "lRS-kg-sxI"; */
-"lRS-kg-sxI.text" = "+ 저장하기";
-
-/* Class = "UILabel"; text = "현재 복사한 글을 클립보드에 저장하기"; ObjectID = "uWa-Jx-rVd"; */
-"uWa-Jx-rVd.text" = "클릭하시면 현재 클립보드에 저장된 글이 저장됩니다";
