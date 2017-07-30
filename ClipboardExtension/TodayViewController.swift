@@ -77,8 +77,8 @@ extension TodayViewController {
         self.clipboardTableView.register(UINib.init(nibName: MemoListTableViewCell.identifier, bundle: nil),
                                          forCellReuseIdentifier: MemoListTableViewCell.identifier)
         
-        self.clipboardTableView.register(UINib.init(nibName: AddMemoButtonTableViewCell.identifier, bundle: nil),
-                                         forCellReuseIdentifier: AddMemoButtonTableViewCell.identifier)
+//        self.clipboardTableView.register(UINib.init(nibName: AddMemoButtonTableViewCell.identifier, bundle: nil),
+//                                         forCellReuseIdentifier: AddMemoButtonTableViewCell.identifier)
     }
 }
 

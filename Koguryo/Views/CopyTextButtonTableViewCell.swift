@@ -28,11 +28,25 @@ class CopyTextButtonTableViewCell: UITableViewCell, Animationable {
     
     @IBAction func didSaveButtonClicked(_ sender: Any) {
 
-        let btn = sender as! UIButton
+        if self.saveButton.isEnabled == true {
 
-        springAnimate(inView: btn)
-        
-        self.delegate?.copyTextButtonTableViewCell(didCopyButtonClicked: btn)
+            let btn = sender as! UIButton
+            
+            springAnimate(inView: btn)
+            self.delegate?.copyTextButtonTableViewCell(didCopyButtonClicked: btn)
+        }
+    }
+    
+}
+
+/**
+ * Methods about status
+ */
+
+extension CopyTextButtonTableViewCell {
+    
+    func enable(_ enabled: Bool) {
+        self.saveButton.isEnabled = enabled
     }
     
 }

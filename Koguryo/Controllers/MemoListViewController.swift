@@ -21,10 +21,15 @@ class MemoListViewController: UIViewController {
         self.setLayout()
         
         self.synchronizeDataBetweenAppAndExtension()
+        
+        self.registNotifications()
     }
 
     override func viewWillAppear(_ animated: Bool) {
+        
         super.viewWillAppear(animated)
+        
+        self.memoListTableView.reloadData()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -51,6 +56,16 @@ extension MemoListViewController {
         let shareInfo = UserDefaults.init(suiteName: GroupKey.groupKey)
         
         shareInfo?.set(self.memoListManager.getFavoriteMemos(), forKey: GroupKey.favorites)
+    }
+    
+    func registNotifications() {
+        
+        NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: AppDelegate.NotificationBecomeActive),
+                                               object: nil,
+                                               queue: OperationQueue.main) { (notification) in
+                                                
+            self.memoListTableView.reloadData()
+        }
     }
 }
 
@@ -97,6 +112,13 @@ extension MemoListViewController: UITableViewDataSource, MemoListTableViewCellDe
             let cell = tableView.dequeueReusableCell(withIdentifier: CopyTextButtonTableViewCell.identifier, for: indexPath) as! CopyTextButtonTableViewCell
             
             cell.delegate = self
+            
+            if memoListManager.hasPasteboardItem() == .string {
+                cell.enable(true)
+            }
+            else {
+                cell.enable(false)
+            }
             
             return cell
         }
@@ -188,7 +210,7 @@ extension MemoListViewController: UITableViewDataSource, MemoListTableViewCellDe
 
         self.synchronizeDataBetweenAppAndExtension()
     }
-
+    
 }
 
 extension MemoListViewController: UITableViewDelegate {
@@ -198,11 +220,6 @@ extension MemoListViewController: UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
         
         guard indexPath.section != MemoListSection.addButton.rawValue else {
-            
-            let addSectionCell = tableView.cellForRow(at: indexPath) as! CopyTextButtonTableViewCell
-            
-            addSectionCell.springAnimate(inView: addSectionCell.saveButton)
-            
             return
         }
         
@@ -241,10 +258,6 @@ extension MemoListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80.0
     }
-    
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return 80.0
-//    }
     
     func tableView(_ tableView: UITableView, estimatedHeightForFooterInSection section: Int) -> CGFloat {
 

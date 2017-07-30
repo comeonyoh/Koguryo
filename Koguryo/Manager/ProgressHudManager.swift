@@ -13,7 +13,7 @@ class ProgressHudManager: NSObject {
 
     static func showCopyHUD(inView view: UIView) {
         
-        let hud = JGProgressHUD.init(style: .light)
+        let hud = JGProgressHUD.init(style: .dark)
         
         hud?.textLabel.text = NSLocalizedString("copy", comment: "copy")
         hud?.indicatorView = JGProgressHUDSuccessIndicatorView.init(image: UIImage(named: "jg_hud_success"))

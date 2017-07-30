@@ -12,6 +12,8 @@ import Firebase
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    static let NotificationBecomeActive = "kNotificationBecomeActive"
+
     var window: UIWindow?
     
     func application(_ application: UIApplication,
@@ -20,6 +22,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
             FirebaseApp.configure()
             return true
+    }
+    
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        
+        NotificationCenter.default.post(name: Notification.Name(rawValue: AppDelegate.NotificationBecomeActive), object: self)
+
     }
 
 }

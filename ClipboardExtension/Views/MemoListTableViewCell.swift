@@ -12,6 +12,10 @@ class MemoListTableViewCell: UITableViewCell {
 
     static let identifier = "MemoListTableViewCell"
     
+    @IBOutlet weak var titleLabel: UILabel!
+    
+    @IBOutlet weak var copyLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }

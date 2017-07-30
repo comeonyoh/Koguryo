@@ -34,3 +34,5 @@
 "warning_favorite_max_count" = "Cannot add more than 3 notes to bookmark";
 "warning_delete_sure" = "Are you sure to delete?";
 "section_footer_add_favorite" = "If you add it to your Bookmarks, you can check it in the widget.";
+
+"written" = "written";
