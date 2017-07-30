@@ -33,12 +33,7 @@ class WriteMemoViewController: UIViewController {
     /**
      * properties for modify memo item
      */
-    
-    var placeholder: String?
-    
-    var contents: String?
-
-    var memoId: String?
+    var modifiedMemo: RealmMemo?
     
     
     @IBOutlet weak var rightNavigationItem: UIBarButtonItem!
@@ -62,7 +57,9 @@ class WriteMemoViewController: UIViewController {
     @IBAction func didRightBarButtonClicked(_ sender: Any) {
     
         //  post delegate alarm with memo info
-        self.delegate?.didMemoWritten(self.getInputtedMemoInfo(), withType: self.writeType, withMemoId: self.memoId)
+        self.delegate?.didMemoWritten(self.getInputtedMemoInfo(),
+                                      withType: self.writeType,
+                                      withMemoId: self.modifiedMemo?.memoId)
 
         //  navigation pop
         _ = self.navigationController?.popViewController(animated: true)
@@ -113,7 +110,7 @@ extension WriteMemoViewController {
                 }
                 
                 if self.writeType == .modify {
-                    self.contents = text
+                    self.modifiedMemo?.contents = text
                 }
             }
         }
@@ -127,7 +124,7 @@ extension WriteMemoViewController {
                 let text = info["info"] as! String
                 
                 if self.writeType == .modify {
-                    self.placeholder = text
+                    self.modifiedMemo?.placeHolder = text
                 }
             }
         }
@@ -169,6 +166,14 @@ extension WriteMemoViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        
+        if section == WriteMemoSection.contents.rawValue && writeType == WriteType.modify {
+            
+            let date = self.modifiedMemo?.createDate.localString()
+            
+            return self.headerTitles[section] + " (\(date!) \(NSLocalizedString("written", comment: "written")))"
+        }
+        
         return self.headerTitles[section]
     }
     
@@ -178,14 +183,14 @@ extension WriteMemoViewController: UITableViewDataSource {
             
             let textField = cell.viewWithTag(WriteMemoViewControllerElementsManager.kTextFieldElementTagId) as! UITextField
             
-            textField.text = self.placeholder
+            textField.text = self.modifiedMemo?.placeHolder
             
         }
         else if indexPath.section == WriteMemoSection.contents.rawValue {
             
             let textView = cell.viewWithTag(WriteMemoViewControllerElementsManager.kTextViewElementTagId) as! PlaceholderTextView
             
-            textView.text = self.contents
+            textView.text = self.modifiedMemo?.contents
 
         }
     }

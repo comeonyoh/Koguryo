@@ -263,9 +263,7 @@ extension MemoListViewController: UITableViewDelegate {
         
         let memo = memoListManager.getMemoAt(indexPath)
         
-        vc.memoId = memo.memoId
-        vc.contents = memo.contents
-        vc.placeholder = memo.placeHolder
+        vc.modifiedMemo = memo.copy() as? RealmMemo
 
         self.navigationController?.pushViewController(vc, animated: true)
     }
