@@ -91,10 +91,10 @@ extension MemoManager {
         let realm = self.configRealm()
         
         guard indexPath.section == MemoListSection.list.rawValue else {
-            return realm.objects(RealmMemo.self).filter(NSPredicate.init(format: "isFavorite = 1")).sorted(byProperty: "createDate", ascending: false)[indexPath.row]
+            return realm.objects(RealmMemo.self).filter(NSPredicate.init(format: "isFavorite = 1")).sorted(byKeyPath: "createDate", ascending: false)[indexPath.row]
         }
 
-        return realm.objects(RealmMemo.self).filter(NSPredicate.init(format: "isFavorite = 0")).sorted(byProperty: "createDate", ascending: false)[indexPath.row]
+        return realm.objects(RealmMemo.self).filter(NSPredicate.init(format: "isFavorite = 0")).sorted(byKeyPath: "createDate", ascending: false)[indexPath.row]
     }
     
     func getMemoAt(_ index: Int, withType type: MemoType) -> RealmMemo {
@@ -102,9 +102,9 @@ extension MemoManager {
         let realm = self.configRealm()
 
         guard type == .normal else {
-            return realm.objects(RealmMemo.self).filter(NSPredicate.init(format: "isFavorite = 1")).sorted(byProperty: "createDate", ascending: false)[index]
+            return realm.objects(RealmMemo.self).filter(NSPredicate.init(format: "isFavorite = 1")).sorted(byKeyPath: "createDate", ascending: false)[index]
         }
-        return realm.objects(RealmMemo.self).filter(NSPredicate.init(format: "isFavorite = 0")).sorted(byProperty: "createDate", ascending: false)[index]
+        return realm.objects(RealmMemo.self).filter(NSPredicate.init(format: "isFavorite = 0")).sorted(byKeyPath: "createDate", ascending: false)[index]
     }
     
     func getMemoCount(withType type: MemoType) -> Int {

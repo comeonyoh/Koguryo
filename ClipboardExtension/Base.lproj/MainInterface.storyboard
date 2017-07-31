@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -37,17 +37,6 @@
                                     <outlet property="delegate" destination="M4Y-Lb-cyx" id="mSe-r6-VZ7"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3p1-jG-2BG">
-                                <rect key="frame" x="250" y="0.0" width="70" height="35"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="tU9-1f-Ark"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <state key="normal" title="Paste"/>
-                                <connections>
-                                    <action selector="didPasteButtonClicked:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="gFz-IP-s9H"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oEV-tj-ten">
                                 <rect key="frame" x="0.0" y="0.0" width="70" height="35"/>
                                 <constraints>
@@ -64,11 +53,8 @@
                             <constraint firstItem="3oh-V4-Svc" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" id="42F-C7-UPR"/>
                             <constraint firstItem="cMD-dG-stq" firstAttribute="centerX" secondItem="S3S-Oj-5AN" secondAttribute="centerX" id="65Q-A9-T5O"/>
                             <constraint firstItem="oEV-tj-ten" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" id="OHh-r2-7sl"/>
-                            <constraint firstItem="3p1-jG-2BG" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" id="S4f-J9-6wn"/>
                             <constraint firstItem="3oh-V4-Svc" firstAttribute="top" secondItem="cMD-dG-stq" secondAttribute="bottom" id="WBm-gc-s9k"/>
-                            <constraint firstAttribute="trailing" secondItem="3p1-jG-2BG" secondAttribute="trailing" id="XCz-Y2-bo5"/>
                             <constraint firstAttribute="trailing" secondItem="3oh-V4-Svc" secondAttribute="trailing" id="Xsi-X1-BaQ"/>
-                            <constraint firstItem="3oh-V4-Svc" firstAttribute="top" secondItem="3p1-jG-2BG" secondAttribute="bottom" id="Zo5-JX-ILY"/>
                             <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="3oh-V4-Svc" secondAttribute="bottom" id="aVs-8H-d80"/>
                             <constraint firstItem="3oh-V4-Svc" firstAttribute="top" secondItem="oEV-tj-ten" secondAttribute="bottom" id="hLP-m4-75x"/>
                             <constraint firstItem="oEV-tj-ten" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" id="m2Q-5B-ZA6"/>
