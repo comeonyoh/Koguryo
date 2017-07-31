@@ -36,3 +36,6 @@
 "section_footer_add_favorite" = "If you add it to your Bookmarks, you can check it in the widget.";
 
 "written" = "written";
+"widget_order_info" = "This helps change the order of sentences in Widget(Extension). \nEnjoy Pinyo with Widget.";
+"favorite_recent_order" = "즐겨찾기 + 최신순";
+"recent_order" = "최신순";

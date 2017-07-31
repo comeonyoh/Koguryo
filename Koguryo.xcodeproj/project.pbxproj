@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		010EB87F1F0CB06F00B6B2CB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 010EB87E1F0CB06F00B6B2CB /* GoogleService-Info.plist */; };
+		013DC50E1F2F1F8E0061CAA8 /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013DC50D1F2F1F8E0061CAA8 /* SettingTableViewController.swift */; };
+		013DC5101F2F20A90061CAA8 /* WidgetOrderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013DC50F1F2F20A90061CAA8 /* WidgetOrderTableViewController.swift */; };
+		013DC5121F2F22980061CAA8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013DC5111F2F22980061CAA8 /* User.swift */; };
 		A19BC8611E2D02DF0075A909 /* NoMarginTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19BC8601E2D02DF0075A909 /* NoMarginTextView.swift */; };
 		A1A840E71DD4D766002EE4C8 /* CopyPasteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A840E61DD4D766002EE4C8 /* CopyPasteManager.swift */; };
 		A1E49DB71F2D900C0050E319 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E49DB61F2D900C0050E319 /* DateExtension.swift */; };
@@ -86,6 +89,9 @@
 
 /* Begin PBXFileReference section */
 		010EB87E1F0CB06F00B6B2CB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		013DC50D1F2F1F8E0061CAA8 /* SettingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
+		013DC50F1F2F20A90061CAA8 /* WidgetOrderTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WidgetOrderTableViewController.swift; sourceTree = "<group>"; };
+		013DC5111F2F22980061CAA8 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		658B6E14CA1E482035C768FB /* Pods-Koguryo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Koguryo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Koguryo/Pods-Koguryo.debug.xcconfig"; sourceTree = "<group>"; };
 		711A1B15B8FF31AF6EAA448D /* Pods-KoguryoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoguryoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KoguryoTests/Pods-KoguryoTests.release.xcconfig"; sourceTree = "<group>"; };
 		A100CC31BA5C5FC248A71EB5 /* Pods_Koguryo_ClipboardExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Koguryo_ClipboardExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -194,6 +200,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		013DC5091F2F1F6E0061CAA8 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				013DC50D1F2F1F8E0061CAA8 /* SettingTableViewController.swift */,
+				013DC50F1F2F20A90061CAA8 /* WidgetOrderTableViewController.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
 		A1A840E51DD4D751002EE4C8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -253,6 +268,7 @@
 				E1EA47271DDC3B6B00B3F098 /* Koguryo.entitlements */,
 				E1805DE01DDC3C9D00867240 /* Shared */,
 				E13F6B0E1DD0440D00E1BA98 /* Views */,
+				013DC5091F2F1F6E0061CAA8 /* Setting */,
 				E13F6B0D1DD0440D00E1BA98 /* Models */,
 				E1FFADE41DD191CA000AA173 /* Manager */,
 				E1C4F9D71DD161BD0017F8DA /* Extensions */,
@@ -295,6 +311,7 @@
 			children = (
 				E13F6B131DD04DF300E1BA98 /* MemoManager.swift */,
 				E13F6B0F1DD0457900E1BA98 /* MemoListSection.swift */,
+				013DC5111F2F22980061CAA8 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -635,11 +652,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				013DC50E1F2F1F8E0061CAA8 /* SettingTableViewController.swift in Sources */,
 				E13F6AE91DD03C5500E1BA98 /* AppDelegate.swift in Sources */,
 				A1E49DB71F2D900C0050E319 /* DateExtension.swift in Sources */,
 				E1FFADE81DD19B14000AA173 /* WriteMemoViewControllerElementsManager.swift in Sources */,
 				E1CE48BA1DD957A10035F5E1 /* StringExtension.swift in Sources */,
 				E1F84B801DDC5DC8003B4368 /* MemoListFooterView.swift in Sources */,
+				013DC5101F2F20A90061CAA8 /* WidgetOrderTableViewController.swift in Sources */,
 				E13F6B141DD04DF300E1BA98 /* MemoManager.swift in Sources */,
 				E13F6B0C1DD03E7600E1BA98 /* WriteMemoViewController.swift in Sources */,
 				E1F5944A1DD557F20052C44D /* RealmMemo.swift in Sources */,
@@ -655,6 +674,7 @@
 				E17C20E81DD1A990003AD7F2 /* Animationable.swift in Sources */,
 				E13F6B101DD0457900E1BA98 /* MemoListSection.swift in Sources */,
 				E17C20E41DD1A40B003AD7F2 /* ProgressHudManager.swift in Sources */,
+				013DC5121F2F22980061CAA8 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

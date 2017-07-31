@@ -8,6 +8,11 @@
 
 import Foundation
 
+enum WidgetOrderKey: Int {
+    case favorite
+    case recent
+}
+
 struct GroupKey {
     
     static let groupKey = "group.com.odov.pinyo"
