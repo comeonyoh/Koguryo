@@ -17,15 +17,15 @@ enum MemoType {
 class RealmMemo: Object {
     
     //  primary key
-    dynamic var memoId: String = ""
+    @objc dynamic var memoId: String = ""
     
-    dynamic var contents: String?
+    @objc dynamic var contents: String?
     
-    dynamic var placeHolder: String?
+    @objc dynamic var placeHolder: String?
 
-    dynamic var isFavorite: Bool = false
+    @objc dynamic var isFavorite: Bool = false
    
-    dynamic var createDate: Date = Date.init()
+    @objc dynamic var createDate: Date = Date.init()
     
     override static func primaryKey() -> String? {
         return "memoId"
